@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="idCEColorAnimal" class="pe.etg.bbva.spring.entity.CE01ColorAnimal">
+		<property name="basePiel" value="white"></property>
+		<property name="texturaPiel" value="gray"></property>
+	</bean>
+
+	<!-- Uso de ref no hay Autowire-->
+	<bean id="idCELlama" class="pe.etg.bbva.spring.entity.CE02LlamaAutowireNo" autowire="no">
+		<property name="nombre" value="Llama"></property>
+		<property name="color" ref="idCEColorAnimal"></property>
+	</bean>
+
+	<!-- Uso de ref ara Autowire -->
+	<bean id="idCEPuma" class="pe.etg.bbva.spring.entity.CE03PumaAutowireByName" autowire="byName">
+		<property name="nombre" value="Puma"></property>
+	</bean>
+	
+	<bean id="idCECuy" class="pe.etg.bbva.spring.entity.CE04CuyAutowireByType" autowire="byType">
+		<property name="nombre" value="Cuy"></property>
+	</bean>
+	
+	<bean id="idCEVizcacha" class="pe.etg.bbva.spring.entity.CE05VizcachaAutowireConstructor" autowire="constructor">
+		<property name="nombre" value="Vizcacha"></property>
+	</bean>
+
+</beans>
