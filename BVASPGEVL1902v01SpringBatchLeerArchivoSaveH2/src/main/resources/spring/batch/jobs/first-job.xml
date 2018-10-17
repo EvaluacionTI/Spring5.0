@@ -1,0 +1,44 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:batch="http://www.springframework.org/schema/batch"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/batch
+		http://www.springframework.org/schema/batch/spring-batch-2.2.xsd
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+	">
+
+    <import resource="../config/context.xml" />
+
+<!-- Se define los pasos del Job -->
+    <batch:job id="idFirstJob">
+        <batch:step id="idStep">
+            <batch:tasklet>
+                <batch:chunk reader="idFileItemReaderCsv" processor="idItemProcesor" writer="idItemWriter" commit-interval="5">
+                </batch:chunk>
+            </batch:tasklet>
+        </batch:step>
+    </batch:job>
+
+<!-- Se define los atributos que tiene el archivo que se va cargar como masivo. Se puede asignar el nombre de la cabecera
+	 Se debe establecer el archivo de entrada (Ej. data.csv)
+ -->
+    <bean id="idFileItemReaderCsv" class="org.springframework.batch.item.file.FlatFileItemReader">
+        <property name="resource" value="classpath:input/data.csv" />
+        <property name="lineMapper">
+            <bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
+                <property name="lineTokenizer">
+                    <bean class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
+                        <property name="names" value="ID, PRECIO, CANTIDAD, NOMBRE, FECHA"/>
+                    </bean>
+                </property>
+                <property name="fieldSetMapper"> 
+                	<bean class="pe.bbva.spring.batch.mapper.ReportMapper" />
+                </property>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="idItemProcesor" class="pe.bbva.spring.batch.process.ReportProcess" />
+    <bean id="idItemWriter" class="pe.bbva.spring.batch.writer.ReportItemWriter" />
+
+</beans>
