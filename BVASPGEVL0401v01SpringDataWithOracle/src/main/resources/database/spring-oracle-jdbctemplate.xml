@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 1. Configurar la base de datos -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+		<property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"></property>
+        <property name="username" value="dip"/>
+        <property name="password" value="Aemsa152027"/>
+	</bean>
+
+	<!-- 2. Configurar el jdbcTemplate -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+    <!-- 3. Configurar la clase implementada en relación al jdbcTemplate -->
+	<bean id="idTipoPlan" class="pe.etg.bbva.spring.model.impl.CD02TipoPlanJdbcTemplate">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>	
+
+</beans>
