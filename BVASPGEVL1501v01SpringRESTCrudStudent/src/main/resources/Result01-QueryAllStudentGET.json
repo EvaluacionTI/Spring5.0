@@ -1,0 +1,26 @@
+[
+    {
+        "id": 101,
+        "firtName": "Esteban",
+        "lastName": "Díaz",
+        "year": "2002"
+    },
+    {
+        "id": 102,
+        "firtName": "Illari",
+        "lastName": "Díaz",
+        "year": "2014"
+    },
+    {
+        "id": 103,
+        "firtName": "Alex",
+        "lastName": "Díaz",
+        "year": "2017"
+    },
+    {
+        "id": 104,
+        "firtName": "Isabela",
+        "lastName": "Díaz",
+        "year": "2018"
+    }
+]
