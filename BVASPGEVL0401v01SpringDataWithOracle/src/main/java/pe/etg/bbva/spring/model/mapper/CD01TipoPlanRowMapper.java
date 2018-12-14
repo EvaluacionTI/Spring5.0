@@ -20,7 +20,7 @@ public class CD01TipoPlanRowMapper implements RowMapper<CE01TipoPlan> {
 		oCETipoPlan= new CE01TipoPlan();
 		MOLOG.info("=> oCETipoCuenta {} ", oCETipoPlan);
 		
-		oCETipoPlan.setCodigoTipoPlan(poRS.getString("id_tipo_plan"));
+		oCETipoPlan.setCodigoTipoPlan(poRS.getString("cod_tipo_plan"));
 		oCETipoPlan.setCodigoEmpresa(poRS.getString("cod_emp"));
 		oCETipoPlan.setCodigoIdioma(poRS.getString("cod_iso_idio_orgn"));
 		oCETipoPlan.setAbreviatura(poRS.getString("txt_abrv"));
