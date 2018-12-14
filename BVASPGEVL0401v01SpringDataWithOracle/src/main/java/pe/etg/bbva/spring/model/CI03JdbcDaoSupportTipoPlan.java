@@ -2,9 +2,9 @@ package pe.etg.bbva.spring.model;
 
 import java.util.List;
 
-import pe.etg.bbva.spring.entity.oracle.CE01TipoPlan;
+import pe.etg.bbva.spring.entity.CE01TipoPlan;
 
-public interface CI02JdbcTemplateTipoPlan {
+public interface CI03JdbcDaoSupportTipoPlan {
 
 	// 1. Mantenimiento que no retorna ningun valor
 	public void grabarTipoPlan(CE01TipoPlan poCETipoPlan);

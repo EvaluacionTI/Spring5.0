@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import pe.etg.bbva.spring.entity.CE01TipoPlan;
+import pe.etg.bbva.spring.entity.oracle.CE01TipoPlan;
 import pe.etg.bbva.spring.model.impl.CD02TipoPlanJdbcTemplate;
 
 public class CV0205v01ConsultaJdbcTemplateTipoPlanPorCodigo {

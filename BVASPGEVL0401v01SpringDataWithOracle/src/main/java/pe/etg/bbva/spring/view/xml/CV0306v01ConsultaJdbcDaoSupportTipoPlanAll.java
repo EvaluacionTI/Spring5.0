@@ -9,14 +9,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import pe.etg.bbva.spring.entity.oracle.CE01TipoPlan;
-import pe.etg.bbva.spring.model.impl.CD02TipoPlanJdbcTemplate;
+import pe.etg.bbva.spring.entity.CE01TipoPlan;
+import pe.etg.bbva.spring.model.impl.CD03TipoPlanJdbcDaoSupport;
 
-public class CV0206v01ConsultaJdbcTemplateTipoPlanAll {
-	private static Logger MOLOG = LoggerFactory.getLogger(CV0206v01ConsultaJdbcTemplateTipoPlanAll.class);
+public class CV0306v01ConsultaJdbcDaoSupportTipoPlanAll {
+	private static Logger MOLOG = LoggerFactory.getLogger(CV0306v01ConsultaJdbcDaoSupportTipoPlanAll.class);
 	private static ConfigurableApplicationContext moCntx;
 	private static String[] configContexto = {
-			"classpath:/database/spring-oracle-jdbctemplate.xml"
+			"classpath:/database/spring-oracle-jdbcdaosupport.xml"
     };
 
 	public static void main(String[] args) throws ParseException {
@@ -24,7 +24,7 @@ public class CV0206v01ConsultaJdbcTemplateTipoPlanAll {
 
 		List<CE01TipoPlan> oListaTipoPlan = new ArrayList<>();
 		moCntx = new ClassPathXmlApplicationContext(configContexto);
-		CD02TipoPlanJdbcTemplate oCDTipoPlan = (CD02TipoPlanJdbcTemplate) moCntx.getBean("idTipoPlan");
+		CD03TipoPlanJdbcDaoSupport oCDTipoPlan = (CD03TipoPlanJdbcDaoSupport) moCntx.getBean("idTipoPlan");
 		
 		MOLOG.info("=> [EVL] Iniciando contexto           : {} ", moCntx);
 		MOLOG.info("=> [EVL] Iniciando bean  CD01TipoPlan : {} ", oCDTipoPlan);

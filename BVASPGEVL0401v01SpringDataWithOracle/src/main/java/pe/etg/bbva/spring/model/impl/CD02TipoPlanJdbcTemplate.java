@@ -6,9 +6,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import pe.etg.bbva.spring.entity.CE01TipoPlan;
+import pe.etg.bbva.spring.entity.oracle.CE01TipoPlan;
 import pe.etg.bbva.spring.model.CI02JdbcTemplateTipoPlan;
-import pe.etg.bbva.spring.model.mapper.CD01TipoPlanRowMapper;
+import pe.etg.bbva.spring.model.mapper.oracle.CD01TipoPlanRowMapper;
 
 public class CD02TipoPlanJdbcTemplate implements CI02JdbcTemplateTipoPlan{
 	private static Logger MOLOG = LoggerFactory.getLogger(CD02TipoPlanJdbcTemplate.class);
@@ -25,8 +25,8 @@ public class CD02TipoPlanJdbcTemplate implements CI02JdbcTemplateTipoPlan{
 		MOLOG.info("=====> [EVL] Start method grabarTipoPlan(CE01TipoPlan poCETipoPlan)");
 
 		Object[] aoInput = new Object[] {poCETipoPlan.getCodigoTipoPlan(), poCETipoPlan.getCodigoEmpresa(), poCETipoPlan.getCodigoIdioma(), 
-				poCETipoPlan.getAbreviatura(), poCETipoPlan.getDescripcion(), poCETipoPlan.isSiNoVisualizar(), poCETipoPlan.isSiNoEditar(), poCETipoPlan.isSiNoAnula(), 
-				poCETipoPlan.isSiNoElimina(), poCETipoPlan.isSiNoDefault(), poCETipoPlan.isSiNoActivo(), 
+				poCETipoPlan.getAbreviatura(), poCETipoPlan.getDescripcion(), poCETipoPlan.getSiNoVisualizar(), poCETipoPlan.getSiNoEditar(), poCETipoPlan.getSiNoAnula(), 
+				poCETipoPlan.getSiNoElimina(), poCETipoPlan.getSiNoDefault(), poCETipoPlan.getSiNoActivo(), 
 				poCETipoPlan.getUsuarioNuevo(), poCETipoPlan.getFechaAlta(), poCETipoPlan.getUsuarioUltimaModificacion(), poCETipoPlan.getFechaUltimaModificacion() 
 		};
 		
@@ -46,8 +46,8 @@ public class CD02TipoPlanJdbcTemplate implements CI02JdbcTemplateTipoPlan{
 		MOLOG.info("=====> [EVL] Start method actualizarTipoPlan(CE01TipoPlan poCETipoPlan)");
 		
 		Object[] aoInput = new Object[] {poCETipoPlan.getCodigoEmpresa(), poCETipoPlan.getCodigoIdioma(), 
-				poCETipoPlan.getAbreviatura(), poCETipoPlan.getDescripcion(), poCETipoPlan.isSiNoVisualizar(), poCETipoPlan.isSiNoEditar(), poCETipoPlan.isSiNoAnula(), 
-				poCETipoPlan.isSiNoElimina(), poCETipoPlan.isSiNoDefault(), poCETipoPlan.isSiNoActivo(), 
+				poCETipoPlan.getAbreviatura(), poCETipoPlan.getDescripcion(), poCETipoPlan.getSiNoVisualizar(), poCETipoPlan.getSiNoEditar(), poCETipoPlan.getSiNoAnula(), 
+				poCETipoPlan.getSiNoElimina(), poCETipoPlan.getSiNoDefault(), poCETipoPlan.getSiNoActivo(), 
 				poCETipoPlan.getUsuarioNuevo(), poCETipoPlan.getFechaAlta(), poCETipoPlan.getUsuarioUltimaModificacion(), poCETipoPlan.getFechaUltimaModificacion(), poCETipoPlan.getCodigoTipoPlan()
 		};
 		
@@ -107,6 +107,4 @@ public class CD02TipoPlanJdbcTemplate implements CI02JdbcTemplateTipoPlan{
 		MOLOG.info("=====> [EVL] End method listarAllTipoPlan()");
 		return oListTipoPlan;
 	}
-
-
 }

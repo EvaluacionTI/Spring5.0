@@ -8,22 +8,22 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import pe.etg.bbva.spring.entity.oracle.CE01TipoPlan;
-import pe.etg.bbva.spring.model.impl.CD02TipoPlanJdbcTemplate;
+import pe.etg.bbva.spring.entity.CE01TipoPlan;
+import pe.etg.bbva.spring.model.impl.CD03TipoPlanJdbcDaoSupport;
 
-public class CV0202v01InsertandoJdbcTemplateTipoPlan {
-	private static Logger MOLOG = LoggerFactory.getLogger(CV0202v01InsertandoJdbcTemplateTipoPlan.class);
+public class CV0302v01InsertandoJdbcDaoSupportTipoPlan {
+	private static Logger MOLOG = LoggerFactory.getLogger(CV0302v01InsertandoJdbcDaoSupportTipoPlan.class);
 	private static ConfigurableApplicationContext moCntx;
 	private static SimpleDateFormat oSDF = new SimpleDateFormat("dd/MM/yyyy");
 	private static String[] configContexto = {
-			"classpath:/database/spring-oracle-jdbctemplate.xml"
+			"classpath:/database/spring-oracle-jdbcdaosupport.xml"
     };
 
 	public static void main(String[] args) throws ParseException {
 		MOLOG.info("=====> [EVL] Start method main(String[] args)");
 
 		moCntx = new ClassPathXmlApplicationContext(configContexto);
-		CD02TipoPlanJdbcTemplate oCDTipoPlan = (CD02TipoPlanJdbcTemplate) moCntx.getBean("idTipoPlan");
+		CD03TipoPlanJdbcDaoSupport oCDTipoPlan = (CD03TipoPlanJdbcDaoSupport) moCntx.getBean("idTipoPlan");
 
 		MOLOG.info("====> Iniciando contexto : {} ", moCntx);
 		MOLOG.info("====> Iniciando bean  CD01TipoPlan: {} ", oCDTipoPlan);
@@ -35,12 +35,12 @@ public class CV0202v01InsertandoJdbcTemplateTipoPlan {
 		oCETipoPlan.setCodigoIdioma("ES");
 		oCETipoPlan.setAbreviatura("PCSBS");
 		oCETipoPlan.setDescripcion("PLAN CONTABLE SBS");
-		oCETipoPlan.setSiNoVisualizar("1");
-		oCETipoPlan.setSiNoEditar("0");
-		oCETipoPlan.setSiNoAnula("1");
-		oCETipoPlan.setSiNoElimina("0");
-		oCETipoPlan.setSiNoDefault("1");
-		oCETipoPlan.setSiNoActivo("1");			
+		oCETipoPlan.setSiNoVisualizar(true);
+		oCETipoPlan.setSiNoEditar(false);
+		oCETipoPlan.setSiNoAnula(true);
+		oCETipoPlan.setSiNoElimina(false);
+		oCETipoPlan.setSiNoDefault(true);
+		oCETipoPlan.setSiNoActivo(true);			
 		oCETipoPlan.setUsuarioNuevo("EDIAZ");
 		oCETipoPlan.setFechaAlta(oSDF.parse("05/01/2002"));
 		oCETipoPlan.setUsuarioUltimaModificacion(null);
