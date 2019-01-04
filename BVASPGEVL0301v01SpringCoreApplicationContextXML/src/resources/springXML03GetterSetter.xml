@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- 2.0 - Se crea información del getter y setter
+	
+		Los argumentos deben estar en el orden adecuado y ser del tipo correcto. 
+	-->	
+	
+	<bean id="idCEMensaje" class="pe.etg.bbva.spring.entity.CEMensaje">
+		<property name="id" value="180"></property>
+		<property name="mensaje" value="Arquitectura Orientada a Servicios"></property>
+	</bean>
+</beans>

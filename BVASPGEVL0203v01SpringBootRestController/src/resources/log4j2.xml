@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+%t = muestra el nombre del thread que loguee el evento
+%p = muestra el nivel de prioridad
+%m = muestra el mensaje
+%n = deja un renglon
+
+%C = muestra el nombre de la clase
+%M = muestra el nombre del método
+%L = muestra el número de línea
+
+trace, debug, info, warn, error, fatal 
+-->
+
+<Configuration status="trace" monitorInterval="3600">
+    <Properties>
+    	<Property name="nivel">info</Property>
+        <Property name="log-path">D:\\tmp\\</Property>
+    </Properties>
+ 
+     <Appenders>
+		<!-- Redirecciona los mensajes hacia la consola -->
+        <Console name="console-log" target="SYSTEM_OUT">
+            <PatternLayout>
+              <!--  <pattern>%d{dd/MM/yyyy HH:mm:ss.SSS} [%t] %-5level %logger{36}-%M:%L - %msg%n</pattern>  -->  
+                <pattern>%d{dd/MM/yyyy HH:mm:ss.SSS} [%t] %-5p %c{1}:%L - %msg%n</pattern>
+            </PatternLayout>
+        </Console>
+        
+        <!-- Redirecciona los mensajes log hacia un archivo  -->
+        <!--  -->
+        <File name="archivo-log" fileName="${log-path}Log4j2Archivo.log">
+            <PatternLayout>
+                  <pattern>%d{dd/MM/yyyy HH:mm:ss.SSS} [%t] [%5p] - %C:%M(%L) - %msg%n</pattern>
+            </PatternLayout>
+        </File>           
+
+		<!-- Redirecciona los mensajes de logs hacia un archivo y permite definir políticas de rotación para que el archivo no crezca indefinidamente -->
+        <RollingFile name="error-log"  fileName="${log-path}Log4j2Error.log" filePattern="${log-path}Log4j2Error-%d{ddMMyyyy}.log" immediateFlush="true">
+            <PatternLayout>
+                <pattern>%d{dd/MM/yyyy HH:mm:ss.SSS} [%t] [%5p] - %c{1}:%L- %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+                <SizeBasedTriggeringPolicy size="100 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20" />
+        </RollingFile>
+
+    </Appenders>
+
+    <Loggers>
+         
+        <Root level="${nivel}" additivity="true">
+            <appender-ref ref="console-log" level="info"/>
+			<appender-ref ref="archivo-log" level="info"/>
+			<appender-ref ref="error-log" level="info"/>
+        </Root>
+       
+    </Loggers>
+</Configuration>
