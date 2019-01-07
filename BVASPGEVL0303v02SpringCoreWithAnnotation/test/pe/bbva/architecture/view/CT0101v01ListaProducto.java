@@ -11,8 +11,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import pe.bbva.architecture.service.impl.CM0101v01ProductoServicioImplementar;
 import pe.etg.bbva.spring.entity.CE0101v01Producto;
+import pe.etg.bbva.spring.service.impl.CM0101v01ProductoServicioImplementar;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 //@SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)

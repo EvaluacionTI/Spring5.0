@@ -1,4 +1,4 @@
-package pe.bbva.architecture.model;
+package pe.etg.bbva.spring.model;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

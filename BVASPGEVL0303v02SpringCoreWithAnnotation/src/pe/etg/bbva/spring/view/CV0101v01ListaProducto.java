@@ -1,11 +1,11 @@
-package pe.bbva.architecture.view;
+package pe.etg.bbva.spring.view;
 
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 
-import pe.bbva.architecture.model.CDSpringConfiguration;
-import pe.bbva.architecture.service.impl.CM0101v01ProductoServicioImplementar;
+import pe.etg.bbva.spring.model.CDSpringConfiguration;
+import pe.etg.bbva.spring.service.impl.CM0101v01ProductoServicioImplementar;
 
 //@SpringBootApplication
 public class CV0101v01ListaProducto {

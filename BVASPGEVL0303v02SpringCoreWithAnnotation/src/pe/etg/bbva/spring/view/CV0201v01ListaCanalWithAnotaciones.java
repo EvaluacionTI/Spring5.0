@@ -1,10 +1,10 @@
-package pe.bbva.architecture.view;
+package pe.etg.bbva.spring.view;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import pe.bbva.architecture.model.CDConfiguracionCanal;
 import pe.etg.bbva.spring.entity.CECanal;
+import pe.etg.bbva.spring.model.CDConfiguracionCanal;
 
 public class CV0201v01ListaCanalWithAnotaciones {
 	

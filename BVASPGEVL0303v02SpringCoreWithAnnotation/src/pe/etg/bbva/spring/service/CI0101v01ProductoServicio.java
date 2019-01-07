@@ -1,4 +1,4 @@
-package pe.bbva.architecture.service;
+package pe.etg.bbva.spring.service;
 
 import java.util.List;
 
