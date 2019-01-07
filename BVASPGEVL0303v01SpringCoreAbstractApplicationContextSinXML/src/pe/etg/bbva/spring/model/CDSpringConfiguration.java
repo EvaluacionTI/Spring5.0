@@ -1,14 +1,14 @@
-package pe.bbva.architecture.model;
+package pe.etg.bbva.spring.model;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import pe.bbva.architecture.service.CIHelloService;
-import pe.bbva.architecture.service.impl.CMHelloService;
+import pe.etg.bbva.spring.service.CIHelloService;
+import pe.etg.bbva.spring.service.impl.CMHelloService;
 
 @Configuration
-@ComponentScan("pe.bbva.architecture")
+@ComponentScan("pe.etg.bbva.spring")
 public class CDSpringConfiguration {
 
 	@Bean("idCIHelloService")

@@ -3,8 +3,8 @@ package pe.bbva.architecture.view;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 
-import pe.bbva.architecture.model.CDSpringConfiguration;
-import pe.bbva.architecture.service.impl.CMHelloService;
+import pe.etg.bbva.spring.model.CDSpringConfiguration;
+import pe.etg.bbva.spring.service.impl.CMHelloService;
 
 public class CV0101v01LecturaAnnotationConfigApplicationContext {
 
