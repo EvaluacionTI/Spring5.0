@@ -1,6 +1,5 @@
 package pe.etg.bbva.spring.view;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
@@ -11,8 +10,6 @@ import pe.etg.bbva.spring.entity.CE02LlamaAutowireNo;
 import pe.etg.bbva.spring.entity.CE03PumaAutowireByName;
 import pe.etg.bbva.spring.entity.CE04CuyAutowireByType;
 import pe.etg.bbva.spring.entity.CE05VizcachaAutowireConstructor;
-
-
 
 public class CVMostrarContextWithPropertyAutowire {
 	private static Logger MOLOG = LoggerFactory.getLogger(CVMostrarContextWithPropertyAutowire.class);
