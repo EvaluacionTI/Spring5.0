@@ -1,6 +1,6 @@
-package pe.bbva.architecture.service.impl;
+package pe.etg.bbva.spring.service.impl;
 
-import pe.bbva.architecture.service.CIHelloService;
+import pe.etg.bbva.spring.service.CIHelloService;
 
 public class CMHelloService implements CIHelloService {
 

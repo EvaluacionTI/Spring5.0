@@ -1,9 +1,9 @@
-package pe.bbva.architecture.view;
+package pe.etg.bbva.spring.view;
 
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import pe.bbva.architecture.service.impl.CMHelloService;
+import pe.etg.bbva.spring.service.impl.CMHelloService;
 
 public class CV0101v01LecturaClassPathXmlApplicationContext {
 
