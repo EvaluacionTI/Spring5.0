@@ -6,10 +6,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import pe.etg.bbva.spring.entity.CE01ColorAnimal;
-import pe.etg.bbva.spring.entity.CE02LlamaAutowireNo;
-import pe.etg.bbva.spring.entity.CE03PumaAutowireByName;
-import pe.etg.bbva.spring.entity.CE04CuyAutowireByType;
-import pe.etg.bbva.spring.entity.CE05VizcachaAutowireConstructor;
 import pe.etg.bbva.spring.entity.formaI.CE01ToroSetter;
 import pe.etg.bbva.spring.entity.formaI.CE02ToroConstructor;
 import pe.etg.bbva.spring.entity.formaI.CE03ToroField;

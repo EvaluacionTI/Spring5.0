@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import pe.etg.bbva.spring.entity.CE01ColorAnimal;
 import pe.etg.bbva.spring.entity.CE06BeanStatic;
 
 public class CV02DeclaracionBeanStatic {
