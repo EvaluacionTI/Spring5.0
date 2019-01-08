@@ -1,6 +1,8 @@
-package pe.bbva.architecture.view;
+package pe.etg.bbva.spring.view;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
@@ -16,8 +18,8 @@ import pe.etg.bbva.spring.service.impl.CM0101v01ProductoServicioImplementar;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 //@SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)
-@SpringBootTest(classes=CT0101v01ListaProducto.class)
-public class CT0101v01ListaProducto {
+@SpringBootTest(classes=CV0101v01ListaProductoTest.class)
+public class CV0101v01ListaProductoTest {
 
 	@Autowired
 	private CM0101v01ProductoServicioImplementar oCCServicioUnico;

@@ -2,7 +2,7 @@ package pe.etg.bbva.spring.entity;
 
 import org.springframework.beans.factory.annotation.Value;
 
-public class CECanal {
+public class CE0201v01Canal {
 	
 	@Value("16")
 	private int id;

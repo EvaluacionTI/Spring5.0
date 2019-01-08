@@ -3,13 +3,14 @@ package pe.etg.bbva.spring.model;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import pe.etg.bbva.spring.entity.CECanal;
+import pe.etg.bbva.spring.entity.CE0201v01Canal;
 
 @Configuration
-public class CDConfiguracionCanal {
+public class CD0201v01ConfiguracionCanal {
 	
 	@Bean
-	public CECanal oCECanal() {
-		return new CECanal();
+	public CE0201v01Canal oCECanal() {
+		// Retorno la instancia de la clase
+		return new CE0201v01Canal();
 	}
 }
