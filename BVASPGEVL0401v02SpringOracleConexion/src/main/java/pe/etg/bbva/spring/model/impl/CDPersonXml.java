@@ -7,16 +7,24 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 
+import pe.etg.bbva.spring.entity.CEConstanteSQL;
 import pe.etg.bbva.spring.entity.CEPerson;
 import pe.etg.bbva.spring.model.CICrudGeneral;
 
-public class CDPerson implements CICrudGeneral<CEPerson> {
-	@Autowired
+public class CDPersonXml implements CICrudGeneral<CEPerson> {
+	
 	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplate;
+	
+	public DataSource getDataSource() {
+		return dataSource;
+	}
+
+	public void setDataSource(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}
 
 	@PostConstruct
     private void postConstruct() {
@@ -24,12 +32,11 @@ public class CDPerson implements CICrudGeneral<CEPerson> {
     }
 	
 	public void save(CEPerson t) {
-		String sql = "INSERT INTO APXt01_Person VALUES (sq_person.nextval, ?, ?, ?)";
-        jdbcTemplate.update(sql, t.getFirstName(), t.getLastName(), t.getAddress());
+        jdbcTemplate.update(CEConstanteSQL.SQL_INSERT_PERSON, t.getFirstName(), t.getLastName(), t.getAddress());
 	}
 
 	public CEPerson load(long id) {
-		List<CEPerson> persons = jdbcTemplate.query("select * from Person where id =?",
+		List<CEPerson> persons = jdbcTemplate.query(CEConstanteSQL.SQL_SELECT_PERSON_BY_ID,
                 new Object[]{id}, (resultSet, i) -> {
                     return toPerson(resultSet);
                 });
@@ -41,7 +48,7 @@ public class CDPerson implements CICrudGeneral<CEPerson> {
 	}
 
 	public void delete(long id) {
-		jdbcTemplate.update("DELETE FROM APXt01_Person WHERE id = ?", id);
+		jdbcTemplate.update(CEConstanteSQL.SQL_DELETE_PERSON, id);
 	}
 
 	public void update(CEPerson t) {
@@ -49,7 +56,7 @@ public class CDPerson implements CICrudGeneral<CEPerson> {
 	}
 
 	public List<CEPerson> loadAll() {
-		return jdbcTemplate.query("SELECT * FROM APXt01_Person", (resultSet, i) -> {
+		return jdbcTemplate.query(CEConstanteSQL.SQL_SELECT_PERSON_ALL, (resultSet, i) -> {
             return toPerson(resultSet);
         });
 	}

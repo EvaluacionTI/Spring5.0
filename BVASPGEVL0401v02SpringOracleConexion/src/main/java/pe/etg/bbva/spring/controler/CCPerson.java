@@ -18,11 +18,11 @@ public class CCPerson {
         List<CEPerson> list = personDao.loadAll();
         System.out.println("Loaded all: " + list);
 
-        CEPerson person = CEPerson.create("Dana", "Whitley", "464 Gorsuch Drive");
+        CEPerson person = CEPerson.create("Illari", "Lakshmi", "Av. Cañete 2208");
         System.out.println("saving: "+person);
         personDao.save(person);
 
-        person = CEPerson.create("Robin", "Cash", "64 Zella Park");
+        person = CEPerson.create("Sayrik", "Cristobal", "Av. 15 Enero 0930");
         System.out.println("saving: "+person);
         personDao.save(person);
 
