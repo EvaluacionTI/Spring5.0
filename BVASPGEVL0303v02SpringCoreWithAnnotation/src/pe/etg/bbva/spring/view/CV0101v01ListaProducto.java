@@ -1,19 +1,23 @@
 package pe.etg.bbva.spring.view;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 
-import pe.etg.bbva.spring.model.CDSpringConfiguration;
+import pe.etg.bbva.spring.model.CD0101v01SpringConfiguration;
 import pe.etg.bbva.spring.service.impl.CM0101v01ProductoServicioImplementar;
 
 //@SpringBootApplication
 public class CV0101v01ListaProducto {
-	
+	public static final Logger MOLOG = LoggerFactory.getLogger(CV0101v01ListaProducto.class); 
 	private static AbstractApplicationContext oCntx;
 
 	public static void main(String[] args) {
-		oCntx = new AnnotationConfigApplicationContext(CDSpringConfiguration.class);
+		MOLOG.info("[EVL] Iniciando ");
+		oCntx = new AnnotationConfigApplicationContext(CD0101v01SpringConfiguration.class);
+		MOLOG.info("[EVL] Contexto {}", oCntx);
 		String sNombreBean = "idCI0101v01ProductoServicio";
 
 		System.out.println("AbstractApplicationContext -----> " + oCntx);
@@ -23,7 +27,7 @@ public class CV0101v01ListaProducto {
 		System.out.println("Fecha -----> " + oCntx.getStartupDate());
 		
 		CM0101v01ProductoServicioImplementar oCMProductoServicio = oCntx.getBean(sNombreBean, CM0101v01ProductoServicioImplementar.class);
-		
+		MOLOG.info("[EVL] oCMProductoServicio {}", oCMProductoServicio);
 		System.out.println("Instancia del Bean " + oCMProductoServicio);
 		System.out.println("Cantidad de Productos " + oCMProductoServicio.listaProductos().size());
 		System.out.println(" Productos 1 :" + oCMProductoServicio.listaProductos().get(0).getDescription());

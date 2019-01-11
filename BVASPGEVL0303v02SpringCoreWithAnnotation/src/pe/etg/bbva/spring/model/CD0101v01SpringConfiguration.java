@@ -8,11 +8,13 @@ import pe.etg.bbva.spring.service.CI0101v01ProductoServicio;
 import pe.etg.bbva.spring.service.impl.CM0101v01ProductoServicioImplementar;
 
 @Configuration
-@ComponentScan("pe.bbva.architecture.model")
-public class CDSpringConfiguration {
+@ComponentScan("pe.etg.bbva.spring.model")
+public class CD0101v01SpringConfiguration {
 	
 	@Bean("idCI0101v01ProductoServicio")
+	// Defino una interface asociado al método
 	public CI0101v01ProductoServicio anotacionProducto() {
+		//Instancio la clase que lo implementa
 		return new CM0101v01ProductoServicioImplementar();
 	}
 }
