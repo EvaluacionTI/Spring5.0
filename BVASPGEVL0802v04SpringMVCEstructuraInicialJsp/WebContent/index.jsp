@@ -35,7 +35,7 @@
 
 
 	</div>
-	<co:url value="/view/jsp0101v01Mostrar" var="messageUrl"></co:url>
+	<co:url value="/view/jsp0101v01Mostrar.jsp" var="messageUrl"></co:url>
 	<a href="${messageUrl}">Clic enter</a>
 </body>
 </html>
