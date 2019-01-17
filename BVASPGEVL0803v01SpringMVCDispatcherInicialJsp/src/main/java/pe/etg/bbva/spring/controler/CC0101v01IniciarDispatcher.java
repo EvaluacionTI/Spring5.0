@@ -27,6 +27,5 @@ public class CC0101v01IniciarDispatcher {
 		String lsFechaSistema = (new Date()).toString();
 
 		return new ModelAndView(lsArchivoJsp, "vFechaSistema", lsFechaSistema);
-
 	}	
 }
