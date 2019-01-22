@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import pe.etg.bbva.spring.entity.CE01ColorAnimal;
+import pe.etg.bbva.spring.entity.CE0101v01ColorAnimal;
 import pe.etg.bbva.spring.entity.formaI.CE01ToroSetter;
 import pe.etg.bbva.spring.entity.formaI.CE02ToroConstructor;
 import pe.etg.bbva.spring.entity.formaI.CE03ToroField;
@@ -35,7 +35,7 @@ public class CVMostrarContextWithNotacionAutowired {
 		MOLOG.info("====> CE02ToroConstructor ==> {} ",oCEToroCon );
 		MOLOG.info("====> CE03ToroField ==> {} ",oCEToroFie );
 
-		CE01ColorAnimal oCEColor = new CE01ColorAnimal();
+		CE0101v01ColorAnimal oCEColor = new CE0101v01ColorAnimal();
 		
 		oCEColor.setBasePiel("Black");
 		oCEColor.setTexturaPiel("Fino");
@@ -45,7 +45,7 @@ public class CVMostrarContextWithNotacionAutowired {
 
 		MOLOG.info("====> Instancia con Setter ==> {} ",oCEToroSet );
 		
-		oCEColor = new CE01ColorAnimal();
+		oCEColor = new CE0101v01ColorAnimal();
 		oCEColor.setBasePiel("Brown");
 		oCEColor.setTexturaPiel("Aspero");
 		
@@ -54,7 +54,7 @@ public class CVMostrarContextWithNotacionAutowired {
 		
 		MOLOG.info("====> CE02ToroConstructor ==> {} ",oCEToroCon );
 		
-		oCEColor = new CE01ColorAnimal();
+		oCEColor = new CE0101v01ColorAnimal();
 		oCEColor.setBasePiel("Yellow");
 		oCEColor.setTexturaPiel("Grumoso");
 		

@@ -1,6 +1,6 @@
 package pe.etg.bbva.spring.entity;
 
-public class CE01ColorAnimal {
+public class CE0101v01ColorAnimal {
 	public String basePiel;
 	public String texturaPiel;
 	
@@ -18,7 +18,7 @@ public class CE01ColorAnimal {
 	}
 	@Override
 	public String toString() {
-		return String.format("CE01ColorAnimal [basePiel=%s, texturaPiel=%s]", basePiel, texturaPiel);
+		return String.format("CE0101v01ColorAnimal [basePiel=%s, texturaPiel=%s]", basePiel, texturaPiel);
 	}
 	
 

@@ -1,8 +1,8 @@
 package pe.etg.bbva.spring.entity;
 
-public class CE02LlamaAutowireNo {
+public class CE0102v01LlamaAutowireNo {
 	public String nombre;
-	public CE01ColorAnimal color;
+	public CE0101v01ColorAnimal color;
 	
 	public String getNombre() {
 		return nombre;
@@ -10,16 +10,16 @@ public class CE02LlamaAutowireNo {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public CE01ColorAnimal getColor() {
+	public CE0101v01ColorAnimal getColor() {
 		return color;
 	}
-	public void setColor(CE01ColorAnimal color) {
+	public void setColor(CE0101v01ColorAnimal color) {
 		this.color = color;
 	}
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("CE02LlamaAutowireNo [nombre=").append(nombre).append(", color=").append(color).append("]");
+		builder.append("CE0102v01LlamaAutowireNo [nombre=").append(nombre).append(", color=").append(color).append("]");
 		return builder.toString();
 	}
 	

@@ -5,9 +5,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import pe.etg.bbva.spring.controller.CC0802v03ConfigurationPersonCiudad;
-import pe.etg.bbva.spring.entity.CE0802v01Pais;
-import pe.etg.bbva.spring.entity.CE0802v01Person;
-import pe.etg.bbva.spring.entity.CE0802v03Pais;
 import pe.etg.bbva.spring.entity.CE0802v03Person;
 
 public class CV0802v03MostarAnnotationInyectionCiudad {
