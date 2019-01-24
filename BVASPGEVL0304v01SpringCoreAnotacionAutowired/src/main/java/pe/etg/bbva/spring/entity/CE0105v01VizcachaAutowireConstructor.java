@@ -4,6 +4,9 @@ public class CE0105v01VizcachaAutowireConstructor {
 	public String nombre;
 	public CE0105v01ColorAnimal color;
 	
+	public CE0105v01VizcachaAutowireConstructor(CE0105v01ColorAnimal poColor) {
+		this.color = poColor;
+	}
 	public String getNombre() {
 		return nombre;
 	}

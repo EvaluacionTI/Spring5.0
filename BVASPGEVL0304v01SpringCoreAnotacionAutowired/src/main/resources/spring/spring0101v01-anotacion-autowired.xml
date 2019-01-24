@@ -11,15 +11,15 @@
 		<property name="nombre" value="Vizcacha"></property>
 	</bean>
 	
-	<bean id="idCEToroSetter" class="pe.etg.bbva.spring.entity.formaI.CE01ToroSetter">
+	<bean id="idCEToroSetter" class="pe.etg.bbva.spring.entity.CE0503v01ToroSetter">
 		<property name="nombre" value="Rocky por Setter"></property>
 	</bean>
 
-	<bean id="idCEToroConstructor" class="pe.etg.bbva.spring.entity.formaI.CE02ToroConstructor">
+	<bean id="idCEToroConstructor" class="pe.etg.bbva.spring.entity.CE0502v01ToroConstructor">
 		<property name="nombre" value="Rocky por Constructor"></property>
 	</bean>
 
-	<bean id="idCEToroField" class="pe.etg.bbva.spring.entity.formaI.CE03ToroField">
+	<bean id="idCEToroField" class="pe.etg.bbva.spring.entity.CE0504v01ToroField">
 		<property name="nombre" value="Rocky por Field"></property>
 	</bean>
 		

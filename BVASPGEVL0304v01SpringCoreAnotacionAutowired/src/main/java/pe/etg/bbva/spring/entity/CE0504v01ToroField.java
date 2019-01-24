@@ -1,15 +1,13 @@
-package pe.etg.bbva.spring.entity.formaI;
+package pe.etg.bbva.spring.entity;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import pe.etg.bbva.spring.entity.CE0101v01ColorAnimal;
-
-public class CE03ToroField {
+public class CE0504v01ToroField {
 	public String nombre;
 	
 	// @Autowired sobre el atributo, Spring crea la instancia del objeto y una vez creada le inyecta la independencia.
 	@Autowired
-	public CE0101v01ColorAnimal color;
+	public CE0501v01ColorAnimal color;
 	
 	public String getNombre() {
 		return nombre;
@@ -17,17 +15,17 @@ public class CE03ToroField {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public CE0101v01ColorAnimal getColor() {
+	public CE0501v01ColorAnimal getColor() {
 		return color;
 	}
 	
-	public void setColor(CE0101v01ColorAnimal color) {
+	public void setColor(CE0501v01ColorAnimal color) {
 		this.color = color;
 	}
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("CE01Toro [nombre=");
+		builder.append("CE0504v01ToroField [nombre=");
 		builder.append(nombre);
 		builder.append(", color=");
 		builder.append(color);
