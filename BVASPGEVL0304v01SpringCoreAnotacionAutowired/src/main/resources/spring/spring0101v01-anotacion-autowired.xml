@@ -7,26 +7,6 @@
 
 	<context:annotation-config/>
 	
-	<bean id="idCEColorAnimal" class="pe.etg.bbva.spring.entity.CE0101v01ColorAnimal">
-		<property name="basePiel" value="white"></property>
-		<property name="texturaPiel" value="gray"></property>
-	</bean>
-
-	<!-- Uso de ref no hay Autowire-->
-	<bean id="idCELlama" class="pe.etg.bbva.spring.entity.CE0102v01LlamaAutowireNo" autowire="no">
-		<property name="nombre" value="Llama"></property>
-		<property name="color" ref="idCEColorAnimal"></property>
-	</bean>
-
-	<!-- Uso de ref ara Autowire -->
-	<bean id="idCEPuma" class="pe.etg.bbva.spring.entity.CE0103v01PumaAutowireByName" autowire="byName">
-		<property name="nombre" value="Puma"></property>
-	</bean>
-	
-	<bean id="idCECuy" class="pe.etg.bbva.spring.entity.CE0104v01CuyAutowireByType" autowire="byType">
-		<property name="nombre" value="Cuy"></property>
-	</bean>
-	
 	<bean id="idCEVizcacha" class="pe.etg.bbva.spring.entity.CE0105v01VizcachaAutowireConstructor" autowire="constructor">
 		<property name="nombre" value="Vizcacha"></property>
 	</bean>

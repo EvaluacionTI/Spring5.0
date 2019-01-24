@@ -7,7 +7,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import pe.etg.bbva.spring.controller.CC0301v01IntanciarWithSetAnimalAutowired;
 import pe.etg.bbva.spring.entity.CE0301v01AnimalAutowired;
-import pe.etg.bbva.spring.entity.CE0801v01Person;
 
 public class CV0801v01MostarXmlYnyeccionObjectos {
 	private static final Logger MOLOG = LoggerFactory.getLogger(CV0801v01MostarXmlYnyeccionObjectos.class);
