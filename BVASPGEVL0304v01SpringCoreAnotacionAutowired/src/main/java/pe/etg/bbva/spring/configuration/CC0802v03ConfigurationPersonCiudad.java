@@ -1,4 +1,4 @@
-package pe.etg.bbva.spring.controller;
+package pe.etg.bbva.spring.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

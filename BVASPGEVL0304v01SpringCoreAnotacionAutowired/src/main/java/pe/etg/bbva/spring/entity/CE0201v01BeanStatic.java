@@ -5,6 +5,7 @@ public class CE0201v01BeanStatic {
 	
 	private CE0201v01BeanStatic() {}
 	
+	@SuppressWarnings("unused")
 	private static CE0201v01BeanStatic createInstance() {
 		return oCEBeanStatic;
 	}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="idCECiudad" class="pe.etg.bbva.spring.entity.CE1001v01Ciudad">
+		<property name="nombre" value="ANCASH"></property>
+	</bean>
+
+	<bean id="idCEPais" class="pe.etg.bbva.spring.entity.CE1002v01Pais">
+		<property name="nombre" value="PERÚ"></property>
+		<property name="ciudades" >
+			<list>
+				<ref bean="idCiudad1"/>
+				<ref bean="idCiudad2"/>
+				<ref bean="idCiudad3"/>
+				<ref bean="idCiudad4"/>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="idCEPerson" class="pe.etg.bbva.spring.entity.CE1003v01Person">
+		<property name="id" value="199"></property>
+		<property name="codigo" value="DNU199"></property>
+		<property name="nombre" value="Luis Alex Vásquez Díaz"></property>
+		<property name="apodo" value="Pechito de lata"></property>
+
+		<property name="pais" ref="idCEPais"></property>
+	</bean>
+	
+	<bean id="idCiudad1" class="pe.etg.bbva.spring.entity.CE1001v01Ciudad">
+		<property name="nombre" value="Pallasca"></property>
+	</bean>
+
+	<bean id="idCiudad2" class="pe.etg.bbva.spring.entity.CE1001v01Ciudad">
+		<property name="nombre" value="Cabana"></property>
+	</bean>
+		
+	<bean id="idCiudad3" class="pe.etg.bbva.spring.entity.CE1001v01Ciudad">
+		<property name="nombre" value="Huandoval"></property>
+	</bean>
+
+	<bean id="idCiudad4" class="pe.etg.bbva.spring.entity.CE1001v01Ciudad">
+		<property name="nombre" value="Bolognesi"></property>
+	</bean>
+</beans>

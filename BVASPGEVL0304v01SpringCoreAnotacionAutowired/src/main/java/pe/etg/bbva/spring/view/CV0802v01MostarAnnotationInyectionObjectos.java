@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import pe.etg.bbva.spring.controller.CC0802v01ConfigurationPerson;
+import pe.etg.bbva.spring.configuration.CC0802v01ConfigurationPerson;
 import pe.etg.bbva.spring.entity.CE0802v01Pais;
 import pe.etg.bbva.spring.entity.CE0802v01Person;
 
