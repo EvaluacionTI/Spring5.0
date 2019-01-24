@@ -8,8 +8,8 @@
 		<property name="texturaPiel" value="intensidad medio"></property>
 	</bean>
 
-	<bean id="idCEToroConstructor" class="pe.etg.bbva.spring.entity.CE0502v01ToroConstructor">
-		<constructor-arg value="verde"></constructor-arg>
+	<bean id="idCEToroConstructor" class="pe.etg.bbva.spring.entity.CE0502v01ToroConstructor" autowire="constructor">
+		<constructor-arg ref="idCEAnimal"></constructor-arg>
 	</bean>
 	
 	<bean id="idCEToroSetter" class="pe.etg.bbva.spring.entity.CE0503v01ToroSetter">

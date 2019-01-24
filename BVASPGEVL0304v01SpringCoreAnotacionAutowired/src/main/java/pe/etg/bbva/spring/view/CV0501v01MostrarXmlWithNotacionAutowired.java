@@ -40,7 +40,6 @@ public class CV0501v01MostrarXmlWithNotacionAutowired {
 		
 		oCEToroSet.setNombre("Asignando por Setter una instancia");
 		oCEToroSet.setColor(oCEColor);
-		
 
 		MOLOG.info("====> Instancia con Setter ==> {} ",oCEToroSet );
 		
