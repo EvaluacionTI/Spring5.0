@@ -11,7 +11,7 @@ import pe.etg.bbva.spring.entity.CE0503v01ToroSetter;
 import pe.etg.bbva.spring.entity.CE0504v01ToroField;
 
 public class CV0501v01MostrarXmlWithNotacionAutowired {
-	private static Logger MOLOG = LoggerFactory.getLogger(CVMostrarContextWithPropertyAutowire.class);
+	private static Logger MOLOG = LoggerFactory.getLogger(CV0501v01MostrarXmlWithNotacionAutowired.class);
 	
 	private static ApplicationContext moCntx;
 	
