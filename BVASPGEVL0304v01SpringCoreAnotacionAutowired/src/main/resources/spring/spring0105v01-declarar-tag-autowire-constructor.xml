@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="color" class="pe.etg.bbva.spring.entity.CE0105v01ColorAnimal">
+		<property name="basePiel" value="white"></property>
+		<property name="texturaPiel" value="gray"></property>
+	</bean>
+	
+	<bean id="idCEVizcacha" class="pe.etg.bbva.spring.entity.CE0105v01VizcachaAutowireConstructor" autowire="constructor">
+		<property name="nombre" value="Vizcacha"></property>
+	</bean>
+	
+</beans>

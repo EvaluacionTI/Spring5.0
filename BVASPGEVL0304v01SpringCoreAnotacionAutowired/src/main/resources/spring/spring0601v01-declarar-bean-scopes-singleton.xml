@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="ciudad" class="pe.etg.bbva.spring.entity.CE0603v01Ciudad">
+		<property name="nombre" value="TAUCA"></property>
+	</bean>
+
+	<bean id="pais" class="pe.etg.bbva.spring.entity.CE0602v01Pais">
+		<property name="nombre" value="PERÚ"></property>
+	</bean>
+
+	<!-- 
+		Por defecto se considera el scope como singleton
+	 -->
+	<bean id="idCEPerson" class="pe.etg.bbva.spring.entity.CE0601v01Person" autowire="byName"  scope="singleton">
+		<property name="id" value="199"></property>
+		<property name="codigo" value="DNU199"></property>
+		<property name="nombre" value="Luis Alex Vásquez Díaz"></property>
+		<property name="apodo" value="Ricotona"></property>
+
+	</bean>
+	
+</beans>

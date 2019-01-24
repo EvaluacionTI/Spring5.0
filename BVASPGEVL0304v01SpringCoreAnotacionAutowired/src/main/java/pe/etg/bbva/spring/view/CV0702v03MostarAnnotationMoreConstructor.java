@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import pe.etg.bbva.spring.controller.CC0702v03ConfigurationMorePerson;
+import pe.etg.bbva.spring.configuration.CC0702v03ConfigurationMorePerson;
 import pe.etg.bbva.spring.entity.CE0701v01Person;
 
 public class CV0702v03MostarAnnotationMoreConstructor {
