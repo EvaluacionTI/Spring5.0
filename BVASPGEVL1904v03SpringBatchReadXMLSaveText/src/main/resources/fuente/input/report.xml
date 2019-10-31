@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company>
+	<record refId="1001">
+		<sales>213,100</sales>
+		<cantidad>980</cantidad>
+		<nameProduct>mkyong</nameProduct>
+		<fechaRegistro>29/7/2013</fechaRegistro>
+	</record>
+	<record refId="1002">
+		<sales>320,200</sales>
+		<cantidad>1080</cantidad>
+		<nameProduct>staff 1</nameProduct>
+		<fechaRegistro>30/7/2013</fechaRegistro>
+	</record>
+	<record refId="1003">
+		<sales>342,197</sales>
+		<cantidad>1200</cantidad>
+		<nameProduct>staff 2</nameProduct>
+		<fechaRegistro>30/7/2019</fechaRegistro>
+	</record>
+	<record refId="1004">
+		<sales>213,100</sales>
+		<cantidad>980</cantidad>
+		<nameProduct>mkyong</nameProduct>
+		<fechaRegistro>29/7/2013</fechaRegistro>
+	</record>
+	<record refId="1005">
+		<sales>320,200</sales>
+		<cantidad>1080</cantidad>
+		<nameProduct>staff 1</nameProduct>
+		<fechaRegistro>30/7/2013</fechaRegistro>
+	</record>
+	<record refId="1006">
+		<sales>342,197</sales>
+		<cantidad>1200</cantidad>
+		<nameProduct>staff 2</nameProduct>
+		<fechaRegistro>30/7/2019</fechaRegistro>
+	</record>	
+</company>

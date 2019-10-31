@@ -1,0 +1,29 @@
+# Requerimiento
+
+## I. Requerimiento
+
+	Realizar la inicialización de Sprint Boot utilizando el puerto 8020. 
+	Considerando que el puerto por defecto es el 8080.
+	Al momento de iniciar el servicio se debe visualizar el mensaje "Revisión Test con Spring Boot".
+
+## II. Procedimiento
+
+	1. Definir spring boot parent
+		2.1.3.RELEASE
+	2. Definir en el archivo application.properties la variable
+		server.port = 8020
+	3. Definir una clase controller de tipo servicio Rest en el paquete pe.etg.bbva.evalua.spring5.controller
+	4. Definir una clase vista para iniciar el spring boot en el paquete pe.etg.bbva.evalua.spring5.view
+	5. Definir una clase test para validar la url del spring boot
+
+## III. Prueba
+	1. Iniciar la clase vista con spring boot
+	2. Las tareas efectuadas en postman con uri base http://localhost:8020/
+	
+	|---------------------------|------------------|----------|
+	|          Acción           |       URI	       | Método   |
+	|---------------------------|------------------|----------|
+	|Mostrar un mensaje         | /       		   |  GET     |
+	
+	
+	

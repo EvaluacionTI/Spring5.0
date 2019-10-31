@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- Define la importación de la bd -->
+	<import resource="../config/job01-database-h2.xml"/>
+
+	<!-- Definir un repositorio -->
+	<bean id="jobRepository" class="org.springframework.batch.core.repository.support.JobRepositoryFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="transactionManager" ref="transactionManager"/>
+    </bean>
+
+	<!-- Define el lanzador de jobs -->
+	<bean id="idJobLauncher" class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+        <property name="jobRepository" ref="jobRepository"/>
+    </bean>
+</beans>

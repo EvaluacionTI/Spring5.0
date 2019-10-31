@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="idCEAlumno" class="pe.unjfsc.daw.spring.entidad.CEAlumno">
+		<property name="codigo" value="3310929382"></property>
+		<property name="numeroDNI" value="39828239"></property>
+		<property name="apellidoPaterno" value="DIAZ"></property>
+		<property name="apellidoMaterno" value="VASQUEZ"></property>
+		<property name="primerNombre" value="ALEXEI"></property>
+		<property name="segundoNombre" value="LUIS"></property>
+		<property name="tercerNombre" value="CRIS"></property>	
+	</bean>
+
+</beans>

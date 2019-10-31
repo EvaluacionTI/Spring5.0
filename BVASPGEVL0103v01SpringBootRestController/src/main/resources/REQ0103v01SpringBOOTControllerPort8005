@@ -1,0 +1,39 @@
+# Requerimiento
+
+## I. Requerimiento
+
+	Realizar la inicialización de Sprint Boot utilizando el puerto 8020. 
+	Considerando que el puerto por defecto es el 8080.
+	Al momento de iniciar el servicio se debe visualizar el mensaje "Revisión Test con Spring Boot".
+
+## II. Procedimiento
+
+	1. Definir spring boot parent
+		2.1.3.RELEASE
+	2. Definir en el archivo application.properties la variable
+		server.port = 8005
+	3. Definir clases controller de tipo servicio Rest en el paquete pe.etg.bbva.evalua.spring5.controller
+		CC0101v01Saludo.- Muestra el mensaje de arquitectura host
+		CC0102v01Persona .- Listado de la colecciona de datos del objeto persona
+		CC0201v01PetController.- Inyectar el servicio de la clase CS0202v01PetService, que lista todas las mascotas
+								 y lista por un identificador
+	4. Definir una clase service CS0202v01PetService, para implementar todas las mascotas y por un identificador
+	5. Definir una clase vista para iniciar el spring boot en el paquete pe.etg.bbva.evalua.spring5.view
+		a) Invocación de un rest controlet interno
+		b) Invocación de un rest controlet externo
+		c) Invocación de un rest para el uso del servicio service
+	5. Definir una clase test para validar la url del spring boot
+
+## III. Prueba
+	1. Iniciar la clase vista con spring boot
+	2. Las tareas efectuadas en postman con uri base http://localhost:8005/
+	
+	|-------------------------------|------------------|----------|
+	|          Acción           	|       URI	       | Método   |
+	|-------------------------------|------------------|----------|
+	|Mostrar un mensaje         	| /       		   |  	      |
+	|Mostrar mensaje            	| /hello           |		  |
+	|Listado de coleccion persona 	| /listado
+	|Listado all of mascotas        | /mascota
+	|Listado by id of mascotas      | /mascota/{id}
+	

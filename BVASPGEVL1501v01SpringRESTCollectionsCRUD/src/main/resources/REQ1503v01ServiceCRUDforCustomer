@@ -1,0 +1,94 @@
+# Requerimiento
+
+## I. Objetivo 
+
+	Mantenimiento CRUD para un Servicios Rest de la Entidad Cliente
+	
+## II. Especificación del Requerimiento
+
+	1. Desarrollar una API REST para efectuar un CRUD para la entidad estudiantes que les permita 
+	   leer, agregar, actualizar y eliminar clientes utilizando collections.
+	2. Identifica los recursos para exponer en la API.	
+	3. Defina los URI para esos recursos.
+	4. Asignar métodos HTTP a las operaciones CRUD.
+	5. Elija el tipo o tipos de medios para intercambiar datos.
+	6. Utilizaremos los métodos HTTP GET, POST, PUT y DELETE para nuestras operaciones CRUD, utilizando la notación @Component
+	7. Nuestra API REST usará JSON como el tipo de medio para intercambiar datos.
+	8. Utilizar el puerto 8020 para http.
+	9. Realizar los test unitarios con el puerto 8027
+   10. Configurar el log para mostrar los datos en consola 
+   11. Inyertar desde el controlador al model por medio de una declaración de la clase implementada 
+   12. Utilizar la notación @Autowired en la declaración
+	
+## III. Analisis
+
+	1. Datos del Proyecto
+	
+		Proyecto		:	BVASPGEVL1501v01SpringRESTCollectionsCRUD
+		Paquete base	:	pe.etg.bbva.evalua.spring5
+		Spring parent 	: 	2.1.3.RELEASE
+		Uri general		:	http://localhost/8020
+
+	2. Las tareas efectuadas son:
+	
+	|---------------------------|------------------|----------|
+	|          Acción           |       URI	       | Método   |
+	|---------------------------|------------------|----------|
+	|Leer todos los customes    | /customers       |  GET     |
+	|Lee un solo customes       | /customers/ {id} |  GET     |
+	|Agrega un customes         | /customers       |  POST    |
+	|Actualizar un customes     | /customers       |  PUT     |
+	|Eliminar un customes       | /customers/{id}  |  DELETE  |
+	|---------------------------|------------------|----------|
+
+	3. Las clases principales que se construyan solo una de ellas debe tener la inicialización de spring boot.
+		Caso contrario mostrará un mensaje como : Configuration error: found multiple declarations of @BootstrapWith
+
+### III. Solution
+
+	1. Spring y Java
+	
+	Se está utilizando java.util.Optional como un contenedor para nuestro objeto de Estudiante ya que nos ayudará a manejar 
+	casos donde el Estudiante es nulo. 
+	Esto es puramente una decisión de implementación y no tiene nada que ver con los conceptos o restricciones REST
+	
+	|-----------------------------------------------------------------------------------------------------------|
+	| N° |     Paquete                  | Componente                     |  Descripción                         |
+	|--------------------------------------------------------------------|--------------------------------------|
+	|  1 | entity                       | CECustomer                     | Clase cliente                        |
+	|  2 | model                        | CDCustomerCollection           | Clase model de acceso a datos        |
+	|  3 | controller.rest              | CCCustomerRestController       | Clase para mapear el front           |
+	|  4 | view                         | CV1303v01SpringRestCRUDCustomer| Clase main                           |  
+	|-----------------------------------------------------------------------------------------------------------|
+
+	2. Test
+
+	|-----------------------------------------------------------------------------------------------------------------|
+	| N° |     Paquete               | Componente                         |  Descripción                              |
+	|-----------------------------------------------------------------------------------------------------------------|
+	|  1 | entity                    | CEStudentTest                      | Utilizando @RunWith(Parameterized.class)  |
+	|  2 | model.repository          | CRStudentRepositoryTest            | Utilizando java.util.Optional             |
+	|  3 | view                      | CV1302v01SpringRestCRUDStudentTest |                                           |
+	|-----------------------------------------------------------------------------------------------------------------|
+
+### IV. Pruebas
+
+	1. Postman con URI : http://localhost:8020/
+	
+	|-----------------------------------|--------|------------------------------------------|
+    |          Acción                   | Método | Resultado                                |
+    |-----------------------------------|--------|------------------------------------------|
+    | students  					    | GET    | Un JSON de los estudiante                |
+    | students/104                      | GET    | Lista un estudiante en JSON              |
+    | students                          | POST   | Inyecta un JSON de un estudiante         |
+    | students                          | PUT    | Actualiza desde un JSON de un estudiante |
+    | students/103                      | DELETE | Eliminar un id                           |
+    |---------------------------------------------------------------------------------------|
+	
+	2. Browse
+	
+	|-----------------------------------|--------|------------------------------------------|
+    |          Acción                   | Método | Resultado                                |
+    |-----------------------------------|--------|------------------------------------------|
+    |http://localhost:8020/students     | GET    | Un JSON de los estudiante                |
+    |http://localhost:8020/students/104 | GET    | Lista un estudiante en JSON              |

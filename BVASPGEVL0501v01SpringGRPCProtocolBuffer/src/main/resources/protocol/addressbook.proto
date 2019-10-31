@@ -1,0 +1,16 @@
+package utilities;
+
+option java_package = "pe.etg.bbva.evalua.spring5.utilities";
+option java_outer_classname = "CUAddressBookProtos";
+
+message CEPersona{
+	required int32 id = 1;
+	required string name = 2;
+	optional string email = 3;
+	
+	repeated string numbers = 4;
+}
+
+message CEAddressBook{
+	repeated CEPersona people = 1;
+}

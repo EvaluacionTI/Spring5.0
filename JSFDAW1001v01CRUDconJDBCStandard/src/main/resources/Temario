@@ -1,0 +1,61 @@
+1. Requerimiento
+
+	Se tiene el modelo de datos de la tabla CTBt14_tipo_plan con los siguientes atributos
+	
+	cod_tipo_plan		
+cod_emp				
+cod_iso_idio_orgn	
+txt_abrv			
+txt_desc			
+sn_ver				
+sn_upd				
+sn_anu				
+	sn_del				
+	sn_dflt				
+	sn_act				
+	txt_user			
+	fec_user			
+	txt_last_user		
+	fec_last_user		
+	
+	
+	
+1. Generar el proyecto
+	Proyecto : UJFEIIDAW0901v01CRUDJdbcStandard
+	Grupo : pe.unjfsc.eei.sesion09
+	Artefacto : UJFWEBEII0901v01CRUDConJDBCStandard
+
+2. Adecuar el POM para agregar el jdbc de spring y jar de postgres
+
+3. Revisar que el jar se hubira cargado
+
+4. Crear los paquetes
+	pe.unjfsc.daw.sesion09.entity
+	pe.unjfsc.daw.sesion09.controller
+	pe.unjfsc.daw.sesion09.model
+	pe.unjfsc.daw.sesion09.view
+	
+5. Crear la entidad CE01TipoPlan en el paquete entity
+
+6. Generar las constantes para el SQL con postgres
+
+7. Implementar el modelo o acceso a datos de la CTBt14_tipo_plan
+
+8. Manejo de una utilidad para las fechas
+
+9. Configuración de context para base de datos postgres, denominar spring-postgres.xml en la carpeta
+	spring / database
+	
+10. Configuración de context para la capa modelo de la clase CD01TipoPlan, denominar spring-bean-tipo-plan en la carpeta
+	spring / entity
+
+11. Crear una clase vista para probar el acceso a la base de datos denominada CV0101v01ConsultaTipoPlan
+
+12. Crear la revisión de CRUD con los siguientes clases definidas
+	C = Crear o insertar	CV0201v01InsertandoTipoPlan
+	R = Consulta puntual o detalle
+		CV0501v01ConsultaTipoPlanPorCodigo
+		CV0601v01ConsultaTipoPlanAll
+	U = Modificación : CV0301v01ModificandoTipoPlan
+	D = Eliminación :  CV0401v01EliminandoTipoPlan
+

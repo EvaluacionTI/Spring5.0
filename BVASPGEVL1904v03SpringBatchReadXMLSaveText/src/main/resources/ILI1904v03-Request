@@ -1,0 +1,36 @@
+# Request
+
+## 1. Requerimiento 
+
+a) Crear un proceso batch con lectura de un archivo plano (*.csv) y mostrar en el log
+
+https://docs.spring.io/spring-batch/4.2.x/reference/html/index.html
+https://www.mkyong.com/spring-batch/spring-batch-example-xml-file-to-csv-file/
+https://www.javacodegeeks.com/2015/03/spring-batch-tutorial.html
+https://www.tutorialspoint.com/spring_batch/
+https://www.baeldung.com/introduction-to-spring-batch
+https://www.toptal.com/spring/spring-batch-tutorial
+https://github.com/spring-projects/spring-batch/tree/master/spring-batch-samples
+https://spring.io/guides/gs/batch-processing/
+https://www.adictosaltrabajo.com/2013/07/17/introduccion-spring-batch/
+https://www.concretepage.com/spring-boot/spring-boot-xml-configuration-example
+
+
+## 2. Procedimiento
+
+a) Definir la bd del proceso en con hsqldb en memoria
+b) Configurar un archivo xml para la conexion a base hsqldb en memoria
+c) Configurar el repository y el lanzador de job, joblauncher
+d) Generar un objeto de entrada y salida con los atributos id, precio, cantidad, nombre y fecha.
+e) El archivo tipo *.csv tendra las columnas ID, PRECIO, CANTIDAD, NOMBRE Y FECHA
+f) Generar una clase con implementación FieldSet para leer el archivo plano
+g) Generar una clase con implementación ItemProcessor que recibe el objeto de entrada, procesar y generar un objeto de salida
+h) Generar una clase con itemWriter ItemWriter que recibe el objeto de entrada
+i) Definir el bean para las columnas a leer con la clase DelimitedLineTokenizer
+j) Definir el bean para identificar el separador con la clase DefaultLineMapper asociado a la clase reader
+k) Definir la ruta del archivo de entrada 
+l) Definir el job con sus pasos, donde se define el chunk para el reader, processor and writer
+m) Definir el bean para el procesor y el writer.
+n) Generar un clase para lanzar el job 
+
+

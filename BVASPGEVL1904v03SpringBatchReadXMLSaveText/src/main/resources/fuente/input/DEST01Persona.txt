@@ -1,0 +1,8 @@
+Name,LastName,Gender
+Brad,Pitt,Male
+Natalie,Portman,female
+Leonardo,DiCaprio,male
+Ben,Affleck,male
+Jenifer,Lawrence,FEMALE
+Emma,Watson,female
+Un,known,

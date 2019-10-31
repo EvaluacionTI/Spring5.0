@@ -1,0 +1,65 @@
+<configuration scan="true">
+   <property name="FOLDER_HOME" value="bbva_spring_logback" />
+	<appender name="FILE_INFO"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${FOLDER_HOME}/bbva_spring_info.log</file>
+		<encoder
+			class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				%d{dd-MM-yyyy HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
+			</Pattern>
+		</encoder>
+
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- rollover daily -->
+			<fileNamePattern>
+				${FOLDER_HOME}/bbva_spring_info.%d{dd-MM-yyyy}.%i.log
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>100MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+
+	<appender name="FILE_ERROR"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>
+			${FOLDER_HOME}/bbva_spring_error.log
+		</file>
+		<encoder
+			class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>
+				%d{yyyy-MM-dd HH:mm:ss};%msg%n
+			</Pattern>
+		</encoder>
+
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- rollover daily -->
+			<fileNamePattern>
+				${FOLDER_HOME}/bbva_spring_error.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>100MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+	</appender>
+
+	<logger name="pe.bbva.architecture.paas.component.CCComponent1" level="info"
+		additivity="false">
+		<appender-ref ref="FILE_INFO" />
+	</logger>
+
+	<logger name="pe.bbva.architecture.paas.component.CCComponent2" level="error"
+		additivity="false">
+		<appender-ref ref="FILE_ERROR" />
+	</logger>
+
+	<root level="info">
+		<appender-ref ref="FILE_INFO" />
+		<appender-ref ref="FILE_ERROR" />
+	</root>
+</configuration>

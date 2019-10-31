@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="idCECanal" class="pe.etg.bbva.spring.entity.CE01Canal">
+		<property name="id" value="10"></property>
+		<property name="codigo" value="AX"></property>
+		<property name="abreviatura" value="PH"></property>
+		<property name="descripcion" value="FRONT PH"></property>
+	</bean>
+
+	<bean id="idCEEmpleado" class="pe.etg.bbva.spring.entity.CE02Empleado">
+		<property name="id" value="100"></property>
+		<property name="name" value="Esteban Alexander"></property>
+		<property name="salary" value="3000.00"></property>
+		<property name="designation" value="Gerente"></property>
+	</bean>
+</beans>
