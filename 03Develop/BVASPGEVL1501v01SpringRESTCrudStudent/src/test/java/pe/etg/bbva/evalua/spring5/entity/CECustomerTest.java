@@ -1,6 +1,17 @@
 package pe.etg.bbva.evalua.spring5.entity;
 
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Date;
+
+import org.junit.Before;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import pe.etg.bbva.evalua.spring5.entity.CECustomer;
 import pe.etg.bbva.evalua.spring5.entity.CEStudent;
 
