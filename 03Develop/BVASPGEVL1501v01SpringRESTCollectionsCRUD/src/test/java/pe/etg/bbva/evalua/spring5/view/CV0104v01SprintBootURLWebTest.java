@@ -12,11 +12,9 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
-import pe.etg.bbva.evalua.spring5.controller.rest.CC0104v01URLInicioWeb;
-
 @RunWith(SpringRunner.class)
 // 1. Asignar el dato del controlador
-@WebMvcTest(CC0104v01URLInicioWeb.class)
+@WebMvcTest(CV0104v01SprintBootURLWebTest.class)
 public class CV0104v01SprintBootURLWebTest {
 
 	// 2. Instanciar el Mockito
