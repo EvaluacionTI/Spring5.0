@@ -13,22 +13,22 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import pe.etg.bbva.evalua.spring5.entity.CEStudent;
-import pe.etg.bbva.evalua.spring5.model.repository.CRStudentRepository;
+import pe.etg.bbva.evalua.spring5.entity.CE0501v01Student;
+import pe.etg.bbva.evalua.spring5.model.repository.CR0501v01StudentRepository;
 
 public class CRStudentRepositoryTest {
 	private static final Logger MOLOG = LoggerFactory.getLogger(CRStudentRepositoryTest.class); 
 
-	private Collection<CEStudent> moCollectionStudent;
-	private Optional<CEStudent> moOptionalStudent;
-	private CRStudentRepository moCRStudentRepository;
-	private CEStudent moCEStudent, moCEStudentEsperado;
-	private Map<Long, CEStudent> moMapStudent = new HashMap<>();
+	private Collection<CE0501v01Student> moCollectionStudent;
+	private Optional<CE0501v01Student> moOptionalStudent;
+	private CR0501v01StudentRepository moCRStudentRepository;
+	private CE0501v01Student moCEStudent, moCEStudentEsperado;
+	private Map<Long, CE0501v01Student> moMapStudent = new HashMap<>();
 	
 	@Before
 	public void setUp() throws Exception {
-		moCRStudentRepository = new CRStudentRepository();
-		moCEStudent = new CEStudent();
+		moCRStudentRepository = new CR0501v01StudentRepository();
+		moCEStudent = new CE0501v01Student();
 
 		MOLOG.info("[EVL]  CEStudent() : {} ", moCEStudent);
 		MOLOG.info("[EVL]  CRStudentRepository() : {} ", moCRStudentRepository);
@@ -46,7 +46,7 @@ public class CRStudentRepositoryTest {
 	 */
 	public void testSaveStudent() {
 
-		moCEStudent = new CEStudent();
+		moCEStudent = new CE0501v01Student();
 		moCEStudent.setId(101L);
 		moCEStudent.setFirtName("Esteban");
 		moCEStudent.setLastName("Díaz");
@@ -55,7 +55,7 @@ public class CRStudentRepositoryTest {
 		moMapStudent.put(101L, moCRStudentRepository.save(moCEStudent));
 		MOLOG.info("[EVL]  {}", moCEStudent);
 		
-		moCEStudentEsperado = new CEStudent();
+		moCEStudentEsperado = new CE0501v01Student();
 		moCEStudentEsperado = moCRStudentRepository.save(moCEStudent);
 		
 		MOLOG.info(" [EVL]  Data Esperada : {}", moCEStudent);
@@ -68,7 +68,7 @@ public class CRStudentRepositoryTest {
 
 	@Test
 	public void testUpdateStudent() {
-		moCEStudent = new CEStudent();
+		moCEStudent = new CE0501v01Student();
 		moCEStudent.setId(102L);
 		moCEStudent.setFirtName("Isabela");
 		moCEStudent.setLastName("Díaz");
@@ -124,7 +124,7 @@ public class CRStudentRepositoryTest {
 	public void  dataStudent(){
 		
 		moMapStudent = new HashMap<>();
-		moCEStudent = new CEStudent();
+		moCEStudent = new CE0501v01Student();
 		
 		moCEStudent.setId(5L);
 		moCEStudent.setFirtName("Esteban");
@@ -132,14 +132,14 @@ public class CRStudentRepositoryTest {
 		moCEStudent.setYear("2002");
 		moMapStudent.put(100L, moCRStudentRepository.save(moCEStudent));
 
-		moCEStudent = new CEStudent();
+		moCEStudent = new CE0501v01Student();
 		moCEStudent.setId(22L);
 		moCEStudent.setFirtName("Illari");
 		moCEStudent.setLastName("Laskhmi");
 		moCEStudent.setYear("2014");
 		moMapStudent.put(105L, moCRStudentRepository.save(moCEStudent));
 		
-		moCEStudent = new CEStudent();
+		moCEStudent = new CE0501v01Student();
 		
 		moCEStudent.setId(30L);
 		moCEStudent.setFirtName("Luis");
@@ -147,7 +147,7 @@ public class CRStudentRepositoryTest {
 		moCEStudent.setYear("2017");
 		moMapStudent.put(110L, moCRStudentRepository.save(moCEStudent));
 
-		moCEStudent = new CEStudent();
+		moCEStudent = new CE0501v01Student();
 		
 		moCEStudent.setId(14L);
 		moCEStudent.setFirtName("Isabella");

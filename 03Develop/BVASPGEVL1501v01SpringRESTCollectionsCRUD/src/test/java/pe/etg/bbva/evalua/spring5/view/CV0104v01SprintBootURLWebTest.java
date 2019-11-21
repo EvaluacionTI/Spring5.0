@@ -15,25 +15,23 @@ import org.springframework.test.web.servlet.MockMvc;
 import pe.etg.bbva.evalua.spring5.controller.rest.CC0104v01URLInicioWeb;
 
 @RunWith(SpringRunner.class)
-
 // 1. Asignar el dato del controlador
 @WebMvcTest(CC0104v01URLInicioWeb.class)
-public class CVURLInicioWebWithSpringBootTest {
+public class CV0104v01SprintBootURLWebTest {
 
 	// 2. Instanciar el Mockito
 	@Autowired
 	private MockMvc oMockMvc;
 	
-	String sContentExpect = "application/json;charset=UTF-8";
-	String sContentDataMock = "application/json;charset=UTF-8";
-	
 	// 3. Realizar Test
-	// El slash porque el servicio rest inicial con invocarlo muestra el mensaje http://localhost:8020/
 	@Test
 	public void testGetRevisionTest() throws Exception {
 		
-		this.oMockMvc.perform(get("/").accept(MediaType.parseMediaType(sContentDataMock)))
-				.andExpect(status().isOk())
-				.andExpect(content().contentType(sContentExpect));
+		this.oMockMvc.perform(get("/")
+					.accept(MediaType.parseMediaType("application/json;charset=UTF-8"))
+				).andExpect(status().isOk())
+				 .andExpect(content().contentType("application/json"));
+		
 	}
+
 }
