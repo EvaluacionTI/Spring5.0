@@ -1,11 +1,11 @@
-package pe.bbva.architecture.model;
+package pe.bbva.spring5.model;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import pe.bbva.architecture.service.CIHelloService;
-import pe.bbva.architecture.service.impl.CMHelloService;
+import pe.bbva.spring5.service.CIHelloService;
+import pe.bbva.spring5.service.impl.CMHelloService;
 
 @Configuration
 @ComponentScan("pe.bbva.architecture")
