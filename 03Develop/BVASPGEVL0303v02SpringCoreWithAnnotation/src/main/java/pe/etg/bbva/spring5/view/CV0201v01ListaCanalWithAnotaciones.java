@@ -1,12 +1,12 @@
-package pe.etg.bbva.spring.view;
+package pe.etg.bbva.spring5.view;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 
-import pe.etg.bbva.spring.entity.CE0201v01Canal;
-import pe.etg.bbva.spring.model.CD0201v01ConfiguracionCanal;
+import pe.etg.bbva.spring5.entity.CE0201v01Canal;
+import pe.etg.bbva.spring5.model.CD0201v01ConfiguracionCanal;
 
 public class CV0201v01ListaCanalWithAnotaciones {
 	public static final Logger MOLOG = LoggerFactory.getLogger(CV0201v01ListaCanalWithAnotaciones.class); 

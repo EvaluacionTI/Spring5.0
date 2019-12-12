@@ -1,9 +1,9 @@
-package pe.etg.bbva.spring.model;
+package pe.etg.bbva.spring5.model;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import pe.etg.bbva.spring.entity.CE0301v01Person;
+import pe.etg.bbva.spring5.entity.CE0301v01Person;
 
 @Configuration
 public class CD0301v01ConfigurationPerson {

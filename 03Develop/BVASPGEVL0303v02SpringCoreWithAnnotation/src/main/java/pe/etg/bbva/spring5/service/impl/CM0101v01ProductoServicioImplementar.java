@@ -1,10 +1,10 @@
-package pe.etg.bbva.spring.service.impl;
+package pe.etg.bbva.spring5.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import pe.etg.bbva.spring.entity.CE0101v01Producto;
-import pe.etg.bbva.spring.service.CI0101v01ProductoServicio;
+import pe.etg.bbva.spring5.entity.CE0101v01Producto;
+import pe.etg.bbva.spring5.service.CI0101v01ProductoServicio;
 
 //@Service
 // 1. Al implementar esta clase y si deseamos utilizar anotaciones y usarlo como servicio no es necesario asignar la etiqueta @Service 

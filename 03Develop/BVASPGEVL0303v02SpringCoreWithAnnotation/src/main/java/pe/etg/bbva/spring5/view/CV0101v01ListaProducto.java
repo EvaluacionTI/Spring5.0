@@ -1,4 +1,4 @@
-package pe.etg.bbva.spring.view;
+package pe.etg.bbva.spring5.view;
 
 
 import org.slf4j.Logger;
@@ -6,8 +6,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 
-import pe.etg.bbva.spring.model.CD0101v01SpringConfiguration;
-import pe.etg.bbva.spring.service.impl.CM0101v01ProductoServicioImplementar;
+import pe.etg.bbva.spring5.model.CD0101v01SpringConfiguration;
+import pe.etg.bbva.spring5.service.impl.CM0101v01ProductoServicioImplementar;
 
 //@SpringBootApplication
 public class CV0101v01ListaProducto {

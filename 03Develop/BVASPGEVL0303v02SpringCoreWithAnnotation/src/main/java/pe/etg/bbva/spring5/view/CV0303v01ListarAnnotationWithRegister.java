@@ -1,23 +1,26 @@
-package pe.etg.bbva.spring.view;
+package pe.etg.bbva.spring5.view;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import pe.etg.bbva.spring.entity.CE0201v01Canal;
-import pe.etg.bbva.spring.entity.CE0301v01Person;
-import pe.etg.bbva.spring.model.CD0201v01ConfiguracionCanal;
-import pe.etg.bbva.spring.model.CD0301v01ConfigurationPerson;
+import pe.etg.bbva.spring5.entity.CE0201v01Canal;
+import pe.etg.bbva.spring5.entity.CE0301v01Person;
+import pe.etg.bbva.spring5.model.CD0201v01ConfiguracionCanal;
+import pe.etg.bbva.spring5.model.CD0301v01ConfigurationPerson;
 
-public class CV0302v01ListarVariasClases {
-	private static final Logger MOLOG = LoggerFactory.getLogger(CV0302v01ListarVariasClases.class);
+public class CV0303v01ListarAnnotationWithRegister {
+	private static final Logger MOLOG = LoggerFactory.getLogger(CV0303v01ListarAnnotationWithRegister.class);
 	private static AnnotationConfigApplicationContext oCntx;
 	
 	public static void main(String[] args) {
 		MOLOG.info("[EVL] Start");
 		
 		MOLOG.info("[EVL] Antes de instancias la Annotation : {}", oCntx);
-		oCntx = new AnnotationConfigApplicationContext(CD0301v01ConfigurationPerson.class, CD0201v01ConfiguracionCanal.class);
+		oCntx = new AnnotationConfigApplicationContext();
+		oCntx.register(CD0201v01ConfiguracionCanal.class);
+		oCntx.register(CD0301v01ConfigurationPerson.class);
+		oCntx.refresh();
 		
 		MOLOG.info("[EVL] Instancia Annotation : {}", oCntx);
 		MOLOG.info("[EVL] Vinculando el bean instanciado ");
