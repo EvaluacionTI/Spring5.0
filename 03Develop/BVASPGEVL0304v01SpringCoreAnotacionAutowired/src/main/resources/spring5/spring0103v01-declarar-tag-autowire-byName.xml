@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- 
+		3. Se asigna al id el valor de la propiedad de la entidad que hace referencia
+	-->
+	<bean id="color" class="pe.etg.bbva.spring5.entity.CE0103v01ColorAnimal">
+		<property name="basePiel" value="white"></property>
+		<property name="texturaPiel" value="gray"></property>
+	</bean>
+	
+	<!-- 
+		1. Se define el tag autowire por el tipo byName
+		2. Se retira la propiedad de referencia
+	-->
+	<bean id="idCEPuma" class="pe.etg.bbva.spring5.entity.CE0103v01PumaAutowireByName" autowire="byName">
+	</bean>
+	
+</beans>

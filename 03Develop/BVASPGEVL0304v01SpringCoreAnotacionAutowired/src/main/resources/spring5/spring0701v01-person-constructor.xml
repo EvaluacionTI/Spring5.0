@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="idCEPerson" class = "pe.etg.bbva.spring5.entity.CE0701v01Person">
+		<constructor-arg value="11"></constructor-arg>
+		<constructor-arg value="DNU199"></constructor-arg>
+		<constructor-arg value="09711332"></constructor-arg>
+		<constructor-arg value="MERY ROSA"></constructor-arg>
+	</bean>
+</beans>

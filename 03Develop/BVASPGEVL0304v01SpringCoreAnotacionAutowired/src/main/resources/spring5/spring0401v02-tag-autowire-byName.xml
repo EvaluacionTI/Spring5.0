@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<!-- 
+		Se cambia idCECiudad y en id se asigna la propiedad de la entidad
+		Se debe tener presente el nombre de las propiedades 
+	-->
+	<bean id="ciudad" class="pe.etg.bbva.spring5.entity.CE0403v01Ciudad">
+		<property name="nombre" value="ANCASH"></property>
+	</bean>
+
+	<!-- 
+		Se cambia idCEPais y en id se asigna la propiedad de la entidad
+		Se debe tener presente el nombre de las propiedades 
+	-->
+	<bean id="pais" class="pe.etg.bbva.spring5.entity.CE0402v01Pais">
+		<property name="nombre" value="PERÚ"></property>
+	</bean>
+
+	<!-- 
+		Se retiro las referencias y se agrega en el tag autowire="byName"
+		Bajo esta consideración estaria buscando la definicion de Pais y Ciudad por nombre.
+	-->
+	<bean id="idCEPerson" class="pe.etg.bbva.spring5.entity.CE0401v01Person" autowire="byName">
+		<property name="id" value="199"></property>
+		<property name="codigo" value="DNU199"></property>
+		<property name="nombre" value="Luis Alex Vásquez Díaz"></property>
+		<property name="apodo" value="Ricotona"></property>
+
+	</bean>
+	
+</beans>

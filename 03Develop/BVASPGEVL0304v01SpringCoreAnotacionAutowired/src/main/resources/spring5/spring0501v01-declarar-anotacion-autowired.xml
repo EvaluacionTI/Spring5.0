@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="idCEAnimal" class = "pe.etg.bbva.spring5.entity.CE0501v01ColorAnimal">
+		<property name="basePiel" value="rosado"></property>
+		<property name="texturaPiel" value="intensidad medio"></property>
+	</bean>
+
+	<bean id="idCEToroConstructor" class="pe.etg.bbva.spring5.entity.CE0502v01ToroConstructor" autowire="constructor">
+		<constructor-arg ref="idCEAnimal"></constructor-arg>
+	</bean>
+	
+	<bean id="idCEToroSetter" class="pe.etg.bbva.spring5.entity.CE0503v01ToroSetter">
+		<property name="nombre" value="Reina por Setter color rosa"></property>
+	</bean>
+
+	<bean id="idCEToroField" class="pe.etg.bbva.spring5.entity.CE0504v01ToroField">
+		<property name="nombre" value="Reina por Field color amarillo"></property>
+	</bean>
+		
+
+</beans>

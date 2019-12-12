@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+	<bean id="idCEPais" class="pe.etg.bbva.spring5.entity.CE0801v03Pais">
+		<property name="nombre" value="PERÚ"></property>
+	</bean>
+
+	<!-- Objecto que referncia a Pais que involucra inyectar la instancia de 
+		Pais -->
+	<bean id="idCEPerson" class="pe.etg.bbva.spring5.entity.CE0801v01Person">
+		<property name="id" value="199"></property>
+		<property name="codigo" value="DNU199"></property>
+		<property name="nombre" value="Luis Alex Vásquez Díaz"></property>
+		<property name="apodo" value="Pechito de lata"></property>
+
+		<property name="pais" ref="idCEPais"></property>
+	</bean>
+
+</beans>
