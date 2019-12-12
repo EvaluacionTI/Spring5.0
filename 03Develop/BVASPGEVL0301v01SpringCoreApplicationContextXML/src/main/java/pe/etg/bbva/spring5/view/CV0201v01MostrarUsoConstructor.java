@@ -1,9 +1,9 @@
-package pe.etg.bbva.spring.view;
+package pe.etg.bbva.spring5.view;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import pe.etg.bbva.spring.entity.CEMensaje;
+import pe.etg.bbva.spring5.entity.CEMensaje;
 
 public class CV0201v01MostrarUsoConstructor {
 	private static ApplicationContext oCntx;

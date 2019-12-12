@@ -1,4 +1,4 @@
-package pe.etg.bbva.spring.entity;
+package pe.etg.bbva.spring5.entity;
 
 import java.io.Serializable;
 import java.util.Date;

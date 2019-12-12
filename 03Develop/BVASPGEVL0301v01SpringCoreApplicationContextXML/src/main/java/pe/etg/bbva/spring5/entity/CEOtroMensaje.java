@@ -1,4 +1,4 @@
-package pe.etg.bbva.spring.entity;
+package pe.etg.bbva.spring5.entity;
 
 public class CEOtroMensaje {
 	private CEMensaje moCEMensaje;
