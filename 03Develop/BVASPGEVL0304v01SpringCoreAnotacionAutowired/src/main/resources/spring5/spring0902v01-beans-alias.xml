@@ -3,21 +3,21 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="idCECiudad" class="pe.etg.bbva.spring5.entity.CE0801v03Ciudad">
+	<bean id="idCECiudad"
+		class="pe.etg.bbva.spring5.entity.CE0801v03Ciudad">
 		<property name="nombre" value="ANCASH"></property>
 	</bean>
 
-	<bean id="idCEPais" class="pe.etg.bbva.spring5.entity.CE0801v03Pais">
+	<bean id="idCEPais"
+		class="pe.etg.bbva.spring5.entity.CE0801v03Pais">
 		<property name="nombre" value="PERÚ"></property>
 		<property name="ciudad" ref="idCECiudad"></property>
 	</bean>
 
-	<!-- 
-		Objecto que referncia a Pais que involucra inyectar la instancia de 
-		Pais.
-		2. Otra forma es asignando en el tag un nombre 
-	-->
-	<bean id="idCEPerson" name="oCEPersona2" class="pe.etg.bbva.spring5.entity.CE0801v03Person">
+	<!-- Objecto que referncia a Pais que involucra inyectar la instancia de 
+		Pais. 2. Otra forma es asignando en el tag un nombre -->
+	<bean id="idCEPerson" name="oCEPersona2"
+		class="pe.etg.bbva.spring5.entity.CE0801v03Person">
 		<property name="id" value="199"></property>
 		<property name="codigo" value="DNU199"></property>
 		<property name="nombre" value="Luis Alex Vásquez Díaz"></property>
@@ -25,7 +25,7 @@
 
 		<property name="pais" ref="idCEPais"></property>
 	</bean>
-	
+
 	<!-- 1. Es una forma denominando con su alias -->
-	<alias name="idCEPerson" alias="oCEPersona"/>
+	<alias name="idCEPerson" alias="oCEPersona" />
 </beans>

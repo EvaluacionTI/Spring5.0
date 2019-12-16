@@ -14,7 +14,7 @@ public class CV0801v03MostarXmlYnyeccionCiudad {
 	public static void main(String[] args) {
 		MOLOG.info("[EVL] Start");
 		MOLOG.info("[EVL] Antes de instanciar el Context : {}", oCntx);
-		oCntx = new ClassPathXmlApplicationContext("classpath:/spring/spring0801v03-person-object-ciudad.xml");
+		oCntx = new ClassPathXmlApplicationContext("classpath:/spring5/spring0801v03-person-object-ciudad.xml");
 
 		MOLOG.info("[EVL] Instancia del context : {}", oCntx);
 		MOLOG.info("[EVL] Vinculando el bean instanciado ");

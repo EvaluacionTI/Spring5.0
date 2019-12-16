@@ -14,7 +14,7 @@ public class CV0902v01MostarXmlBeanAlias {
 	public static void main(String[] args) {
 		MOLOG.info("[EVL] Start");
 		MOLOG.info("[EVL] Antes de instanciar el Context : {}", oCntx);
-		oCntx = new ClassPathXmlApplicationContext("classpath:/spring/spring0902v01-beans-alias.xml");
+		oCntx = new ClassPathXmlApplicationContext("classpath:/spring5/spring0902v01-beans-alias.xml");
 
 		MOLOG.info("[EVL] Instancia del context : {}", oCntx);
 		MOLOG.info("[EVL] Vinculando el bean instanciado ");

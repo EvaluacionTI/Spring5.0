@@ -5,22 +5,27 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
-	<context:annotation-config/>
-	
-	<bean id="idCEVizcacha" class="pe.etg.bbva.spring5.entity.CE0105v01VizcachaAutowireConstructor" autowire="constructor">
+	<context:annotation-config />
+
+	<bean id="idCEVizcacha"
+		class="pe.etg.bbva.spring5.entity.CE0105v01VizcachaAutowireConstructor"
+		autowire="constructor">
 		<property name="nombre" value="Vizcacha"></property>
 	</bean>
-	
-	<bean id="idCEToroSetter" class="pe.etg.bbva.spring5.entity.CE0503v01ToroSetter">
+
+	<bean id="idCEToroSetter"
+		class="pe.etg.bbva.spring5.entity.CE0503v01ToroSetter">
 		<property name="nombre" value="Rocky por Setter"></property>
 	</bean>
 
-	<bean id="idCEToroConstructor" class="pe.etg.bbva.spring5.entity.CE0502v01ToroConstructor">
+	<bean id="idCEToroConstructor"
+		class="pe.etg.bbva.spring5.entity.CE0502v01ToroConstructor">
 		<property name="nombre" value="Rocky por Constructor"></property>
 	</bean>
 
-	<bean id="idCEToroField" class="pe.etg.bbva.spring5.entity.CE0504v01ToroField">
+	<bean id="idCEToroField"
+		class="pe.etg.bbva.spring5.entity.CE0504v01ToroField">
 		<property name="nombre" value="Rocky por Field"></property>
 	</bean>
-		
+
 </beans>

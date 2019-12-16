@@ -1,4 +1,4 @@
-package pe.etg.bbva.spring.batch.view;
+package pe.etg.bbva.spring5.batch.view;
 
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.boot.SpringApplication;

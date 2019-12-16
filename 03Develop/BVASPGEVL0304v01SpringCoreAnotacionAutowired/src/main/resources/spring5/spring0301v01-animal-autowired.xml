@@ -4,13 +4,15 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
 	<!-- 1. Declaro el bean -->
-	<bean id="idCEAnimal" name = "CEAnimal" class="pe.etg.bbva.spring5.entity.CE0301v01AnimalAutowired">
+	<bean id="idCEAnimal" name="CEAnimal"
+		class="pe.etg.bbva.spring5.entity.CE0301v01AnimalAutowired">
 		<property name="basePiel" value="CANELA"></property>
-		<property name="texturaPiel" value = "SUAVE"></property>
+		<property name="texturaPiel" value="SUAVE"></property>
 	</bean>
 
 	<!-- 2. Defino la instancia para por medio del set del constructor -->
 
- 	<bean id="idCEAutowiredSet" class="pe.etg.bbva.spring5.controller.CC0301v01IntanciarWithSetAnimalAutowired">
+	<bean id="idCEAutowiredSet"
+		class="pe.etg.bbva.spring5.controller.CC0301v01IntanciarWithSetAnimalAutowired">
 	</bean>
 </beans>

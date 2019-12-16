@@ -2,9 +2,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>pe.etg.bbva.evalua.spring</groupId>
+	<groupId>pe.etg.bbva.evalua.spring5</groupId>
 	<artifactId>BVASPGEVL0802v01SpringMVC-EstructuraMavenWithJsp</artifactId>
 	<packaging>war</packaging>
+		<!--
+			[EVL-1] web.xml is missing and <failOnMissingWebXml> is set to true 
+		 -->
 	<version>0.0.1-SNAPSHOT</version>
 	<name>BVASPGEVL0802v01SpringMVC-EstructuraMavenWithJsp Maven Webapp</name>
 	<url>http://maven.apache.org</url>
@@ -73,9 +76,16 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			<!--
+				[EVL-1] Require un puglin de maven war porque el paquete está definido como war
+			 -->
 			<plugin>
-				<artifactId>maven-jar-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
 				<version>3.1.0</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-install-plugin</artifactId>

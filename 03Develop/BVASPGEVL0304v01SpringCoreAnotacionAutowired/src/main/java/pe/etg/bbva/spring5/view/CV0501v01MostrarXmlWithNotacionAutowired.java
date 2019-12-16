@@ -17,7 +17,7 @@ public class CV0501v01MostrarXmlWithNotacionAutowired {
 	
 	public static void main(String[] args) {
 		MOLOG.info("====> [ Start - main(String[] args) ] <====");
-		moCntx = new ClassPathXmlApplicationContext("classpath:/spring/spring0501v01-declarar-anotacion-autowired.xml");
+		moCntx = new ClassPathXmlApplicationContext("classpath:/spring5/spring0501v01-declarar-anotacion-autowired.xml");
 		
 		MOLOG.info("====> Contexto ==> {} ", moCntx );
 		MOLOG.info("====> Number Beans ==> {}", moCntx.getBeanDefinitionNames().length );

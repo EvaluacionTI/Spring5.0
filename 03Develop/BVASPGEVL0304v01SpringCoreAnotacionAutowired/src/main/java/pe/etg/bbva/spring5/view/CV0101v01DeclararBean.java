@@ -14,7 +14,7 @@ public class CV0101v01DeclararBean {
 	
 	public static void main(String[] args) {
 		MOLOG.info("[EVL] [ Start - main(String[] args) ] <====");
-		moCntx = new ClassPathXmlApplicationContext("classpath:/spring/spring0101v01-declerar-bean.xml");
+		moCntx = new ClassPathXmlApplicationContext("classpath:/spring5/spring0101v01-declerar-bean.xml");
 		
 		MOLOG.info("[EVL] Contexto ==> {} ", moCntx );
 		MOLOG.info("[EVL] Number Beans ==> {}", moCntx.getBeanDefinitionNames().length );

@@ -14,7 +14,7 @@ public class CV0701v01MostarXmlConstructor {
 	public static void main(String[] args) {
 		MOLOG.info("[EVL] Start");
 		MOLOG.info("[EVL] Antes de instanciar el Context : {}", oCntx);
-		oCntx = new ClassPathXmlApplicationContext("classpath:/spring/spring0701v01-person-constructor.xml");
+		oCntx = new ClassPathXmlApplicationContext("classpath:/spring5/spring0701v01-person-constructor.xml");
 
 		MOLOG.info("[EVL] Instancia del context : {}", oCntx);
 		MOLOG.info("[EVL] Vinculando el bean instanciado ");

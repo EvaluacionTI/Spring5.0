@@ -14,7 +14,7 @@ public class CV0104v01DeclararBeanWithTagAutowireTypebyType {
 	
 	public static void main(String[] args) {
 		MOLOG.info("[EVL] [ Start - main(String[] args) ] <====");
-		moCntx = new ClassPathXmlApplicationContext("classpath:/spring/spring0104v01-declarar-tag-autowire-byType.xml");
+		moCntx = new ClassPathXmlApplicationContext("classpath:/spring5/spring0104v01-declarar-tag-autowire-byType.xml");
 		
 		MOLOG.info("[EVL] Contexto ==> {} ", moCntx );
 		MOLOG.info("[EVL] Number Beans ==> {}", moCntx.getBeanDefinitionNames().length );

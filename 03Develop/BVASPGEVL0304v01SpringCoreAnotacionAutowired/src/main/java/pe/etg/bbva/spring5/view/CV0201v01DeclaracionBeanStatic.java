@@ -14,7 +14,7 @@ private static Logger MOLOG = LoggerFactory.getLogger(CV0201v01DeclaracionBeanSt
 	public static void main(String[] args) {
 		
 		MOLOG.info("====> [ Start - main(String[] args) ] <====");
-		moCntx = new ClassPathXmlApplicationContext("classpath:/spring/spring0201v01-bean-static.xml");
+		moCntx = new ClassPathXmlApplicationContext("classpath:/spring5/spring0201v01-bean-static.xml");
 		
 		MOLOG.info("====> Contexto ==> {} ", moCntx );
 		MOLOG.info("====> Number Beans ==> {}", moCntx.getBeanDefinitionNames().length );

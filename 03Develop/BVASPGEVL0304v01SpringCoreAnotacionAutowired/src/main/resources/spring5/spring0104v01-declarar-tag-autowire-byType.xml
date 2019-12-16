@@ -4,16 +4,18 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
 
-	<!-- 
-		2. Se asigna al id el valor de la propiedad de la entidad que hace referencia
-	-->
-	<bean id="color" class="pe.etg.bbva.spring5.entity.CE0104v01ColorAnimal">
+	<!-- 2. Se asigna al id el valor de la propiedad de la entidad que hace 
+		referencia -->
+	<bean id="color"
+		class="pe.etg.bbva.spring5.entity.CE0104v01ColorAnimal">
 		<property name="basePiel" value="white"></property>
 		<property name="texturaPiel" value="gray"></property>
 	</bean>
-	
-	<bean id="idCECuy" class="pe.etg.bbva.spring5.entity.CE0104v01CuyAutowireByType" autowire="byType">
+
+	<bean id="idCECuy"
+		class="pe.etg.bbva.spring5.entity.CE0104v01CuyAutowireByType"
+		autowire="byType">
 		<property name="nombre" value="rojizo"></property>
 	</bean>
-	
+
 </beans>

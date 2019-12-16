@@ -1,4 +1,4 @@
-package pe.etg.bbva.spring.batch.config;
+package pe.etg.bbva.spring5.batch.config;
  
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import pe.etg.bbva.spring.batch.step.CBReader;
-import pe.etg.bbva.spring.batch.step.CBWriter;
-import pe.etg.bbva.spring.batch.tasklet.TaskletStep;
+import pe.etg.bbva.spring5.batch.step.CBReader;
+import pe.etg.bbva.spring5.batch.step.CBWriter;
+import pe.etg.bbva.spring5.batch.tasklet.TaskletStep;
 
 @Configuration
 public class BatchConfig {

@@ -14,7 +14,7 @@ public class CV0601v01MostarXmlBeanWithAutowirebyNameScopeSingleton {
 	public static void main(String[] args) {
 		MOLOG.info("[EVL] Start");
 		MOLOG.info("[EVL] Antes de instanciar el Context : {}", oCntx);
-		oCntx = new ClassPathXmlApplicationContext("classpath:/spring/spring0601v01-declarar-bean-scopes-singleton.xml");
+		oCntx = new ClassPathXmlApplicationContext("classpath:/spring5/spring0601v01-declarar-bean-scopes-singleton.xml");
 
 		MOLOG.info("[EVL] Instancia del context : {}", oCntx);
 		MOLOG.info("[EVL] Vinculando el bean instanciado ");
