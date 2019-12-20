@@ -1,13 +1,13 @@
-package pe.etg.bbva.spring.view;
+package pe.etg.bbva.spring5.view;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import pe.etg.bbva.spring.entity.CEPerson;
-import pe.etg.bbva.spring.model.CD0401v01ConfiguracionConexionAnotacionOracle;
-import pe.etg.bbva.spring.model.CI0401v01PersonAnotation;
+import pe.etg.bbva.spring5.entity.CEPerson;
+import pe.etg.bbva.spring5.model.CD0401v01ConfiguracionConexionAnotacionOracle;
+import pe.etg.bbva.spring5.model.CI0401v01PersonAnotation;
 
 public class CV0406v01ConsultaAllDataPerson {
 	public static final Logger MOLOG = LoggerFactory.getLogger(CV0406v01ConsultaAllDataPerson.class);

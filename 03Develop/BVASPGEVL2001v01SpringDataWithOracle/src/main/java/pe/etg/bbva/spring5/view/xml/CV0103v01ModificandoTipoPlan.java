@@ -9,8 +9,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import pe.etg.bbva.spring.entity.CE01TipoPlan;
-import pe.etg.bbva.spring.model.impl.CD01TipoPlan;
+import pe.etg.bbva.spring5.entity.CE01TipoPlan;
+import pe.etg.bbva.spring5.model.impl.CD01TipoPlan;
 
 public class CV0103v01ModificandoTipoPlan {
 	private static Logger MOLOG = LoggerFactory.getLogger(CV0103v01ModificandoTipoPlan.class);

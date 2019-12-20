@@ -1,4 +1,4 @@
-package pe.etg.bbva.spring.model.impl;
+package pe.etg.bbva.spring5.model.impl;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,9 +10,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import pe.etg.bbva.spring.entity.CEConstanteSQL;
-import pe.etg.bbva.spring.entity.CEPerson;
-import pe.etg.bbva.spring.model.CI0201v01Person;
+import pe.etg.bbva.spring5.entity.CEConstanteSQL;
+import pe.etg.bbva.spring5.entity.CEPerson;
+import pe.etg.bbva.spring5.model.CI0201v01Person;
 
 /*
  * Se está inyectando el dataSource al jdbcTemplate por instancia con new 

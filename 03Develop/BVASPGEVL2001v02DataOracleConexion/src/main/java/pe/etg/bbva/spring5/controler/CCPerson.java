@@ -1,12 +1,12 @@
-package pe.etg.bbva.spring.controler;
+package pe.etg.bbva.spring5.controler;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import pe.etg.bbva.spring.entity.CEPerson;
-import pe.etg.bbva.spring.model.CICrudGeneral;
+import pe.etg.bbva.spring5.entity.CEPerson;
+import pe.etg.bbva.spring5.model.CICrudGeneral;
 
 @Component
 public class CCPerson {

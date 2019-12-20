@@ -1,4 +1,4 @@
-package pe.etg.bbva.spring.model;
+package pe.etg.bbva.spring5.model;
 
 import javax.sql.DataSource;
 
@@ -11,7 +11,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
  * El SCAN de la base para identificar la implemantación del modelo está en este paquete
  */
 @Configuration
-@ComponentScan(basePackages="pe.etg.bbva.spring.model")
+@ComponentScan(basePackages="pe.etg.bbva.spring5.model")
 public class CD0401v01ConfiguracionConexionAnotacionOracle {
 
 	@Bean

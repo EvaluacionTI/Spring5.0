@@ -15,7 +15,7 @@
 		<spring-framework.version>5.0.10.RELEASE</spring-framework.version>
 
 		<!-- Base de Datos -->
-		<oracle.version>11.2.0.2.0</oracle.version>
+		<oracle.version>19.3.0.0</oracle.version>
 		<!-- Hibernate / JPA -->
 		<hibernate.version>4.2.1.Final</hibernate.version>
 
@@ -63,8 +63,8 @@
 
 		<!-- Base de Datos -->
 		<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc6</artifactId>
+			<groupId>com.oracle.ojdbc</groupId>
+			<artifactId>ojdbc8</artifactId>
 			<version>${oracle.version}</version>
 		</dependency>
 		

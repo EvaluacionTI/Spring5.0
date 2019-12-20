@@ -5,7 +5,7 @@
 
 	<import resource="../database/spring-oracle01.xml"/>
 
-	<bean id="idCDPersonXml" class="pe.etg.bbva.spring.model.impl.CD0201v02PersonXml">
+	<bean id="idCDPersonXml" class="pe.etg.bbva.spring5.model.impl.CD0201v02PersonXml">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 
