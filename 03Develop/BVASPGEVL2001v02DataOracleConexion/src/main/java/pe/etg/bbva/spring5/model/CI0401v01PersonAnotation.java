@@ -1,8 +1,8 @@
-package pe.etg.bbva.spring.model;
+package pe.etg.bbva.spring5.model;
 
 import java.util.List;
 
-import pe.etg.bbva.spring.entity.CEPerson;
+import pe.etg.bbva.spring5.entity.CEPerson;
 
 public interface CI0401v01PersonAnotation {
 	void save(CEPerson poCEPerson);

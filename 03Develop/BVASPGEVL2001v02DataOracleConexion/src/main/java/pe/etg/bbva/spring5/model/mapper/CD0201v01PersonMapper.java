@@ -1,9 +1,9 @@
-package pe.etg.bbva.spring.model.mapper;
+package pe.etg.bbva.spring5.model.mapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import pe.etg.bbva.spring.entity.CEPerson;
+import pe.etg.bbva.spring5.entity.CEPerson;
 
 public class CD0201v01PersonMapper {
 	

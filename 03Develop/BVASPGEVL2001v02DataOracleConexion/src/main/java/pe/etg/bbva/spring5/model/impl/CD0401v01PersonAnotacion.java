@@ -1,4 +1,4 @@
-package pe.etg.bbva.spring.model.impl;
+package pe.etg.bbva.spring5.model.impl;
 
 import java.util.List;
 
@@ -8,10 +8,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import pe.etg.bbva.spring.entity.CEConstanteSQL;
-import pe.etg.bbva.spring.entity.CEPerson;
-import pe.etg.bbva.spring.model.CI0401v01PersonAnotation;
-import pe.etg.bbva.spring.model.mapper.CD0401v01PersonMapper;
+import pe.etg.bbva.spring5.entity.CEConstanteSQL;
+import pe.etg.bbva.spring5.entity.CEPerson;
+import pe.etg.bbva.spring5.model.CI0401v01PersonAnotation;
+import pe.etg.bbva.spring5.model.mapper.CD0401v01PersonMapper;
 
 @Repository
 public class CD0401v01PersonAnotacion implements CI0401v01PersonAnotation {

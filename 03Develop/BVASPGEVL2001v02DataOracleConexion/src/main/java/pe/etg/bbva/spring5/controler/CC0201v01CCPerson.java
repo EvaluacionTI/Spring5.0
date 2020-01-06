@@ -1,11 +1,11 @@
-package pe.etg.bbva.spring.controler;
+package pe.etg.bbva.spring5.controler;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import pe.etg.bbva.spring.entity.CEPerson;
-import pe.etg.bbva.spring.model.CI0201v01Person;
+import pe.etg.bbva.spring5.entity.CEPerson;
+import pe.etg.bbva.spring5.model.CI0201v01Person;
 
 public class CC0201v01CCPerson {
 	

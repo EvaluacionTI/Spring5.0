@@ -1,4 +1,4 @@
-package pe.etg.bbva.spring.view;
+package pe.etg.bbva.spring5.view;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
-import pe.etg.bbva.spring.model.CD0401v01ConfiguracionConexionAnotacionOracle;
+import pe.etg.bbva.spring5.model.CD0401v01ConfiguracionConexionAnotacionOracle;
 
 public class CV0301v01RevisarConexionYaml {
 	public static final Logger MOLOG = LoggerFactory.getLogger(CV0301v01RevisarConexionYaml.class);

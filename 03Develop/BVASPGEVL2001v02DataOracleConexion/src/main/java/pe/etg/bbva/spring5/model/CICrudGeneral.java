@@ -1,4 +1,4 @@
-package pe.etg.bbva.spring.model;
+package pe.etg.bbva.spring5.model;
 
 import java.util.List;
 
