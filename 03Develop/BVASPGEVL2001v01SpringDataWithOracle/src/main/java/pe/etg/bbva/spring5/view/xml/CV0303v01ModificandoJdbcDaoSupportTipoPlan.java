@@ -1,4 +1,4 @@
-package pe.etg.bbva.spring.view.xml;
+package pe.etg.bbva.spring5.view.xml;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -8,8 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import pe.etg.bbva.spring.entity.CE01TipoPlan;
-import pe.etg.bbva.spring.model.impl.CD03TipoPlanJdbcDaoSupport;
+import pe.etg.bbva.spring5.entity.CE01TipoPlan;
+import pe.etg.bbva.spring5.model.impl.CD03TipoPlanJdbcDaoSupport;
 
 public class CV0303v01ModificandoJdbcDaoSupportTipoPlan {
 	private static Logger MOLOG = LoggerFactory.getLogger(CV0303v01ModificandoJdbcDaoSupportTipoPlan.class);
