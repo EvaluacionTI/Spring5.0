@@ -8,7 +8,7 @@
 		Los argumentos deben estar en el orden adecuado y ser del tipo correcto. 
 	-->	
 	
-	<bean id="idCEMensaje" class="pe.etg.bbva.spring.entity.CEMensaje">
+	<bean id="idCEMensaje" class="pe.etg.bbva.spring5.entity.CEMensaje">
 		<property name="id" value="180"></property>
 		<property name="mensaje" value="Arquitectura Orientada a Servicios"></property>
 	</bean>

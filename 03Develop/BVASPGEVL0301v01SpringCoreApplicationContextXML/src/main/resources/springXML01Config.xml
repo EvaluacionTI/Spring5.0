@@ -7,5 +7,5 @@
 						http://www.springframework.org/schema/context 
 						http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
-	<bean id="idCEFechaProgramacionTerapia" class="pe.etg.bbva.spring.entity.CEFechaProgramacionTerapia"></bean>
+	<bean id="idCEFechaProgramacionTerapia" class="pe.etg.bbva.spring5.entity.CEFechaProgramacionTerapia"></bean>
 </beans>

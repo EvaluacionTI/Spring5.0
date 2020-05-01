@@ -11,6 +11,6 @@
 
 	<!--  Se agrego xmlns:c="http://www.springframework.org/schema/c"; observar la letra c que se agregó  -->
 
-	<bean id="idCEMensaje" class="pe.etg.bbva.spring.entity.CEMensaje" p:id="25" p:mensaje="CICS - COBOL - JOB"/>
+	<bean id="idCEMensaje" class="pe.etg.bbva.spring5.entity.CEMensaje" p:id="25" p:mensaje="CICS - COBOL - JOB"/>
 	
 </beans>

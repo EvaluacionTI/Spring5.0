@@ -8,7 +8,7 @@
 		Los argumentos deben estar en el orden adecuado y ser del tipo correcto. 
 	-->	
 	
-	<bean id="idCEMensaje" class="pe.etg.bbva.spring.entity.CEMensaje">
+	<bean id="idCEMensaje" class="pe.etg.bbva.spring5.entity.CEMensaje">
 		<constructor-arg value="150"></constructor-arg>
 		<constructor-arg value="Arquitectura Host"></constructor-arg>
 	</bean>

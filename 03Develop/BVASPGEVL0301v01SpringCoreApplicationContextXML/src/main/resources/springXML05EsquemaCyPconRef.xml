@@ -10,7 +10,7 @@
 						http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 	<bean	id="idCEOtroMensaje" 
-			class="pe.etg.bbva.spring.entity.CEOtroMensaje"
+			class="pe.etg.bbva.spring5.entity.CEOtroMensaje"
 			p:moCEMensaje-ref="moCEMensaje"
 	/>
 
