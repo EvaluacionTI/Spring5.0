@@ -8,7 +8,7 @@ import pe.etg.bbva.spring5.service.CI0101v01ProductoServicio;
 import pe.etg.bbva.spring5.service.impl.CM0101v01ProductoServicioImplementar;
 
 @Configuration
-@ComponentScan("pe.etg.bbva.spring.model")
+@ComponentScan("pe.etg.bbva.spring5.model")
 public class CD0101v01SpringConfiguration {
 	
 	@Bean("idCI0101v01ProductoServicio")
