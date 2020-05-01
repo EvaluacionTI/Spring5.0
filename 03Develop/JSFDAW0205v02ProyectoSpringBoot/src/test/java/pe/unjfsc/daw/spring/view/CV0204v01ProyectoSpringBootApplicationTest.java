@@ -1,4 +1,4 @@
-package pe.unjfsc.daw.spring;
+package pe.unjfsc.daw.spring.view;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class Jsfdaw0204v01ProyectoSpringApplicationTests {
+public class CV0204v01ProyectoSpringBootApplicationTest {
 
 	@Test
 	public void contextLoads() {
