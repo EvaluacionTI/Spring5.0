@@ -8,7 +8,7 @@ import pe.bbva.spring5.service.CIHelloService;
 import pe.bbva.spring5.service.impl.CMHelloService;
 
 @Configuration
-@ComponentScan("pe.bbva.architecture")
+@ComponentScan("pe.bbva.spring5")
 public class CDSpringConfiguration {
 
 	@Bean("idCIHelloService")
