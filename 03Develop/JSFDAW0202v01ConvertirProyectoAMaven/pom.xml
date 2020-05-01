@@ -4,6 +4,16 @@
   <artifactId>JSFDAW0202v01ConvertirProyectoAMaven</artifactId>
   <version>0.01</version>
   <packaging>war</packaging>
+  <dependencies>
+  <!-- Dependencias de un servlet Grabar : Ctrl + S -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+  </dependencies>
+  
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
