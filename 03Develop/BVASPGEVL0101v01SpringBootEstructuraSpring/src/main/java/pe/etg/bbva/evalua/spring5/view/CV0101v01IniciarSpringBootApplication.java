@@ -25,9 +25,9 @@ public class CV0101v01IniciarSpringBootApplication {
 		
 		SpringApplication app = new SpringApplication(CV0101v01IniciarSpringBootApplication.class);
 		app.run(args);
-		MOLOG.info("4. Digitar url : http://localhost:8080");
-		MOLOG.info("4. Digitar url : http://localhost:8080/");
-		MOLOG.info("4. Digitar url : http://localhost:8080/Evalua");
+		MOLOG.info("4. Digitar url : http://localhost:8015");
+		MOLOG.info("4. Digitar url : http://localhost:8015/");
+		MOLOG.info("4. Digitar url : http://localhost:8015/Evalua");
 	}
 
 }
