@@ -10,7 +10,7 @@ public class CVConfigurarContexto {
 		
 		// Definición del contexto de la aplicación
 		ApplicationContext oCntx = new ClassPathXmlApplicationContext("spring-config-xml.xml");
-		
+
 		System.out.println("Mostrando el contexto de la aplicación " + oCntx);
 
 		// Cerrando el contexto
