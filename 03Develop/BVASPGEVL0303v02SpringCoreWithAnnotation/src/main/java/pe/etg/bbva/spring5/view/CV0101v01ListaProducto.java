@@ -3,13 +3,14 @@ package pe.etg.bbva.spring5.view;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 
 import pe.etg.bbva.spring5.model.CD0101v01SpringConfiguration;
 import pe.etg.bbva.spring5.service.impl.CM0101v01ProductoServicioImplementar;
 
-//@SpringBootApplication
+@SpringBootApplication
 public class CV0101v01ListaProducto {
 	public static final Logger MOLOG = LoggerFactory.getLogger(CV0101v01ListaProducto.class); 
 	private static AbstractApplicationContext oCntx;

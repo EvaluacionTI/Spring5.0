@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+%t = muestra el nombre del thread que loguee el evento
+%p = muestra el nivel de prioridad
+%m = muestra el mensaje
+%n = deja un renglon
+
+%C = muestra el nombre de la clase
+%M = muestra el nombre del método
+%L = muestra el número de línea
+
+trace, debug, info, warn, error, fatal 
+-->
+
+<Configuration status="TRACE" monitorInterval="3600">
+    <Properties>
+    	<Property name="nivel">info</Property>
+    	<Property name="log_parttern_console">%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} %p %m%n</Property>
+    	<Property name="log_parttern_file">%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} %p %c{1.} [%t] %m%n</Property>
+        <Property name="log-path">D:\Programs\tmp\</Property>
+    </Properties>
+ 
+     <Appenders>
+		<!-- Redirecciona los mensajes hacia la consola -->
+        <Console name="console-log" target="SYSTEM_OUT">
+            <PatternLayout pattern="${log_parttern_console}"/>
+        </Console>
+        
+        <!-- Redirecciona los mensajes log hacia un archivo  -->
+        <!--  -->
+        <File name="archivo-log" fileName="${log-path}Log4j2Archivo.log">
+            <PatternLayout pattern="${log_parttern_file}"/>
+        </File>           
+    </Appenders>
+
+    <Loggers>
+        <Logger name="pe.bbva.spring5.evalua.modulo" additivity="false">
+            <AppenderRef ref="console-log"/>
+            <AppenderRef ref="archivo-log"/>
+        </Logger>
+
+        <Logger name="org.springframework.web" level="error" additivity="false">
+            <AppenderRef ref="archivo-log"/>
+        </Logger>
+            
+        <Root level="${nivel}">
+            <appender-ref ref="console-log" level="info"/>
+			<appender-ref ref="archivo-log" level="debug"/>
+        </Root>
+       
+    </Loggers>
+</Configuration>
