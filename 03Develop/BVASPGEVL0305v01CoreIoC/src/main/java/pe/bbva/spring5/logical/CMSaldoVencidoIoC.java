@@ -2,11 +2,17 @@ package pe.bbva.spring5.logical;
 
 public class CMSaldoVencidoIoC {
 
-	public void getInsertarSaldo() {
-		System.out.println("Insertando datos en Oracle");
+	CIMovimiento oMovimiento;
+	
+	public CMSaldoVencidoIoC(CIMovimiento poMovimiento) {
+		this.oMovimiento = poMovimiento;
 	}
 	
-	public void getEliminarSaldo(int id) {
-		System.out.println("Eliminao datos en Oracle");
+	public void getInsertarSaldo() {
+		oMovimiento.insertar();
+	}
+	
+	public void getEliminarSaldo(int pid) {
+		oMovimiento.eliminar(pid);
 	}
 }

@@ -1,0 +1,55 @@
+#Errores
+
+1. Problema:
+	Al cargar el proyecto Dynamic Proyject en spring 5 con STS no se visualiza el proyecto correctamente
+
+2. Diagnóstico
+	Los archivos de configuración no estan definidos correctamente
+	La carpeta .settings no contiene los arhivos de configuración
+	Incorrecta ubicación de la carpeta de java
+	Incorrecta ubicación de la carpeta WebContent o equivalente para web
+
+4. Estructura del proyecto Dynamic Project
+	
+	Nombre del proyecto	
+		.settings
+		build
+		src					: Código fuente de java
+		WebContent			: Código de WEB JSP, JS, CSS etc
+		.classpath			: Archivo de configuración de JDK, Src y Server
+		.project			: Archivo de configuración del proyecto con referencia a .settings
+
+3. Solución - Procedimiento
+
+3.1. Archivo de configuración [.classpath]
+	
+	Son los tag necesarios
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_241">
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.jboss.ide.eclipse.as.core.server.runtime.runtimeTarget/WildFly 17.0 Runtime">
+
+3.2. Archivo de configuración [.project]
+	
+	<name>estrucut</name>
+
+3.3. Carpeta de configuración .settings
+
+3.3.1. Archivo de configuración .jdftscope
+
+	[a] src indica la carpeta del código java
+	[b] WebContent la carpeta de la web para jsp, js, css, etc.
+	
+	<classpathentry excluding="**/bower_components/*|**/node_modules/*|**/*.min.js" kind="src" path="WebContent"/>
+
+3.3.2. Archivo org.eclipse.wst.common.component para deployar el proyecto
+
+	[a] Carpeta origen de la web
+	<wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+	
+	[b] Origen de las class donde se alojaran
+	<wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+    
+	[c] El nombre del contexto
+	<property name="context-root" value="estrucut"/>
+		
+		
