@@ -14,7 +14,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 @RunWith(SpringRunner.class)
 // 1. Asignar el dato del controlador
-@WebMvcTest(CV0104v01SprintBootURLWebTest.class)
+@WebMvcTest(CV0104v01URLInicioWebWithSpringBoot.class)
 public class CV0104v01SprintBootURLWebTest {
 
 	// 2. Instanciar el Mockito
