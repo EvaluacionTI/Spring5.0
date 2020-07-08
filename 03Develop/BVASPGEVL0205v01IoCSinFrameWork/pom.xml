@@ -4,7 +4,7 @@
 
   <groupId>pe.bbva.evalua.spring5</groupId>
   <artifactId>BVASPGEVL0205v01IoCSinFrameWork</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
 
   <name>Maven</name>
   <url>http://maven.apache.org/</url>
