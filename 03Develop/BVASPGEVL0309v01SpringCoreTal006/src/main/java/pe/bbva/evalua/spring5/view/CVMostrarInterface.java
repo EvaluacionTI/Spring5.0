@@ -27,9 +27,7 @@ public class CVMostrarInterface {
 		String cadena = oCLUtilidad.convertirMayuscula(oCEToro.getNombre());
 		
 		LOG.info(" {} ", numeroGenerado);
-		
 		LOG.info(cadena);
-
 		
 		((ConfigurableApplicationContext) oCntx).close();
 	}
