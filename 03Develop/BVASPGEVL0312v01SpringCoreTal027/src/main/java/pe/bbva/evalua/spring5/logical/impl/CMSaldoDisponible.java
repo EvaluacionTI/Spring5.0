@@ -9,7 +9,7 @@ import pe.bbva.evalua.spring5.logical.CIRetiroAFP;
 
 public class CMSaldoDisponible implements CIRetiroAFP {
 	public static final Logger LOG = LoggerFactory.getLogger("CMSaldoDisponible");
-	
+
 	@Override
 	public double saldoDisponible(CESaldoAfiliado poCESaldo) {
 		double iSaldoResult = 0;
