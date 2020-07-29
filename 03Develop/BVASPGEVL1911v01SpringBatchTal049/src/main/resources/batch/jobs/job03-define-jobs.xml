@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:batch="http://www.springframework.org/schema/batch"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- 
+		A. Referencia al contexto 
+	-->
+	<import resource="../config/job02-batch-context.xml" />
+
+	<!-- 
+		B. Definir los beans de las Entity
+	-->
+	<bean id="idCESaldoAfiliado" class = "pe.bbva.evalua.spring5.entity.CESaldoAfiliadoCustom" scope="prototype"/>
+
+	<!--
+		C. Definir el JOB 
+	-->		
+	<batch:job id="idFirstJobBatch">
+		<batch:step id="idFirstStep">
+			<batch:tasklet>
+				<batch:chunk reader="idReaderPostgres" processor="idProcesor" writer="idWriterConsole" commit-interval="10" />
+			</batch:tasklet>
+		</batch:step>
+	</batch:job>
+		
+	<!-- 
+		D. Definición de Postgres
+	-->
+	<bean id="idReaderPostgres" class="org.springframework.batch.item.database.JdbcCursorItemReader">
+		<property name="dataSource" ref="dataSource" /> 
+		<property name="sql" value="select * from aemsa.AFPt10_saldo_afiliado"/>
+		<property name="rowMapper">
+			<bean id="idRowMapper" class="pe.bbva.evalua.spring5.mapper.CDMapperSaldoAfiliado"/>
+		</property>
+		<property name="maxRows" value="300"></property>
+		<property name="fetchSize" value="100"></property>
+	</bean>
+
+	<bean id="idProcesor" class ="pe.bbva.evalua.spring5.process.CUProcesSaldoAfiliado"/>	
+
+	<bean id="idWriterConsole" class="pe.bbva.evalua.spring5.writer.CDWriterSaldoAfiliado"></bean>
+
+</beans>
