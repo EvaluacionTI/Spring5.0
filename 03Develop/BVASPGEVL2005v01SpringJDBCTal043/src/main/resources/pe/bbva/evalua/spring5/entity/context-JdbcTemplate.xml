@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<import resource="classpath:/pe/bbva/evalua/spring5/database/spring-postgres.xml"/>
+
+	<bean id="idCESaldoAfiliado" class="pe.bbva.evalua.spring5.entity.CESaldoAfiliadoCustom">
+	</bean>
+	
+	<bean id="idCDSaldoAfiliado" class="pe.bbva.evalua.spring5.model.impl.CDSaldoAfiliado">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+
+</beans>
