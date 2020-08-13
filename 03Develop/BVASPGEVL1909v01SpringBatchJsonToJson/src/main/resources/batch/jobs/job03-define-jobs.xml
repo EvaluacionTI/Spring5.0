@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:batch="http://www.springframework.org/schema/batch"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- A. Referencia al contexto -->
+	<import resource="../config/job02-batch-context.xml" />
+
+	<batch:job id="idFirstJobBatch">
+		<batch:step id="idFirstStep">
+			<batch:tasklet>
+				<batch:chunk reader="idJsonReader" processor="idJsonProcesor" writer="idJsonWriter" commit-interval="10" />
+			</batch:tasklet>
+		</batch:step>
+	</batch:job>
+
+ 	
+	<bean id="idJsonMapper" class="org.springframework.batch.item.json.JsonObjectReader">
+		<property name="objectMapper">
+			<bean class="pe.bbva.evalua.spring5.mapper.CUReaderJsonMapper"></bean>
+		</property>
+	</bean>
+
+	<bean id="idJsonReader" class="org.springframework.batch.item.json.JacksonJsonObjectReader">
+		<property name="resource" value="classpath:/fuente/input/Compras.json"></property>
+		<property name="mapper" ref="idJsonMapper"></property>
+	</bean>
+
+	<bean id="idJsonProcesor" class="pe.bbva.evalua.spring5.process.CLCompraProcessor"></bean>
+
+	<bean id="idJsonWriter" class="pe.bbva.evalua.spring5.writer.CUWriterJsonCompra"></bean>
+
+<!-- 
+	<bean id="idCompraToken"
+		class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
+		<property name="delimiter" value=","></property>
+		<property name="names" value="ID, PRECIO, CANTIDAD, NOMBRE, FECHA"></property>
+	</bean>
+
+	<bean id="idCompraLineMapper"
+		class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
+		<property name="lineTokenizer" ref="idCompraToken" />
+		<property name="fieldSetMapper">
+			<bean class="pe.bbva.spring.batch.mapper.CLCompraMapper"></bean>
+		</property>
+	</bean>
+
+	<bean id="idCompraReader" class="org.springframework.batch.item.file.FlatFileItemReader">
+		<description>Se define la fuenta de entrada u origen de datos
+		</description>
+		<property name="resource" value="classpath:/fuente/input/compras.csv"></property>
+		<property name="lineMapper" ref="idCompraLineMapper" />
+	</bean>
+ -->
+ 
+</beans>

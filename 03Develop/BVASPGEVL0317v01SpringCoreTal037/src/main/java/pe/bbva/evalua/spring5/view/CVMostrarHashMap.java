@@ -3,6 +3,7 @@ package pe.bbva.evalua.spring5.view;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import pe.bbva.evalua.spring5.entity.CESaldoAfiliadoCustom;
@@ -33,7 +34,7 @@ public class CVMostrarHashMap {
 
 		LOG.info("[EVL] Insert : ");
 		oLista.saveRetiroHashMap("A29", new CESaldoAfiliadoCustom(29, "2927201517", 292929.29));
-
+		((ConfigurableApplicationContext) oCntx).close();
 	}
 
 }

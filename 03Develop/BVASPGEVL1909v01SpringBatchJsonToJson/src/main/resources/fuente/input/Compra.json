@@ -1,0 +1,16 @@
+[
+	{"id":"1001","precio":2131.00,"cantidad":980,"nombre":"paas", "fecha":"29/01/2018"},
+	{"id":"1003","precio":342.197,"cantidad":1200,"nombre":"clound 2",    "fecha":"01/03/2018"},
+	{"id":"1004","precio":213.100,"cantidad": 980,"nombre":"laptop",      "fecha":"02/04/2018"},
+	{"id":"1002","precio":320.200,"cantidad":1080,"nombre":"iaas 1",      "fecha":"30/02/2018"},
+	{"id":"1005","precio":320.200,"cantidad":1080,"nombre":"ganaderia 1", "fecha":"04/05/2018"},
+	{"id":"1006","precio":342.197,"cantidad":1200,"nombre":"deportivo 2", "fecha":"05/06/2018"},
+	{"id":"1007","precio":213.100,"cantidad": 980,"nombre":"comercio exterior", "fecha":"06/07/2018"},
+	{"id":"1008","precio":320.200,"cantidad":1080,"nombre":"leasing 1",   "fecha":"07/08/2018"},
+	{"id":"1009","precio":342.197,"cantidad":1200,"nombre":"prestamos 2", "fecha":"08/09/2018"},
+	{"id":"1010","precio":213.100,"cantidad": 980,"nombre":"contratos",   "fecha":"09/10/2018"},
+	{"id":"1011","precio":320.200,"cantidad":1080,"nombre":"compras 1",   "fecha":"10/11/2018"},
+	{"id":"1013","precio":342.197,"cantidad":1200,"nombre":"ventas 2",    "fecha":"11/12/2018"}
+]
+
+

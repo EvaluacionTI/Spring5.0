@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Caso asignado un valor 
+
+	<bean id="idCE01Afiliado" class="pe.bbva.evalua.spring5.entity.CE01Afiliado">
+		<constructor-arg value="2"></constructor-arg>
+	</bean>
+	 -->
+	<!-- Caso 2: asignado un valor por el tipo de dato 
+
+	<bean id="idCE01Afiliado" class="pe.bbva.evalua.spring5.entity.CE01Afiliado">
+		<constructor-arg type="int" value="2"></constructor-arg>
+		<constructor-arg type="String" value="Chabelo"></constructor-arg>
+	</bean>
+	--> 	
+
+	<!-- Caso 3: asignado un valor por el index 
+	-->	 
+	<bean id="idCE01Afiliado" class="pe.bbva.evalua.spring5.entity.CE01Afiliado">
+		<constructor-arg index="1" type="String" value="2"></constructor-arg>
+		<constructor-arg index="2" type="String" value="Chabelo"></constructor-arg>
+		<constructor-arg index="0" value="2"></constructor-arg>
+	</bean>
+
+</beans>

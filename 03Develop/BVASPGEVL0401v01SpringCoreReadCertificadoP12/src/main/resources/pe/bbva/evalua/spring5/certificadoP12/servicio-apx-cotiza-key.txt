@@ -1,0 +1,2 @@
+chameleon.certificate.internal.user=pfco-bot-apx-cotiza.p12
+chameleon.certificate.internal.password=BN3t0!21!

@@ -1,3 +1,10 @@
 Manifest-Version: 1.0
-Class-Path: 
+Implementation-Title: BVASPGEVL2002v03SpringDataMongoDbSpringMVC
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: P028036
+Implementation-Vendor-Id: pe.etg.bbva.evalua.spring5
+Build-Jdk: 1.8.0_241
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/BVASPGEVL2002v03SpringDataMongoDbSpringMVC
+Created-By: Maven Integration for Eclipse
 
