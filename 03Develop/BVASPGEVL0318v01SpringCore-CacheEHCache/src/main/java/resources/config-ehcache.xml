@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd"
+	updateCheck="true"
+	monitoring="autodetect"
+	dynamicConfig="true"
+	maxBytesLocalHeap="100M"
+	>
+	
+	<cache name="evaluaCache"
+		maxElementsInMemory="1000"
+		maxEntriesLocalHeap="10000"
+		maxBytesLocalOffHeap="true"
+		maxElementsOnDisk="1000000"
+		
+		eternal="false"
+		timeToIdleSeconds="120" 
+		timeToLiveSeconds="600"
+		
+		memoryStoreEvictionPolicy="LRU"
+
+		overflowToOffHeap="true"
+		overflowToDisk="true" 
+
+		diskPersistent="false" 
+		diskExpiryThreadIntervalSeconds="120" 
+		>
+		<persistence strategy="localTempSwap" />
+	</cache>
+
+</ehcache>
