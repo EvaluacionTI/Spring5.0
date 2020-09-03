@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			 "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="idCEEntity" 	class="pe.unjfsc.daw.spring5.entity.CEEntity">
+		<property name="id" value="3"></property>
+		<property name="nombre" value="Luis"></property>
+		<property name="direccion" value="Av. San Luis"></property>
+	</bean>
+
+	<bean id="idCEEmpresa" 	class="pe.unjfsc.daw.spring5.entity.CEEmpresa">
+		<property name="RUC" value="20514330175"></property>
+
+	</bean>
+	<bean id="idCEPasajero" 	class="pe.unjfsc.daw.spring5.entity.CEPasajero">
+		<property name="DNI" value="09313657"></property>
+	</bean>
+
+	<bean id="idCEDatoRuta" class="pe.unjfsc.daw.spring5.entity.CEDatoRuta">
+		<property name="origen" value="Lima"></property>
+		<property name="destino" value="Chiclayo"></property>
+		<property name="fechaViaje" value="02/08/2020"></property>
+		<property name="horaViaje" value="16:30pm"></property>
+		<property name="numeroAsiento" value="4"></property>
+		<property name="embarque" value="Av. 28Julio"></property>
+		<property name="desembarque" value="Av. San Jose"></property>
+	</bean>
+	
+	<bean id="idCEDetalle" 	class="pe.unjfsc.daw.spring5.entity.CEDetalle">
+		<property name="concepto" value="Servicio Transporte Interprovincial"></property>
+		<property name="cantidad" value="1"></property>
+		<property name="precio" value="100"></property>
+	</bean>
+	
+	<bean id="idCEMoneda" 	class="pe.unjfsc.daw.spring5.entity.CEMoneda">
+		<property name="codigo" value="S/"></property>
+		<property name="nombre" value="Nuevos soles"></property>
+	</bean>
+	
+	<bean id="idCETotales" 	class="pe.unjfsc.daw.spring5.entity.CETotales">
+		<property name="operacionGratuita" value="0"></property>
+		<property name="operacionExonerada" value="0"></property>
+		<property name="operacionInafecta" value="1000"></property>
+		<property name="operacionGravada" value="0"></property>
+		<property name="totalPagar" value="100"></property>
+	</bean>
+
+	<bean id="idCEDistancia" 	class="pe.unjfsc.daw.spring5.entity.CEDistancia" >
+		<property name="distanciaOrigen" value="100"></property>
+		<property name="distanciaDestino" value="890.97"></property>
+	</bean>
+
+	<bean id="idCMPasajero" 	class="pe.unjfsc.daw.spring5.logical.impl.CMPasajero" >
+	</bean>
+
+	<bean id="idCMRevisionNumeroCadena" 	class="pe.unjfsc.daw.spring5.logical.impl.CMRevisionNumeroCadena" >
+	</bean>
+
+	
+</beans>
