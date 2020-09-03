@@ -39,6 +39,7 @@
 	</bean>
 	
 	<bean id="idCETotales" 	class="pe.unjfsc.daw.spring5.entity.CETotales">
+		<property name="oMoneda" ref="idCEMoneda"></property>
 		<property name="operacionGratuita" value="0"></property>
 		<property name="operacionExonerada" value="0"></property>
 		<property name="operacionInafecta" value="1000"></property>

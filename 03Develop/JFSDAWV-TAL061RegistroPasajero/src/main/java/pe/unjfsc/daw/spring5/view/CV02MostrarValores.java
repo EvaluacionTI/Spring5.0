@@ -6,12 +6,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import pe.unjfsc.daw.spring5.entity.CEDatoRuta;
-import pe.unjfsc.daw.spring5.entity.CEDetalle;
 import pe.unjfsc.daw.spring5.entity.CEDistancia;
-import pe.unjfsc.daw.spring5.entity.CEEmpresa;
 import pe.unjfsc.daw.spring5.entity.CEEntity;
-import pe.unjfsc.daw.spring5.entity.CEMoneda;
 import pe.unjfsc.daw.spring5.entity.CEPasajero;
 import pe.unjfsc.daw.spring5.entity.CETotales;
 import pe.unjfsc.daw.spring5.logical.CIPasajero;
@@ -31,7 +27,11 @@ public class CV02MostrarValores {
 		
 		LOG.info("[EVL] Revisando los beans ");
 		
+		CEEntity oCEEntity = (CEEntity) oCntx.getBean("idCEEntity");
+		LOG.info("[EVL] CEPasajero  : {}", oCEEntity);
+		
 		CEPasajero oCEPasajero = (CEPasajero) oCntx.getBean("idCEPasajero");
+		oCEPasajero.setNombre("  Revision de Desarrollo Aplicaciones Web  ");
 		LOG.info("[EVL] CEPasajero  : {}", oCEPasajero);
 	
 		CEDistancia oCEDistancia = (CEDistancia) oCntx.getBean("idCEDistancia");
@@ -40,7 +40,6 @@ public class CV02MostrarValores {
 		CETotales oCETotales = (CETotales) oCntx.getBean("idCETotales");
 		LOG.info("[EVL] CETotales  : {}", oCETotales);	
 
-		
 		CIPasajero oCMPasajero = (CMPasajero) oCntx.getBean("idCMPasajero");
 		LOG.info("[EVL] CETotales  : {}", oCMPasajero.calcularDistancia(oCEDistancia));
 		
