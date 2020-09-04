@@ -7,7 +7,21 @@
 	<bean id="idCECovid19" class="pe.bbva.evalua.spring5.entity.CECovid19">
 	</bean>
 	
-		<bean id="idCMCovid" class="pe.bbva.evalua.spring5.logical.impl.CMProyectarCovid">
+	<bean id="idCECovid19Set" class="pe.bbva.evalua.spring5.entity.CECovid19Set">
+		<property name="day" value="1"></property>
+		<property name="fallecido" value="3"></property>
+		<property name="nacimiento" value="4"></property>
+	</bean>
+	
+	<bean id="idCECovid19Cons" class="pe.bbva.evalua.spring5.entity.CECovid19Constructor">
+		<constructor-arg value="15"></constructor-arg>
+		<constructor-arg value="17"></constructor-arg>
+		<constructor-arg value="20"></constructor-arg>
+		<constructor-arg value="27"></constructor-arg>
+	</bean>
+	
+	
+	<bean id="idCMCovid" class="pe.bbva.evalua.spring5.logical.impl.CMProyectarCovid">
 	</bean>
 
 </beans>
