@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="idCE04Persona" class="pe.bbva.evalua.spring5.entity.CE04PersonaBeanCollection">
+		<property name="id" value="15"></property>
+		<property name="nombre" value="83782"></property>
+		<property name="apodo" value="EIAS"></property>
+
+		<property name="pais" ref="idCE04Pais"></property>
+	</bean>
+
+	<bean id="idCE04Pais" class="pe.bbva.evalua.spring5.entity.CE04PaisCollection">
+		<property name="nombre" value = "Perú"></property>
+		<property name="listCiudad">
+			<list>
+				<ref bean="idCECiudad01"/>
+				<ref bean="idCECiudad02"/>
+				<ref bean="idCECiudad03"/>
+				<ref bean="idCECiudad04"/>
+				<ref bean="idCECiudad05"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="idCECiudad01" class="pe.bbva.evalua.spring5.entity.CE0202Ciudad">
+		<property name="nombre" value = "Chilca"></property>
+	</bean>
+	
+	<bean id="idCECiudad02" class="pe.bbva.evalua.spring5.entity.CE0202Ciudad">
+		<property name="nombre" value = "Canete"></property>
+	</bean>
+	
+	<bean id="idCECiudad03" class="pe.bbva.evalua.spring5.entity.CE0202Ciudad">
+		<property name="nombre" value = "Chincha"></property>
+	</bean>
+	
+	<bean id="idCECiudad04" class="pe.bbva.evalua.spring5.entity.CE0202Ciudad">
+		<property name="nombre" value = "Tacna"></property>
+	</bean>
+	
+	<bean id="idCECiudad05" class="pe.bbva.evalua.spring5.entity.CE0202Ciudad">
+		<property name="nombre" value = "Ancash"></property>
+	</bean>
+</beans>

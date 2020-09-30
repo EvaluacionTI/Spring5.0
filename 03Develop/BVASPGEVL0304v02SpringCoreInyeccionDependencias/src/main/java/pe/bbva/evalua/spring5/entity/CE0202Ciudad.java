@@ -10,4 +10,5 @@ public class CE0202Ciudad {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	
 }

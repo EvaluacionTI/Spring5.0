@@ -1,4 +1,4 @@
-package pe.bbva.evalua.spring5.view.constructor;
+package pe.bbva.evalua.spring5.view;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +19,7 @@ public class CV02MostrarInyeccionObjetos {
 	public static void main(String[] args) {
 		LOG.info("[EVL] Revisando inyeccion dependencias por constructor");
 		
-		ApplicationContext oCntx = new ClassPathXmlApplicationContext("context-inyeccion-objetos.xml");
+		ApplicationContext oCntx = new ClassPathXmlApplicationContext("context02-inyeccion-objetos.xml");
 
 		LOG.info("[EVL] Instancia de Context : {}", oCntx);
 		

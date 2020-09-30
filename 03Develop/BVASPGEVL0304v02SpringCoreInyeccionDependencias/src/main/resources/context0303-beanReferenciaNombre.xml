@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="idCE03PersonaBeanAnidado" class="pe.bbva.evalua.spring5.entity.CE03PersonaBeanAnidado" name="personAnidado">
+		<property name="id" value="1520"></property>
+		<property name="nombre" value="Evaluacion Spring5"></property>
+
+		<property name="pais">
+			<bean id="idCE0201Pais" class="pe.bbva.evalua.spring5.entity.CE0201Pais">
+				<property name="nombre" value="PERU"></property>
+				<property name="ciudad">
+					<bean id="idCE0202Ciudad" class="pe.bbva.evalua.spring5.entity.CE0202Ciudad">
+						<property name="nombre" value="Chilca"></property>
+					</bean>
+				</property>
+			</bean>		
+		</property>
+	</bean>
+
+
+
+
+
+
+</beans>

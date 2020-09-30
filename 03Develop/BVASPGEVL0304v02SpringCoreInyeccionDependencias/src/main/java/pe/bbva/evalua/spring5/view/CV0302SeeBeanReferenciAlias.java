@@ -1,0 +1,27 @@
+package pe.bbva.evalua.spring5.view;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import pe.bbva.evalua.spring5.entity.CE03PersonaBeanAnidado;
+
+public class CV0302SeeBeanReferenciAlias {
+	private static final Logger LOG = LoggerFactory.getLogger("CV0302SeeBeanReferenciAlias");
+	public static void main(String[] args) {
+		LOG.info("[EVL] Start ");
+		ApplicationContext oCntx = new ClassPathXmlApplicationContext("context0302-beanReferenciAlias.xml");
+		
+		CE03PersonaBeanAnidado oCEPersona = (CE03PersonaBeanAnidado) oCntx.getBean("beanAnidado");
+		
+		LOG.info("[EVL] Context : {}", oCntx);
+		LOG.info("[EVL] Instance CEPersona : {}", oCEPersona);
+		
+		LOG.info("[EVL] Oracion Persona : {}", oCEPersona.getId() + " " + oCEPersona.getNombre() + " " + oCEPersona.getPais().getNombre() + " " + oCEPersona.getPais().getCiudad().getNombre());
+		
+		((ConfigurableApplicationContext) oCntx).close();
+	}
+
+}

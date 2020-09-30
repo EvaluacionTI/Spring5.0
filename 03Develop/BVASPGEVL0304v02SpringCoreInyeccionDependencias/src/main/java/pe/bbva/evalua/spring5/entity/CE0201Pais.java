@@ -21,4 +21,15 @@ public class CE0201Pais {
 		this.ciudad = ciudad;
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("CE0201Pais [nombre=");
+		builder.append(nombre);
+		builder.append(", ciudad=");
+		builder.append(ciudad);
+		builder.append("]");
+		return builder.toString();
+	}
+
 }
