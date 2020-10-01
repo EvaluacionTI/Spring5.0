@@ -8,6 +8,7 @@ public class CEAreaSuperficieLateral {
 	
 	private String radioLetra;
 	private String diametroLetra;
+	
 	public double getRadio() {
 		return radio;
 	}

@@ -16,7 +16,14 @@
 		<property name="oCETsa" ref="idCEAreaTotalSuperficie"></property>
 	</bean>
 	
-	<bean id="idCMEvaluarArea" class = "pe.unjfsc.daw.spring5.logical.impl.CMEvaluarArea"></bean>
+	<bean id="idCMEvaluarArea" class = "pe.unjfsc.daw.spring5.logical.impl.CMEvaluarAreaOnlyInyection">
+		<property name="oCELsaRequest" ref="idCEAreaSuperficieLateral"/>
+		<property name="oCELsaResponse" ref="idCEAreaSuperficieLateral"/>
+		<property name="oCETsaRequest" ref="idCEAreaTotalSuperficie"/>
+		<property name="oCETsaResponse" ref="idCEAreaTotalSuperficie"/>
+		<property name="oCEMostrarDatos" ref="idCEMostrarDatos"/>
+		<property name="oCUConvert" ref="idCUConvert"/>		
+	</bean>
 	
 	<bean id="idCUConvert" class="pe.unjfsc.daw.spring5.utility.CUConvert"></bean>
 </beans>
