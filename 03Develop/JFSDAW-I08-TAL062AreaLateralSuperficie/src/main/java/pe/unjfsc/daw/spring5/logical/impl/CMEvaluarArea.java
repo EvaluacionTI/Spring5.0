@@ -8,6 +8,7 @@ import pe.unjfsc.daw.spring5.entity.CEAreaTotalSuperficie;
 import pe.unjfsc.daw.spring5.entity.CEConstant;
 import pe.unjfsc.daw.spring5.entity.CEMostrarDatos;
 import pe.unjfsc.daw.spring5.logical.CIEvaluarSuperficie;
+import pe.unjfsc.daw.spring5.utility.CUConvert;
 
 
 public class CMEvaluarArea implements CIEvaluarSuperficie{
@@ -15,6 +16,7 @@ public class CMEvaluarArea implements CIEvaluarSuperficie{
     private CEAreaSuperficieLateral oCELsa, oCELsaRpta;
     private CEAreaTotalSuperficie oCETsa, oCETsaRpta;
     private CEMostrarDatos oCEMostrarDatos;
+    private CUConvert oCUConvert;
     
     @Override
     public CEAreaSuperficieLateral calcularLSA(CEAreaSuperficieLateral poLSA) {
@@ -60,12 +62,25 @@ public class CMEvaluarArea implements CIEvaluarSuperficie{
     @Override
     public CEMostrarDatos procesarData(CEMostrarDatos poData) {
         oCEMostrarDatos = new CEMostrarDatos();
+        oCELsaRpta = new CEAreaSuperficieLateral();
+        oCETsa = new CEAreaTotalSuperficie();
+        oCETsaRpta = new CEAreaTotalSuperficie();
+        oCUConvert = new CUConvert();
         
         oCELsaRpta = calcularLSA(poData.getoCETsa().getoCELsa());
+        oCETsa.setoCELsa(oCELsaRpta);
         
-        oCETsaRpta.setoCELsa(oCELsaRpta);
+        oCETsaRpta = calcularTSA(oCETsa);
+        
+        oCEMostrarDatos.setoCELsa(oCELsaRpta);
         oCEMostrarDatos.setoCETsa(oCETsaRpta);
-        
+        oCEMostrarDatos.setValorPI(CEConstant.PI);
+
+        String sNumero = String.valueOf(oCETsaRpta.getAte());
+        LOG.info(" Numero Utility : {}", sNumero);
+        oCEMostrarDatos.setRotarIzquiedaDerecha(oCUConvert.rotarIzquierdaDerecha(sNumero));
+        oCEMostrarDatos.setPrimerUltimoCaracter(oCUConvert.rotarIzquierdaDerecha(sNumero));
+
         return oCEMostrarDatos;
     }
 

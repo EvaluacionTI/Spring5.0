@@ -13,7 +13,7 @@ public class CVMostrarAbstractTableAFP {
 
 	
 	public static void main(String[] args) {
-		ApplicationContext oCntx = new ClassPathXmlApplicationContext("/pe/bbva/evalua/spring5/context-abstractAFP.xml");
+		ApplicationContext oCntx = new ClassPathXmlApplicationContext("/pe/bbva/evalua/spring5/context-AbstractAFP.xml");
 		
 		CUMostrarAbstractTable oVentana = new CUMostrarAbstractTable(oCntx);
 		
