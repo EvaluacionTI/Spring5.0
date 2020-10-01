@@ -5,7 +5,7 @@ import pe.unjfsc.daw.spring5.entity.CEAreaTotalSuperficie;
 import pe.unjfsc.daw.spring5.entity.CEMostrarDatos;
 
 public interface CIEvaluarSuperficie {
-    public CEAreaSuperficieLateral calcularLSA(CEAreaSuperficieLateral poLSA);
-    public CEAreaTotalSuperficie calcularTSA(CEAreaTotalSuperficie poTSA);
-    public CEMostrarDatos procesarData(CEMostrarDatos poData);
+	public CEAreaSuperficieLateral calcularLSA(CEAreaSuperficieLateral poLSA);
+	public CEAreaTotalSuperficie calcularTSA(CEAreaTotalSuperficie poTSA);
+	public CEMostrarDatos procesarData(CEMostrarDatos poData);
 }
