@@ -17,7 +17,7 @@ public class CVMostrarAllMatriz {
 		CIRetiroAFP25 oLista = (CIRetiroAFP25) oCntx.getBean("idCIRetiroAFP25");
 		LOG.info("[EVL] Instancia Interface : {}", oLista);
 		LOG.info("[EVL] Mostrar all : ");
-		
+
 		Object[][] oResult = oLista.consultaAllRetiroDimensional();
 		LOG.info("[EVL] Lista all load : {}", oResult);
 		
