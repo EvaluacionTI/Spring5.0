@@ -12,7 +12,7 @@
 		<h2>Analisis y Diseño para el registro de animales de granja</h2>
 		<hr>
 
-		<co:url value="/mostrarPollo.ea" var="messageUrl"></co:url>
+		<co:url value="/mostrarPollo.pollo" var="messageUrl"></co:url>
 	<a href="${messageUrl}">Clic enter</a>
 	</body>
 </html>

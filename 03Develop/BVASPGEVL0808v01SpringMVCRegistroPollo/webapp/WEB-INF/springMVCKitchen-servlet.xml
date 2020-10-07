@@ -6,7 +6,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 	<!-- No olvidar marcar el namespaces de context y beans -->
-	<context:component-scan base-package="pe"></context:component-scan>
+	<context:component-scan base-package="pe.bbva"></context:component-scan>
 
 	<!-- Configuración de bean para especificar la ubicación de las páginas 
 		de visualización y el sufijo utilizado. Example: a logical view name of 'showMessage' 

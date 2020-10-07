@@ -7,7 +7,7 @@
 
 	<servlet>
 		<servlet-name>springMVCKitchen</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DistpatcherServlet</servlet-class>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 
