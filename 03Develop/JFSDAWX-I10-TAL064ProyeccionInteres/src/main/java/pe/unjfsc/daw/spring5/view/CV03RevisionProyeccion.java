@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import pe.unjfsc.daw.spring5.entity.CEMeses;
 import pe.unjfsc.daw.spring5.logical.CIProyeccion;
 import pe.unjfsc.daw.spring5.logical.impl.CMProyeccion;
 import pe.unjfsc.daw.spring5.utility.CUInteres;
@@ -18,13 +19,14 @@ public class CV03RevisionProyeccion {
 		ApplicationContext oCntx = new ClassPathXmlApplicationContext("context-proyeccion-interes.xml");
 		LOG.info("[EVL] Context : {}", oCntx);
 		
-		CUInteres oCUInteres = oCntx.getBean(CUInteres.class);
-		LOG.info("[EVL] CUInteres : {}", oCUInteres);
+		CEMeses oCEMeses = oCntx.getBean(CEMeses.class);
+		LOG.info("[EVL] CEMeses : {}", oCEMeses);
 		
 		CIProyeccion oCIProyeccion = oCntx.getBean(CMProyeccion.class);
 		LOG.info("[EVL] CIProyeccion : {}", oCIProyeccion);
 		
-		LOG.info("[EVL] CEFormula : {}", oCIProyeccion.buscarTasa(10));
+		oCEMeses.setIdMes(10);
+		LOG.info("[EVL] CEFormula : {}", oCIProyeccion.buscarTasa(oCEMeses));
 		
 		((ConfigurableApplicationContext) oCntx).close();
 	}

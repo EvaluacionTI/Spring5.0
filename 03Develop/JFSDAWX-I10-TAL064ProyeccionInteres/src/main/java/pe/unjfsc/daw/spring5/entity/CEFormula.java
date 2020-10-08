@@ -4,6 +4,8 @@ public class CEFormula {
 	private double tasa;
 	private double plazo;
 	private double factor;
+	private double plazoSinFeriado;
+	private double factorSinFeriado;
 	
 	public double getTasa() {
 		return tasa;
@@ -23,6 +25,18 @@ public class CEFormula {
 	public void setFactor(double factor) {
 		this.factor = factor;
 	}
+	public double getPlazoSinFeriado() {
+		return plazoSinFeriado;
+	}
+	public void setPlazoSinFeriado(double plazoSinFeriado) {
+		this.plazoSinFeriado = plazoSinFeriado;
+	}
+	public double getFactorSinFeriado() {
+		return factorSinFeriado;
+	}
+	public void setFactorSinFeriado(double factorSinFeriado) {
+		this.factorSinFeriado = factorSinFeriado;
+	}
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -32,8 +46,11 @@ public class CEFormula {
 		builder.append(plazo);
 		builder.append(", factor=");
 		builder.append(factor);
+		builder.append(", plazoSinFeriado=");
+		builder.append(plazoSinFeriado);
+		builder.append(", factorSinFeriado=");
+		builder.append(factorSinFeriado);
 		builder.append("]");
 		return builder.toString();
 	}
-	
 }

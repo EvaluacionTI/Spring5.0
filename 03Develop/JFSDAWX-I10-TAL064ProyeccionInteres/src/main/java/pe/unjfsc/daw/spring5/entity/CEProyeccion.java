@@ -2,16 +2,22 @@ package pe.unjfsc.daw.spring5.entity;
 
 public class CEProyeccion {
 	private CESaldoAfiliado oCESaldo;
+	private CEFormula oCEFormula;
 	private double interesCompleto;
 	private double interesSinFeriado;
 	private double diferenciaInteres;
 	private double SaldoFinal;
-	
 	public CESaldoAfiliado getoCESaldo() {
 		return oCESaldo;
 	}
 	public void setoCESaldo(CESaldoAfiliado oCESaldo) {
 		this.oCESaldo = oCESaldo;
+	}
+	public CEFormula getoCEFormula() {
+		return oCEFormula;
+	}
+	public void setoCEFormula(CEFormula oCEFormula) {
+		this.oCEFormula = oCEFormula;
 	}
 	public double getInteresCompleto() {
 		return interesCompleto;
@@ -42,6 +48,8 @@ public class CEProyeccion {
 		StringBuilder builder = new StringBuilder();
 		builder.append("CEProyeccion [oCESaldo=");
 		builder.append(oCESaldo);
+		builder.append(", oCEFormula=");
+		builder.append(oCEFormula);
 		builder.append(", interesCompleto=");
 		builder.append(interesCompleto);
 		builder.append(", interesSinFeriado=");
@@ -53,5 +61,6 @@ public class CEProyeccion {
 		builder.append("]");
 		return builder.toString();
 	}
+	
 
 }

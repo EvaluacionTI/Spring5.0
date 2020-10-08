@@ -20,6 +20,10 @@ public class CUInteres {
 
 		return oCEResult; 
 	}
+	
+	public double calculoInteres(double pdFactor, double pdCapital) {
+		return pdFactor * pdCapital;
+	}
 
 	public void setoCEResult(CEFormula oCEResult) {
 		this.oCEResult = oCEResult;
