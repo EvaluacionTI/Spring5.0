@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="idCESaldoAfiliado" class="pe.unjfsc.daw.spring5.entity.CESaldoAfiliado">
+	</bean>
+
+	<bean id="idCEMeses" class="pe.unjfsc.daw.spring5.entity.CEMeses">
+	</bean>
+
+	<bean id="idCEProyeccion" class="pe.unjfsc.daw.spring5.entity.CEProyeccion">
+	</bean>
+
+	<bean id="idCEUnionListas" class="pe.unjfsc.daw.spring5.entity.CEUnionListas">
+	</bean>
+
+	<bean id="idCEFormula" class="pe.unjfsc.daw.spring5.entity.CEFormula">
+	</bean>
+
+	<bean id="idCDLoadData" class="pe.unjfsc.daw.spring5.model.CDLoadData">
+	</bean>
+	
+	<bean id="idCUInteres" class="pe.unjfsc.daw.spring5.utility.CUInteres" >
+		<property name="oCEResult" ref="idCEFormula"></property>
+	</bean>
+		
+	<bean id="idCMProyeccion" class="pe.unjfsc.daw.spring5.logical.impl.CMProyeccion">
+		<property name="oCEFormulaResponse" ref="idCEFormula"/>
+		<property name="oData" ref="idCDLoadData"/>
+	</bean>
+	
+<!-- 
+	<bean id="idCMSaldoDisponible" class="pe.unjfsc.daw.spring5.logical.impl.CMSaldoDisponible">
+	</bean>
+
+	 -->
+</beans>
