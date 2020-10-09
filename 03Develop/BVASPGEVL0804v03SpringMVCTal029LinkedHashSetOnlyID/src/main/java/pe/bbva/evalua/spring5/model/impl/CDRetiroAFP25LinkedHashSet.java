@@ -5,13 +5,16 @@ import java.util.LinkedHashSet;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 import pe.bbva.evalua.spring5.entity.CESaldoAfiliadoCustom;
 
 import pe.bbva.evalua.spring5.model.CIRetiroAFP25LinkedHashSet;
 
+@Component
 public class CDRetiroAFP25LinkedHashSet implements CIRetiroAFP25LinkedHashSet {
 	private static final Logger LOG = LoggerFactory.getLogger("CDRetiroAFP25LinkedHashSet");
+	
 	private LinkedHashSet<CESaldoAfiliadoCustom> moListAfiliado;
 	private CESaldoAfiliadoCustom moCESaldoAfilidado;
 	

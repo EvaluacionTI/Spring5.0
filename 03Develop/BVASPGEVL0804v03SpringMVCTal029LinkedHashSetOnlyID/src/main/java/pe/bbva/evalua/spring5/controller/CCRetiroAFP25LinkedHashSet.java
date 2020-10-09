@@ -1,4 +1,4 @@
-package pe.bbva.evalua.spring5.controler;
+package pe.bbva.evalua.spring5.controller;
 
 import java.io.IOException;
 import java.util.Date;
@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -25,9 +24,8 @@ import pe.bbva.evalua.spring5.model.impl.CDRetiroAFP25LinkedHashSet;
 public class CCRetiroAFP25LinkedHashSet {
 	public static final Logger LOG = LoggerFactory.getLogger("CCRetiroAFP25LinkedHashSet");
 	
-	@Autowired
-	CDRetiroAFP25LinkedHashSet oCDLinkedListHashSet;
-	LinkedHashSet<CESaldoAfiliadoCustom> oListaFinal;
+	private CDRetiroAFP25LinkedHashSet oCDLinkedListHashSet;
+	private LinkedHashSet<CESaldoAfiliadoCustom> oListaFinal;
 	
 	@RequestMapping(value="/listarAfiliados.ea")
 	public ModelAndView linkedHashSetRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -51,6 +49,4 @@ public class CCRetiroAFP25LinkedHashSet {
 		LOG.info("[EVL] Mapa for DOM : {}", myModel);
 		return new ModelAndView(CEConstant.JSP_LIST_ALL_AFILIADO, "model", myModel);
 	}
-
-
 }
