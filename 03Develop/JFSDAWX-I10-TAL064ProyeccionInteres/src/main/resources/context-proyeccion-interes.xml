@@ -32,12 +32,11 @@
 		<property name="oCESaldo" ref="idCESaldoAfiliado"/>
 		<property name="oData" ref="idCDLoadData"/>
 		<property name="oCUInteres" ref="idCUInteres"/>
+		<property name="oaListProyeccion">
+			<list>
+				<ref bean="idCEProyeccion"/>
+			</list>
+		</property>
 	</bean>
 	
-
-<!-- 
-	<bean id="idCMSaldoDisponible" class="pe.unjfsc.daw.spring5.logical.impl.CMSaldoDisponible">
-	</bean>
-
-	 -->
 </beans>
