@@ -16,6 +16,9 @@
 	<bean id="idCEFormula" class="pe.unjfsc.daw.spring5.entity.CEFormula">
 	</bean>
 
+	<bean id="idCEUnionListas" class="pe.unjfsc.daw.spring5.entity.CEUnionListas">
+	</bean>
+	
 	<bean id="idCDLoadData" class="pe.unjfsc.daw.spring5.model.CDLoadData">
 	</bean>
 	
@@ -23,14 +26,30 @@
 		<property name="oCEResult" ref="idCEFormula"></property>
 	</bean>
 		
-	<bean id="idCMProyeccion" class="pe.unjfsc.daw.spring5.logical.impl.CMProyeccion">
+	<bean id="idCMProyeccion" class="pe.unjfsc.daw.spring5.logical.impl.CMUnificarProyeccion">
 		<property name="oCEProyeccion" ref="idCEProyeccion"/>
 		<property name="oCEFormulaResponse" ref="idCEFormula"/>
 		<property name="oCESaldo" ref="idCESaldoAfiliado"/>
+		<property name="oCEMerge" ref="idCEUnionListas"/>
 		<property name="oData" ref="idCDLoadData"/>
 		<property name="oCUInteres" ref="idCUInteres"/>
-	
+
+		<property name="oaListHashSet">
+			<set>
+				<ref bean="idCEProyeccion"/>
+			</set>
+		</property>
+		<property name="oaListLnkSet">
+			<set>
+				<ref bean="idCEProyeccion"/>
+			</set>
+		</property>		
 		<property name="oaListProyeccion">
+			<list>
+				<ref bean="idCEProyeccion"/>
+			</list>
+		</property>
+		<property name="oList">
 			<list>
 				<ref bean="idCEProyeccion"/>
 			</list>

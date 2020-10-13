@@ -8,7 +8,7 @@
 <title>.....[Evaluacion Spring 5].....</title>
 </head>
 <body>
-	<h2>Evaluación de Spring 5 - Listar data ArrayList</h2>
+	<h2>Listar Proyeccion ArrayList</h2>
 	Fecha del Sistema :<co:out value="${vFechaSistema}"></co:out>
 	<hr>
 	

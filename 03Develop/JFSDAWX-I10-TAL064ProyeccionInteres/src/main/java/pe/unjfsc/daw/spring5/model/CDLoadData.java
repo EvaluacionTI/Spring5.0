@@ -23,7 +23,7 @@ public class CDLoadData {
 	}
 	
 	protected ArrayList<CEMeses> beginMeses() {
-		ArrayList<CEMeses> oListMeses = new ArrayList<>();
+		ArrayList<CEMeses> oListMeses = new ArrayList<CEMeses>();
 		
 		oListMeses.add(new CEMeses(1, "ENERO", 31, 1, 0.5));
 		oListMeses.add(new CEMeses(2, "FEBRERO", 31, 1, 0.5));

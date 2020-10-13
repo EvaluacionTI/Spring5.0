@@ -10,7 +10,7 @@ import javax.swing.border.EmptyBorder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import pe.unjfsc.daw.spring5.controller.CCReceiverSend;
+import pe.unjfsc.daw.spring5.controller.CCReceiverSendProyeccion;
 
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -18,18 +18,13 @@ import javax.swing.JTable;
 import javax.swing.JButton;
 
 public class JFrameProyeccion extends JFrame {
-	private static final Logger LOG = LoggerFactory.getLogger("panelDatosEntrada");
+	private static final Logger LOG = LoggerFactory.getLogger("JFrameProyeccion");
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField textFieldMes;
 	private JTable table;
 
-	private CCReceiverSend oCCSeeData;
-	
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
