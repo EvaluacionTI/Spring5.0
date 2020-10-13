@@ -9,11 +9,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import pe.unjfsc.daw.spring5.entity.CEMeses;
 import pe.unjfsc.daw.spring5.logical.CIProyeccion;
 import pe.unjfsc.daw.spring5.logical.impl.CMProyeccion;
-import pe.unjfsc.daw.spring5.utility.CUInteres;
 
-
-public class CV03RevisionProyeccion {
-	private static final Logger LOG = LoggerFactory.getLogger("CV03RevisionProyeccion");
+public class CV03RevisionBuscarTasa {
+	private static final Logger LOG = LoggerFactory.getLogger("CV03RevisionBuscarTasa");
 	
 	public static void main(String[] args) {
 		ApplicationContext oCntx = new ClassPathXmlApplicationContext("context-proyeccion-interes.xml");

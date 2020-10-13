@@ -7,6 +7,6 @@ import pe.unjfsc.daw.spring5.entity.CEUnionListas;
 
 public interface CIProyeccion {
 	public CEFormula buscarTasa(CEMeses poCEMes);
-	public CEProyeccion calcularFactor(CEFormula poCEFormula);
+	public CEProyeccion integrarTasaInteres(CEMeses poCEMes);
 	public CEUnionListas llenarListas(CEProyeccion oCEProyeccion);
 }

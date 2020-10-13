@@ -12,12 +12,16 @@ public class CUInteres {
 	private CEFormula oCEResult;
 	
 	public CEFormula calcularFactor(CEFormula poCEFormula) {
-		
-		double dFactor = (Math.pow(1+poCEFormula.getTasa(),poCEFormula.getPlazo() / CEConstant.BASE_CALCULO))-1;
-		LOG.info("[EVL] Factor : {}", dFactor);
 		oCEResult = poCEFormula;
+		double dFactor = (Math.pow(1+poCEFormula.getTasa(),poCEFormula.getPlazo() / CEConstant.BASE_CALCULO))-1;
+		LOG.info("[EVL] Factor completo : {}", dFactor);
+		
 		oCEResult.setFactor(dFactor);
-
+		dFactor = (Math.pow(1+poCEFormula.getTasa(),poCEFormula.getPlazoSinFeriado() / CEConstant.BASE_CALCULO))-1;
+		LOG.info("[EVL] Factor sin feriado : {}", dFactor);
+		oCEResult.setFactorSinFeriado(dFactor);
+		LOG.info("[EVL] CEFormula : {}", oCEResult);
+		
 		return oCEResult; 
 	}
 	

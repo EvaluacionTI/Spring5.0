@@ -27,10 +27,14 @@
 	</bean>
 		
 	<bean id="idCMProyeccion" class="pe.unjfsc.daw.spring5.logical.impl.CMProyeccion">
+		<property name="oCEProyeccion" ref="idCEProyeccion"/>
 		<property name="oCEFormulaResponse" ref="idCEFormula"/>
+		<property name="oCESaldo" ref="idCESaldoAfiliado"/>
 		<property name="oData" ref="idCDLoadData"/>
+		<property name="oCUInteres" ref="idCUInteres"/>
 	</bean>
 	
+
 <!-- 
 	<bean id="idCMSaldoDisponible" class="pe.unjfsc.daw.spring5.logical.impl.CMSaldoDisponible">
 	</bean>

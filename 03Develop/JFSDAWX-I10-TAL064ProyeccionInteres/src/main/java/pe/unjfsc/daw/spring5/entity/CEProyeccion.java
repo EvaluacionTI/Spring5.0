@@ -7,6 +7,7 @@ public class CEProyeccion {
 	private double interesSinFeriado;
 	private double diferenciaInteres;
 	private double SaldoFinal;
+
 	public CESaldoAfiliado getoCESaldo() {
 		return oCESaldo;
 	}
