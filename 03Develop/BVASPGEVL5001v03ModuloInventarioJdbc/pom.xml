@@ -10,7 +10,7 @@
 		<version.spring>5.2.5.RELEASE</version.spring>
 		<version.servletapi>2.5</version.servletapi>
 		<version.slf4j>1.7.30</version.slf4j>
-		<version.junit>4.12</version.junit>
+		<version.junit>4.13.1</version.junit>
 		<version.jstl>1.2</version.jstl>
 		<version.taglibs>1.1.2</version.taglibs>
 		
