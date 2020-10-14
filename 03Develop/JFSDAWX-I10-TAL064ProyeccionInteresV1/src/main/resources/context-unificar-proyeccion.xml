@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="idCESaldoAfiliado" class="pe.unjfsc.daw.spring5.entity.CESaldoAfiliado">
+	</bean>
+
+	<bean id="idCEMeses" class="pe.unjfsc.daw.spring5.entity.CEMeses">
+	</bean>
+
+	<bean id="idCEProyeccion" class="pe.unjfsc.daw.spring5.entity.CEProyeccion">
+	</bean>
+
+	<bean id="idCEFormula" class="pe.unjfsc.daw.spring5.entity.CEFormula">
+	</bean>
+
+	<bean id="idCEUnionListas" class="pe.unjfsc.daw.spring5.entity.CEUnionListas">
+	</bean>
+	
+	<bean id="idCDLoadData" class="pe.unjfsc.daw.spring5.model.CDLoadData">
+	</bean>
+	
+	<bean id="idCUInteres" class="pe.unjfsc.daw.spring5.utility.CUInteres" >
+		<property name="oCEResult" ref="idCEFormula"></property>
+	</bean>
+		
+	<bean id="idCMProyeccion" class="pe.unjfsc.daw.spring5.logical.impl.CMUnificarProyeccion">
+		<property name="oCEProyeccion" ref="idCEProyeccion"/>
+		<property name="oCEFormulaResponse" ref="idCEFormula"/>
+		<property name="oCESaldo" ref="idCESaldoAfiliado"/>
+		<property name="oCEMerge" ref="idCEUnionListas"/>
+		<property name="oData" ref="idCDLoadData"/>
+		<property name="oCUInteres" ref="idCUInteres"/>
+
+		<property name="oaListHashSet">
+			<set>
+				<ref bean="idCEProyeccion"/>
+			</set>
+		</property>
+		<property name="oaListLnkSet">
+			<set>
+				<ref bean="idCEProyeccion"/>
+			</set>
+		</property>		
+		<property name="oaListProyeccion">
+			<list>
+				<ref bean="idCEProyeccion"/>
+			</list>
+		</property>
+		<property name="oList">
+			<list>
+				<ref bean="idCEProyeccion"/>
+			</list>
+		</property>
+	</bean>
+	
+</beans>

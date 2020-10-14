@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -25,14 +26,19 @@ import pe.unjfsc.daw.spring5.logical.impl.CMProyeccion;
 @Controller
 public class CCReceiverSendProyeccion {
 	public static final Logger LOG = LoggerFactory.getLogger("CCReceiverSendProyeccion");
-	
+
+	@Autowired
 	private CEMeses oCEMes;
+	
+	@Autowired
 	private CMProyeccion oCMProyeccion;
+	
 	private ArrayList<CEProyeccion> oListaFinal;
 	
 	@RequestMapping(value="/listarProyeccion.ea")
 	public ModelAndView arrayListRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		LOG.info("[EVL] Request and response : {} {}", request, response);
+		LOG.info("[EVL] Instance CEMeses	: {}", oCEMes);
 		LOG.info("[EVL] Instance CMProyeccion	: {}", oCMProyeccion);
 		
 		String lsFechaSistema = (new Date()).toString();

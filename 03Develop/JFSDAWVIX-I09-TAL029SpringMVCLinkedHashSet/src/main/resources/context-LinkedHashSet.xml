@@ -4,11 +4,10 @@
 	xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="idCESaldoAfiliado" class="pe.bbva.evalua.spring5.entity.CESaldoAfiliadoCustom">
+	<bean id="idCESaldoAfiliado" class="pe.unjfsc.daw.spring5.entity.CESaldoAfiliado">
 	</bean>
 	
-	<bean id="idCIRetiroAFP25"   class="pe.bbva.evalua.spring5.model.impl.CDRetiroAFP25LinkedHashSet">
-		<property name="moCESaldoAfilidado" ref="idCESaldoAfiliado"/>
+	<bean id="idCIRetiroAFP25"   class="pe.unjfsc.daw.spring5.logical.impl.CMRetiroAFPLinkedHashSet">
 	</bean>
-
+	
 </beans>

@@ -7,7 +7,7 @@
 
 	<context:component-scan base-package="pe.unjfsc.daw.spring5"/>
 
-	<import resource="context-proyeccion-interes.xml"/>
+	<import resource="classpath:context-proyeccion-interes.xml"/>
 
 	<!-- Configuración de bean para especificar la ubicación de las páginas 
 		de visualización y el sufijo utilizado. Example: a logical view name of 'showMessage' 

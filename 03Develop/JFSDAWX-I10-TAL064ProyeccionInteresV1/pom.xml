@@ -1,12 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>pe.unjfsc.daw.spring5</groupId>
-	<artifactId>JFSDAWX-I10-TAL064ProyeccionInteres</artifactId>
-	<packaging>war</packaging>
-	<version>0.1.0</version>
-	<name>JFSDAWX-I10-TAL064ProyeccionInteres Maven Webapp</name>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>pe.unjfsc.daw.spring5</groupId>
+  <artifactId>JFSDAWX-I10-TAL064ProyeccionInteresV1</artifactId>
+  <packaging>war</packaging>
+  <version>0.1.0</version>
+  <name>JFSDAWX-I10-TAL064ProyeccionInteresV1 Maven Webapp</name>
+  <url>http://maven.apache.org</url>
 
 	<!-- [ 1. PROPIEDADES GENERALES ] -->
 	<properties>
@@ -71,4 +71,8 @@
 			<version>${slf4j.version}</version>
 		</dependency>
 	</dependencies>
+	
+  <build>
+    <finalName>JFSDAWX-I10-TAL064ProyeccionInteresV1</finalName>
+  </build>
 </project>
