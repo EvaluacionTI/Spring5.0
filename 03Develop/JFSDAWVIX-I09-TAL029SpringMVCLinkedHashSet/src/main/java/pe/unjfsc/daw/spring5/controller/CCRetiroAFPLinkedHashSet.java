@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,6 +22,7 @@ import pe.unjfsc.daw.spring5.logical.impl.CMRetiroAFPLinkedHashSet;
 public class CCRetiroAFPLinkedHashSet {
 	private static final Logger LOG = LoggerFactory.getLogger("CMRetiroAFPLinkedHashSet");
 	
+	@Autowired
 	private CMRetiroAFPLinkedHashSet oCMRetiroAFP;
 	private LinkedHashSet<CESaldoAfiliado> oListaFinal;
 	
