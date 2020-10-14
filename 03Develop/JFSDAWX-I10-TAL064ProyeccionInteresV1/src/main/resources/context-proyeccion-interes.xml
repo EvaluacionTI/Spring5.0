@@ -10,7 +10,7 @@
 	<bean id="idCEMeses" class="pe.unjfsc.daw.spring5.entity.CEMeses">
 	</bean>
 
-	<bean id="idCEProyeccion" class="pe.unjfsc.daw.spring5.entity.CEProyeccion">
+	<bean id="idCEProyeccion" class="pe.unjfsc.daw.spring5.entity.CEProyeccion" >
 	</bean>
 
 	<bean id="idCEFormula" class="pe.unjfsc.daw.spring5.entity.CEFormula">

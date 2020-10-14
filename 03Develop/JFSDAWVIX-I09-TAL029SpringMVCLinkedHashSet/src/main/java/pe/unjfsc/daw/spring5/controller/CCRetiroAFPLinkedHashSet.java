@@ -15,32 +15,31 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import pe.unjfsc.daw.spring5.entity.CEConstant;
 import pe.unjfsc.daw.spring5.entity.CESaldoAfiliado;
 import pe.unjfsc.daw.spring5.logical.impl.CMRetiroAFPLinkedHashSet;
 
 @Controller
 public class CCRetiroAFPLinkedHashSet {
 	private static final Logger LOG = LoggerFactory.getLogger("CMRetiroAFPLinkedHashSet");
-	
-	@Autowired
+
 	private CMRetiroAFPLinkedHashSet oCMRetiroAFP;
 	private LinkedHashSet<CESaldoAfiliado> oListaFinal;
-	
-	@RequestMapping(value="/listadoAfialiados.lhs")
+
+	@RequestMapping(value = "/listadoAfialiados.lhs")
 	public ModelAndView linkedHashSetConsulta(HttpServletRequest request, HttpServletResponse response) {
 		String lFechaSistema = (new Date()).toString();
-		String lFileJSP = "jsp01ListaAfialiado";
-		
+
 		LOG.info("[EVL] CMRetiroAFPLinkedHashSet : {}", oCMRetiroAFP);
 		oListaFinal = new LinkedHashSet<CESaldoAfiliado>();
-		
+
 		oListaFinal = oCMRetiroAFP.consultAll();
-		
+
 		Map<String, Object> myModel = new HashMap<String, Object>();
 		myModel.put("vFechaSistema", lFechaSistema);
 		myModel.put("listSaldoAfiliados", oListaFinal);
 		LOG.info("[EVL] Salida : {}", oListaFinal.size());
-		
-		return new ModelAndView(lFileJSP, "model", myModel);
+
+		return new ModelAndView(CEConstant.JSP_LIST_ALL_AFILIADO, "model", myModel);
 	}
 }

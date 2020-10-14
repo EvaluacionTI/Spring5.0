@@ -64,10 +64,12 @@ public class CMProyeccion implements CIProyeccion{
 			oCEProyeccion.setDiferenciaInteres(dInteresCompleto-dIntereSinFeriado);
 			oCEProyeccion.setSaldoFinal(oItem.getSaldoCIC() + dInteresCompleto);
 			LOG.info("[EVL] End CEProyeccion  : {}", oCEProyeccion);
+			oCEProyeccion = new CEProyeccion();
 			oaListProyeccion.add(oCEProyeccion);
 			dInteresCompleto=0;
 			dIntereSinFeriado=0;
 		}
+		LOG.info("[EVL] List Final CEProyeccion  : {}", oaListProyeccion);
 		return oaListProyeccion;
 	}
 

@@ -22,7 +22,6 @@ import pe.unjfsc.daw.spring5.entity.CEMeses;
 import pe.unjfsc.daw.spring5.entity.CEProyeccion;
 import pe.unjfsc.daw.spring5.logical.impl.CMProyeccion;
 
-
 @Controller
 public class CCReceiverSendProyeccion {
 	public static final Logger LOG = LoggerFactory.getLogger("CCReceiverSendProyeccion");

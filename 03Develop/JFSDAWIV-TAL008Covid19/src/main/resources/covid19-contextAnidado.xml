@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+			 "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="idCEPeriodo" class="pe.unjfsc.daw.spring5.entity.CEPeriodo">
+		<constructor-arg value="09"></constructor-arg>
+	</bean>
+
+	<bean id="idCEVirusCovid19Anidado" class="pe.unjfsc.daw.spring5.entity.CEVirusCovid19Anidado">
+		<property name="dayProyectado" value="7"></property>
+		<property name="numeroContagio" value="67"></property>
+		<property name="numeroFallecido" value="7"></property>
+		<property name="numeroNacidos" value="67"></property>
+		<property name="oPeriodo" ref="idCEPeriodo"></property>
+	</bean>
+
+</beans>

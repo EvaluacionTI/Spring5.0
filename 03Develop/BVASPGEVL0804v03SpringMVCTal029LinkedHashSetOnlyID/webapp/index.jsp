@@ -29,5 +29,17 @@
 	<!-- <co:url value="/view/jsp0101v01ListarAfiliado.jsp" var="messageUrl"></co:url> -->
 	<co:url value="/listarAfiliados.ea" var="messageUrl" />
 	<a href="${messageUrl}">Clic enter</a>
+		<co:url value="/adicionarAfiliado.lhs" var="adicionarUrl"/>
+	<a href="${adicionarUrl}">Nuevo de Saldo de Afiliados</a>
+	<br>
+	<br>
+	<co:url value="/visualizarAfiliados.lhs" var="visualizarUrl"/>
+	<a href="${visualizarUrl}">Visualizar Saldo de Afiliados</a>	
+	<br>
+	<br>
+	<co:url value="/listadoAfiliados.lhs" var="listadoUrl"/>
+	<a href="${listadoUrl}">Lista general de Saldo de Afiliados</a>
+	<br>
+	<br>
 </body>
 </html>

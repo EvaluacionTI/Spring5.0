@@ -1,5 +1,6 @@
 package pe.unjfsc.daw.spring5.logical.impl;
 
+import java.util.Iterator;
 import java.util.LinkedHashSet;
 
 import org.slf4j.Logger;
@@ -11,7 +12,8 @@ import pe.unjfsc.daw.spring5.logical.CICrudLSA;
 public class CMRetiroAFPLinkedHashSet implements CICrudLSA{
 	private static final Logger LOG = LoggerFactory.getLogger("CMRetiroAFPLinkedHashSet");
 	
-	public LinkedHashSet<CESaldoAfiliado> moHashAreaLateral;
+	private LinkedHashSet<CESaldoAfiliado> moHashAreaLateral;
+	private CESaldoAfiliado moCESaldoAfilidado;
 	
 	public CMRetiroAFPLinkedHashSet() {
 		moHashAreaLateral = new LinkedHashSet<CESaldoAfiliado>();
@@ -31,31 +33,55 @@ public class CMRetiroAFPLinkedHashSet implements CICrudLSA{
 	}
 	
 	public void saveRetiro(CESaldoAfiliado poLSA) {
-		// TODO Auto-generated method stub
+		moHashAreaLateral.add(new CESaldoAfiliado(poLSA.getId(), poLSA.getCodigoAfiliado(), poLSA.getSaldoCIC()));
 		
 	}
 
 	public void updateRetiro(CESaldoAfiliado poLSA) {
-		// TODO Auto-generated method stub
+		Iterator<CESaldoAfiliado> it = moHashAreaLateral.iterator();
+		while(it.hasNext()) {
+			moCESaldoAfilidado = new CESaldoAfiliado();
+			moCESaldoAfilidado = it.next();
+			if (moCESaldoAfilidado.getId()==poLSA.getId()) {
+				moCESaldoAfilidado.setCodigoAfiliado(poLSA.getCodigoAfiliado());
+				moCESaldoAfilidado.setSaldoCIC(poLSA.getSaldoCIC());
+				break;
+			}
+		}
 		
 	}
 
 	public void deleteRetiro(int pId) {
-		// TODO Auto-generated method stub
-		
+		Iterator<CESaldoAfiliado> it = moHashAreaLateral.iterator();
+		while(it.hasNext()) {
+			moCESaldoAfilidado = new CESaldoAfiliado();
+			moCESaldoAfilidado = it.next();
+			if (moCESaldoAfilidado.getId()==pId) {
+				moHashAreaLateral.remove(moCESaldoAfilidado);
+				break;
+			}
+		}
 	}
 
 	public LinkedHashSet<CESaldoAfiliado> consultAll() {
+		LOG.info("[EVL] consultAll : {}", moHashAreaLateral.size());
 		return moHashAreaLateral;
 	}
 
 	public CESaldoAfiliado consultaById(int pId) {
-		// TODO Auto-generated method stub
-		return null;
+		CESaldoAfiliado oCESaldoAfilidado = null;
+		CESaldoAfiliado oCESaldoResult = null;
+		
+		Iterator<CESaldoAfiliado> it = moHashAreaLateral.iterator();
+		while(it.hasNext()) {
+			oCESaldoAfilidado = new CESaldoAfiliado();
+			oCESaldoAfilidado = it.next();
+			if (oCESaldoAfilidado.getId()==pId) {
+				oCESaldoResult = new CESaldoAfiliado();
+				oCESaldoResult = oCESaldoAfilidado;
+				break;
+			}
+		}
+		return oCESaldoResult;
 	}
-
-	public void setMoHashAreaLateral(LinkedHashSet<CESaldoAfiliado> moHashAreaLateral) {
-		this.moHashAreaLateral = moHashAreaLateral;
-	}
-
 }
