@@ -12,7 +12,7 @@
 	<hr>
 		Mostrar información por medio de LinkedHashset]<br>
 		
-	<co:url value="/listadoAfialiados.lns" var="mensajeUrl"/>
+	<co:url value="/listadoAfiliados.lhs" var="mensajeUrl"/>
 	<a href="${mensajeUrl}">Clic de acceso</a>
 
 </body>

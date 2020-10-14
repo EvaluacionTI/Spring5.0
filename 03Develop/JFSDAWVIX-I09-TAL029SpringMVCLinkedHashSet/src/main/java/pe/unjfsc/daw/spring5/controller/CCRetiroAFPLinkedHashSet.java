@@ -23,10 +23,11 @@ import pe.unjfsc.daw.spring5.logical.impl.CMRetiroAFPLinkedHashSet;
 public class CCRetiroAFPLinkedHashSet {
 	private static final Logger LOG = LoggerFactory.getLogger("CMRetiroAFPLinkedHashSet");
 
+	@Autowired
 	private CMRetiroAFPLinkedHashSet oCMRetiroAFP;
 	private LinkedHashSet<CESaldoAfiliado> oListaFinal;
 
-	@RequestMapping(value = "/listadoAfialiados.lhs")
+	@RequestMapping(value = "/listadoAfiliados.lhs")
 	public ModelAndView linkedHashSetConsulta(HttpServletRequest request, HttpServletResponse response) {
 		String lFechaSistema = (new Date()).toString();
 

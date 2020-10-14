@@ -84,4 +84,8 @@ public class CMRetiroAFPLinkedHashSet implements CICrudLSA{
 		}
 		return oCESaldoResult;
 	}
+
+	public void setMoCESaldoAfilidado(CESaldoAfiliado moCESaldoAfilidado) {
+		this.moCESaldoAfilidado = moCESaldoAfilidado;
+	}
 }

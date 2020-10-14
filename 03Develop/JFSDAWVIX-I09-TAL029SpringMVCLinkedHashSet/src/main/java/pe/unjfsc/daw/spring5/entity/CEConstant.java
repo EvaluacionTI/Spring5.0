@@ -7,7 +7,6 @@ public class CEConstant {
 	public static final int RANGO_51600  = 51600;
 	public static final double PORCENTAJE_25=0.25;
 	
-	public static final String JSP_LIST_ALL_AFILIADO = "jsp01ListaAfialiado";
-	public static final String JSP_ADD_AFILIADO = "jsp02AdicionarAfialiado";
-	public static final String JSP_SEE_ALL_AFILIADO = "jsp05VisualizarAfialiado";
+	public static final String JSP_LIST_ALL_AFILIADO = "jsp01ListaAfiliado";
+
 }
