@@ -18,6 +18,7 @@ public class CD01TipoPlan implements CI01TipoPlan{
 	
 	// Get y seter solo al datasource
 	private DataSource dataSource;
+	
 	private JdbcTemplate moJdbcTemplate;
 
 	public void setDataSource(DataSource dataSource) {
@@ -25,7 +26,6 @@ public class CD01TipoPlan implements CI01TipoPlan{
 	}
 
 	//Implementación de la inteface
-	@Override
 	public void grabarTipoPlan(CE01TipoPlan poCETipoPlan){
 		MOLOG.info("[EVL] =====[ Start grabarTipoPlan ]=====");
 
@@ -46,7 +46,6 @@ public class CD01TipoPlan implements CI01TipoPlan{
 		MOLOG.info("[EVL] After save     : {} ", moJdbcTemplate);
 	}
 
-	@Override
 	public void actualizarTipoPlan(CE01TipoPlan poCETipoPlan){
 		MOLOG.info("[EVL] =====[ Start actualizarTipoPlan ]=====");
 
@@ -67,7 +66,6 @@ public class CD01TipoPlan implements CI01TipoPlan{
 		MOLOG.info("[EVL] After update     : {} ", moJdbcTemplate);
 	}
 
-	@Override
 	public void eliminarTipoPlan(String psCodigo){
 		MOLOG.info("[EVL] =====[ Start eliminarTipoPlan ]=====");
 		
@@ -78,7 +76,6 @@ public class CD01TipoPlan implements CI01TipoPlan{
 		MOLOG.info("[EVL] After delete     : {} ", moJdbcTemplate);
 	}
 
-	@Override
 	public CE01TipoPlan buscarTipoPlan(String psCodigo) {
 		MOLOG.info("[EVL] =====[ Start buscarTipoPlan ]=====");
 		
@@ -92,7 +89,6 @@ public class CD01TipoPlan implements CI01TipoPlan{
 		return oCETipoPlan;
 	}
 
-	@Override
 	public List<CE01TipoPlan> listaAllTipoPlan() {
 		MOLOG.info("[EVL] =====[ Start listaAllTipoPlan ]=====");
 		

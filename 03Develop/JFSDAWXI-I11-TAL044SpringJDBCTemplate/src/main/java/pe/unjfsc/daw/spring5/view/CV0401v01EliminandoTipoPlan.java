@@ -11,8 +11,8 @@ public class CV0401v01EliminandoTipoPlan {
 	private static Logger MOLOG = LoggerFactory.getLogger(CV0401v01EliminandoTipoPlan.class);
 	private static ConfigurableApplicationContext moCntx;
 	private static String[] configContexto = {
-			"classpath:/pe/bbva/evalua/spring5/database/spring-postgres.xml",
-			"classpath:/pe/bbva/evalua/spring5/entity/spring-bean-tipo-plan.xml"
+			"classpath:/pe/unjfsc/daw/spring5/database/spring-postgres.xml",
+			"classpath:/pe/unjfsc/daw/spring5/entity/spring-bean-tipo-plan.xml"
     };
 
 	public static void main(String[] args) {

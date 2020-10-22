@@ -15,8 +15,8 @@ public class CV0601v01ConsultaTipoPlanAll {
 	private static Logger MOLOG = LoggerFactory.getLogger(CV0601v01ConsultaTipoPlanAll.class);
 	private static ConfigurableApplicationContext moCntx;
 	private static String[] configContexto = {
-			"classpath:/pe/bbva/evalua/spring5/database/spring-postgres.xml",
-			"classpath:/pe/bbva/evalua/spring5/entity/spring-bean-tipo-plan.xml"
+			"classpath:/pe/unjfsc/daw/spring5/database/spring-postgres.xml",
+			"classpath:/pe/unjfsc/daw/spring5/entity/spring-bean-tipo-plan.xml"
     };
 	public static void main(String[] args){
 		MOLOG.info("[EVL] =====[ Start main ]=====");

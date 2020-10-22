@@ -16,8 +16,8 @@ public class CV0301v01ModificandoTipoPlan {
 	private static ConfigurableApplicationContext moCntx;
 	private static SimpleDateFormat oSDF = new SimpleDateFormat("dd/MM/yyyy hh:mm:ss");
 	private static String[] configContexto = {
-			"classpath:/pe/bbva/evalua/spring5/database/spring-postgres.xml",
-			"classpath:/pe/bbva/evalua/spring5/entity/spring-bean-tipo-plan.xml"
+			"classpath:/pe/unjfsc/daw/spring5/database/spring-postgres.xml",
+			"classpath:/pe/unjfsc/daw/spring5/entity/spring-bean-tipo-plan.xml"
 	};
 	
 	public static void main(String[] args) throws ParseException {

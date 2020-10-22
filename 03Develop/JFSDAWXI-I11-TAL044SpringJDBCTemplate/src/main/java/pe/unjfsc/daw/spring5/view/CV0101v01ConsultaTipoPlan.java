@@ -24,7 +24,7 @@ public class CV0101v01ConsultaTipoPlan {
 		MOLOG.info("[EVL] =====[ Start main ]=====");
 		
 		// Referencio a la ruta donde se ubica el contexto
-		moCntx = new ClassPathXmlApplicationContext("classpath:/pe/bbva/evalua/spring5/database/spring-postgres.xml");
+		moCntx = new ClassPathXmlApplicationContext("classpath:/pe/unjfsc/daw/spring5/database/spring-postgres.xml");
 		MOLOG.info("[EVL] Context : {}", moCntx);
 		
 		// Conexion a bd

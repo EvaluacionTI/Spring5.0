@@ -1,21 +1,31 @@
 package pe.unjfsc.daw.spring5.model;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import pe.unjfsc.daw.spring5.entity.CECliente;
+import pe.unjfsc.daw.spring5.entity.CECompraEfectuada;
 import pe.unjfsc.daw.spring5.entity.CEProducto;
 
 public class CDLoadData {
 	private static final Logger LOG = LoggerFactory.getLogger("CDLoadData");
-	private HashSet<CEProducto> oListProduct;
 	
+	private HashSet<CEProducto> oListProduct;
+	private ArrayList<CECliente> oListClient;
+	private LinkedHashSet<CECompraEfectuada> oListCompraEfectuadas;
+
 	public CDLoadData() {
 		loadProducto();
+		loadCliente();
+		loadCompraEfectuadas();
 	}
 	
 	public HashSet<CEProducto> loadProducto(){
+		oListProduct = new HashSet<>();
 		oListProduct.add(new CEProducto(10, "Bebidas", "Gasesosa", "Retornable", "Coca cola", "1.5 lt", 6.00));
 		oListProduct.add(new CEProducto(15, "Bebidas", "Gasesosa", "Retornable", "Coca cola", "1.0 lt", 3.50));
 		oListProduct.add(new CEProducto(20, "Bebidas", "Gasesosa", "No retornable", "Coca cola", "500 ml", 2.50));
@@ -26,11 +36,68 @@ public class CDLoadData {
 		oListProduct.add(new CEProducto(45, "Lacteos", "Formula de crecimiento", "Nan3", "Nestle", "Liquida", 3.70));
 		oListProduct.add(new CEProducto(50, "Lacteos", "Formula lactea", "Nan2", "Nestle", "Liquida", 4.30));
 		LOG.info("[EVL] Load List Product : {}", oListProduct.size() );
+
 		return oListProduct;
 	}
 
-	public void setoListProduct(HashSet<CEProducto> oListProduct) {
-		this.oListProduct = oListProduct;
+	public ArrayList<CECliente> loadCliente(){
+		oListClient = new ArrayList<>();
+		oListClient.add(new CECliente ("0333132031", null, "0333132031@unjfsc.edu.pe", "PÉREZ RIVERA GIANELA ESTHER"));
+		oListClient.add(new CECliente ("0333092018", null, "0333092018@unjfsc.edu.pe", "ALCÁNTARA MIRANDA CARLOS ENRIQU"));
+		oListClient.add(new CECliente ("0333141002", null, "0333141002@unjfsc.edu.pe", "ARAMBULO AQUIJES GEAN PAUL ALEX"));
+		oListClient.add(new CECliente ("0333161007", null, "0333161007@unjfsc.edu.pe", "BORDA NONATO CARLOS ALONSO"));
+		oListClient.add(new CECliente ("0333161010", null, "0333161010@unjfsc.edu.pe", "CHÁVEZ OBREGÓN LEONEL GUILLERMO"));
+		oListClient.add(new CECliente ("0333161014", null, "0333161014@unjfsc.edu.pe", "FELIX ESCALANTE ANGEL GABINO"));
+		oListClient.add(new CECliente ("0333152007", null, "0333152007@unjfsc.edu.pe", "FLORES BRONCANO PEDRO CESAR"));
+		oListClient.add(new CECliente ("0333111040", null, "0333111040@unjfsc.edu.pe", "FLORES ROMERO EBLÉ CHRISTIAN"));
+		oListClient.add(new CECliente ("0333132017", null, "0333132017@unjfsc.edu.pe", "GARGATE TARAZONA JHIMI RUSVEL"));
+		oListClient.add(new CECliente ("0333152034", null, "0333152034@unjfsc.edu.pe", "LA ROSA FERNÁNDEZ ANGELA ELIZAB"));
+		oListClient.add(new CECliente ("0333142015", null, "0333142015@unjfsc.edu.pe", "LANDA SOLIS JUNIOR IVAN"));
+		oListClient.add(new CECliente ("0333151023", null, "0333151023@unjfsc.edu.pe", "MENDOZA SAMAN LEIDY VANESSA"));
+		oListClient.add(new CECliente ("0333161030", null, "0333161030@unjfsc.edu.pe", "MUNAYCO PERALTA JERCY BRYAN"));
+		oListClient.add(new CECliente ("0333142025", null, "0333142025@unjfsc.edu.pe", "NARVASTA VELAZCO ANTHONY JHONAT"));
+		oListClient.add(new CECliente ("0333161033", null, "0333161033@unjfsc.edu.pe", "OLORTIGUE JIMENEZ KENT NAY"));
+		oListClient.add(new CECliente ("0333161034", null, "0333161034@unjfsc.edu.pe", "ORTIZ GARCÍA ALISON GERALDINE"));
+		oListClient.add(new CECliente ("0333161045", null, "0333161045@unjfsc.edu.pe", "SANCHEZ CASTRO ROBERTO FREDI"));
+		oListClient.add(new CECliente ("0333161046", null, "0333161046@unjfsc.edu.pe", "URBANO LINO JHEYSSON JESÚS"));
+		oListClient.add(new CECliente ("0333161048", null, "0333161048@unjfsc.edu.pe", "VARGAS LEÓN BEATRIZ MILAGRITOS"));
+		oListClient.add(new CECliente ("0333141049", null, "0333141049@unjfsc.edu.pe", "ZELAYA HUERTA CLAUDIA JULISA"));
+		oListClient.add(new CECliente ("0333142040", null, "0333142040@unjfsc.edu.pe", "ZEVALLOS SALAS DELMER FRANCISCO"));
+
+		LOG.info("[EVL] Load List Cliente : {}", oListClient.size() );
+		return oListClient;
 	}
+
 	
+	public LinkedHashSet<CECompraEfectuada> loadCompraEfectuadas(){
+		oListCompraEfectuadas = new LinkedHashSet<CECompraEfectuada>();
+		
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333132031", "17/10/2020", 10,  2,6.00));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333152034", "16/10/2020", 15,  4,3.50));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333152034", "16/10/2020", 20,  6,2.50));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333151023", "15/10/2020", 25,  8,2.50));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333151023", "15/10/2020", 30, 11,6.50));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333151023", "15/10/2020", 35, 15,6.50));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333161034", "14/10/2020", 40, 13,6.50));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333161034", "14/10/2020", 45, 24,3.70));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333161034", "14/10/2020", 50, 24,4.30));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333161034", "14/10/2020", 10, 12,6.00));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333161048", "14/10/2020", 15, 14,3.50));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333141049", "15/10/2020", 20, 16,2.50));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333161033", "16/10/2020", 25, 18,2.50));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333161033", "16/10/2020", 30, 21,6.50));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333161033", "16/10/2020", 35, 25,6.50));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333161046", "17/10/2020", 40, 26,6.50));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333161046", "17/10/2020", 45, 48,3.70));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333142040", "08/10/2020", 50, 12,4.30));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333132031", "07/10/2020", 10,  3,6.00));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333152034", "06/10/2020", 15,  5,3.50));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333152034", "06/10/2020", 20,  7,2.50));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333151023", "05/10/2020", 25,  9,2.50));
+		oListCompraEfectuadas.add(new CECompraEfectuada( "0333151023", "05/10/2020", 30, 12,6.50));
+		
+		LOG.info("[EVL] Load List Compra Efectuadas : {}", oListCompraEfectuadas.size() );
+
+		return oListCompraEfectuadas;
+	}
 }

@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import pe.unjfsc.daw.spring5.logical.CIMostrarListado;
 
 public class CVLookListProduct {
-	private static final Logger LOG = LoggerFactory.getLogger("CVMostrarLinkedHashSet.java");
+	private static final Logger LOG = LoggerFactory.getLogger("CVLookListProduct");
 	public static void main(String[] args) {
 		
 		ApplicationContext oCntx = new ClassPathXmlApplicationContext("context-ultimoRincon.xml");

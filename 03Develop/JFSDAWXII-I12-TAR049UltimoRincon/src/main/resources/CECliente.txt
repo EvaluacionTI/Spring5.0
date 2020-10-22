@@ -1,0 +1,22 @@
+oListClient.add(new CECliente ("0333132031", null, "0333132031@unjfsc.edu.pe", "PÉREZ RIVERA GIANELA ESTHER"));
+oListClient.add(new CECliente ("0333092018", null, "0333092018@unjfsc.edu.pe", "ALCÁNTARA MIRANDA CARLOS ENRIQU"));
+oListClient.add(new CECliente ("0333141002", null, "0333141002@unjfsc.edu.pe", "ARAMBULO AQUIJES GEAN PAUL ALEX"));
+oListClient.add(new CECliente ("0333161007", null, "0333161007@unjfsc.edu.pe", "BORDA NONATO CARLOS ALONSO"));
+oListClient.add(new CECliente ("0333161010", null, "0333161010@unjfsc.edu.pe", "CHÁVEZ OBREGÓN LEONEL GUILLERMO"));
+oListClient.add(new CECliente ("0333161014", null, "0333161014@unjfsc.edu.pe", "FELIX ESCALANTE ANGEL GABINO"));
+oListClient.add(new CECliente ("0333152007", null, "0333152007@unjfsc.edu.pe", "FLORES BRONCANO PEDRO CESAR"));
+oListClient.add(new CECliente ("0333111040", null, "0333111040@unjfsc.edu.pe", "FLORES ROMERO EBLÉ CHRISTIAN"));
+oListClient.add(new CECliente ("0333132017", null, "0333132017@unjfsc.edu.pe", "GARGATE TARAZONA JHIMI RUSVEL"));
+oListClient.add(new CECliente ("0333152034", null, "0333152034@unjfsc.edu.pe", "LA ROSA FERNÁNDEZ ANGELA ELIZAB"));
+oListClient.add(new CECliente ("0333142015", null, "0333142015@unjfsc.edu.pe", "LANDA SOLIS JUNIOR IVAN"));
+oListClient.add(new CECliente ("0333151023", null, "0333151023@unjfsc.edu.pe", "MENDOZA SAMAN LEIDY VANESSA"));
+oListClient.add(new CECliente ("0333161030", null, "0333161030@unjfsc.edu.pe", "MUNAYCO PERALTA JERCY BRYAN"));
+oListClient.add(new CECliente ("0333142025", null, "0333142025@unjfsc.edu.pe", "NARVASTA VELAZCO ANTHONY JHONAT"));
+oListClient.add(new CECliente ("0333161033", null, "0333161033@unjfsc.edu.pe", "OLORTIGUE JIMENEZ KENT NAY"));
+oListClient.add(new CECliente ("0333161034", null, "0333161034@unjfsc.edu.pe", "ORTIZ GARCÍA ALISON GERALDINE"));
+oListClient.add(new CECliente ("0333161045", null, "0333161045@unjfsc.edu.pe", "SANCHEZ CASTRO ROBERTO FREDI"));
+oListClient.add(new CECliente ("0333161046", null, "0333161046@unjfsc.edu.pe", "URBANO LINO JHEYSSON JESÚS"));
+oListClient.add(new CECliente ("0333161048", null, "0333161048@unjfsc.edu.pe", "VARGAS LEÓN BEATRIZ MILAGRITOS"));
+oListClient.add(new CECliente ("0333141049", null, "0333141049@unjfsc.edu.pe", "ZELAYA HUERTA CLAUDIA JULISA"));
+oListClient.add(new CECliente ("0333142040", null, "0333142040@unjfsc.edu.pe", "ZEVALLOS SALAS DELMER FRANCISCO"));
+

@@ -6,7 +6,7 @@
 	<import resource="classpath:/spring/database/spring-postgres.xml"/>
 
 	<!-- Definimos una clase a inyectar en el contexto -->
-	<bean id="idTipoPlan" class="pe.unjfsc.eii.daw.model.CD01TipoPlan">
+	<bean id="idTipoPlan" class="pe.unjfsc.daw.spring5.model.CD01TipoPlan">
 		<property name="dataSource" ref="idDriverManagerDataSource"></property>
 	</bean>
 
