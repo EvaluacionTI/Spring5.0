@@ -1,0 +1,32 @@
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333132031", "17/10/2020", 10,  2,6.00));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333152034", "16/10/2020", 15,  4,3.50));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333152034", "16/10/2020", 20,  6,2.50));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333151023", "15/10/2020", 25,  8,2.50));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333151023", "15/10/2020", 30, 11,6.50));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333151023", "15/10/2020", 35, 15,6.50));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333161034", "14/10/2020", 40, 13,6.50));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333161034", "14/10/2020", 45, 24,3.70));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333161034", "14/10/2020", 50, 24,4.30));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333161034", "14/10/2020", 10, 12,6.00));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333161048", "14/10/2020", 15, 14,3.50));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333141049", "15/10/2020", 20, 16,2.50));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333161033", "16/10/2020", 25, 18,2.50));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333161033", "16/10/2020", 30, 21,6.50));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333161033", "16/10/2020", 35, 25,6.50));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333161046", "17/10/2020", 40, 26,6.50));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333161046", "17/10/2020", 45, 48,3.70));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333142040", "08/10/2020", 50, 12,4.30));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333132031", "07/10/2020", 10,  3,6.00));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333152034", "06/10/2020", 15,  5,3.50));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333152034", "06/10/2020", 20,  7,2.50));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333151023", "05/10/2020", 25,  9,2.50));
+oListCompraEfectuadas.add(new CECompraEfectuada( "0333151023", "05/10/2020", 30, 12,6.50));
+
+
+
+
+
+
+
+
+
