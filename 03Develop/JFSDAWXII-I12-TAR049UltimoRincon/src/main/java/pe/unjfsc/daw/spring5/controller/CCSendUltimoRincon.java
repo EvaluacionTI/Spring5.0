@@ -139,5 +139,42 @@ public class CCSendUltimoRincon {
 
 		LOG.info("[EVL] Mapa for DOM : {}", myModel);
 		return new ModelAndView(CEConstant.JSP_LIST_DETAIL_BUY_ORDER, "model", myModel);
-	}	
+	}
+
+	@RequestMapping(value="/listadoUltimaCompra.eur")
+	public ModelAndView arrayListUltimaOrderRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		LOG.info("[EVL] Request and response : {} {}", request, response);
+		
+		String lsFechaSistema = (new Date()).toString();
+		LOG.info("[EVL] Instance CMListadoUltimoRincon	: {}", oListaFinal);
+		
+		LOG.info("[EVL] Archivo			  	: {}", CEConstant.JSP_LIST_COMPRA_BY_CLIENT);
+		LOG.info("[EVL] Fecha del sistema 	: {}", lsFechaSistema);
+		LOG.info("[EVL] ArrayList			: {}", oListaFinal.detailAccumulatedBuyOrder("0333151023").size());
+		
+		Map<String, Object> myModel = new HashMap<String, Object>();
+        myModel.put("vFechaSistema", lsFechaSistema);
+        myModel.put("listSaldoAfiliados", oListaFinal.detailAccumulatedBuyOrder("0333151023"));
+
+		LOG.info("[EVL] Mapa for DOM : {}", myModel);
+		return new ModelAndView(CEConstant.JSP_LIST_COMPRA_BY_CLIENT, "model", myModel);
+	}
+	@RequestMapping(value="/listadoNoCompra.eur")
+	public ModelAndView arrayListUltimaNoOrderRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		LOG.info("[EVL] Request and response : {} {}", request, response);
+		
+		String lsFechaSistema = (new Date()).toString();
+		LOG.info("[EVL] Instance CMListadoUltimoRincon	: {}", oListaFinal);
+		
+		LOG.info("[EVL] Archivo			  	: {}", CEConstant.JSP_LIST_COMPRA_NO_CLIENT);
+		LOG.info("[EVL] Fecha del sistema 	: {}", lsFechaSistema);
+		LOG.info("[EVL] ArrayList			: {}", oListaFinal.detailNotBuy("0333141002").size());
+		
+		Map<String, Object> myModel = new HashMap<String, Object>();
+        myModel.put("vFechaSistema", lsFechaSistema);
+        myModel.put("listSaldoAfiliados", oListaFinal.detailNotBuy("0333141002"));
+
+		LOG.info("[EVL] Mapa for DOM : {}", myModel);
+		return new ModelAndView(CEConstant.JSP_LIST_COMPRA_NO_CLIENT, "model", myModel);
+	}
 }

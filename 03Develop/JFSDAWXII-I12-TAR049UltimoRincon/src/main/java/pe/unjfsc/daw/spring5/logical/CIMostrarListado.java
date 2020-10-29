@@ -18,6 +18,7 @@ public interface CIMostrarListado {
 	public ArrayList<CECompraEfectuada> detailAccumulatedBuyOrder(String psCodigo);
     public ArrayList<CECompraEfectuada> detailNotBuy(String psCodigo);
     
+    // Métodos de conversion para tablemodel en Swing
     public String[][] convertHashSetToMatriz(HashSet<CEProducto> poLista);
     public String[][] convertArrayListToMatriz(ArrayList<CECliente> poLista);
     public String[][] convertLinkedHashSetToMatriz(LinkedHashSet<CECompraEfectuada> poLista);

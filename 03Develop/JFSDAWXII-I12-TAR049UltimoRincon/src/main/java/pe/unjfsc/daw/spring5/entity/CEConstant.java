@@ -7,7 +7,7 @@ public class CEConstant {
 	public static final String JSP_LIST_NAME_COMPRA_ECECTUADA = "jsp04ListadoNameComprasEfectuadas";
 	public static final String JSP_LIST_DETAIL_BUY_NOT_ORDER = "jsp05ListadoBuyNotOrder";
 	public static final String JSP_LIST_DETAIL_BUY_ORDER = "jsp06ListadoBuyOrder";
-	public static final String JSP_LIST_COMPRA_BY_CLIENT = "jsp04ListadoComprasPorCliente";
-	public static final String JSP_LIST_COMPRA_NO_CLIENT = "jsp05ListadoComprasNoCliente";
+	public static final String JSP_LIST_COMPRA_BY_CLIENT = "jsp07ListadoUltimaCompra";
+	public static final String JSP_LIST_COMPRA_NO_CLIENT = "jsp08ListadoUltimaNoCompra";
 	
 }
