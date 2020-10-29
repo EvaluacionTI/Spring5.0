@@ -11,4 +11,5 @@ public class CEConstant {
 	public static final String JSP_ADD_AFILIADO = "jsp02AdicionarAfiliado";
 	public static final String JSP_EDIT_AFILIADO = "jsp03ActualizarAfiliado";
 	public static final String JSP_SEE_ALL_AFILIADO = "jsp04VisualizarAfiliado";
+	public static final String JSP_SEE_ALL_AFILIADOV1 = "jsp05VisualizarAfiliado";
 }

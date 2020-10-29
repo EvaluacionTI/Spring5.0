@@ -2,8 +2,10 @@ package pe.unjfsc.daw.spring5.entity;
 
 public class CECompraEfectuada {
 	private String codigoCliente;
+	private String nameClient;
 	private String fechaCompra;
 	private int idProducto;
+	private String nameProduct;
 	private int cantidad;
 	private double precioVenta;
 	private double totalVenta;
@@ -25,6 +27,19 @@ public class CECompraEfectuada {
 		this.codigoCliente = codigoCliente;
 		this.idProducto = idProducto;
 		this.fechaCompra = fechaCompra;
+		this.cantidad = cantidad;
+		this.precioVenta = precioVenta;
+		this.totalVenta = totalVenta;
+	}
+
+	public CECompraEfectuada(String codigoCliente, String nameClient, String fechaCompra, int idProducto,
+			String nameProduct, int cantidad, double precioVenta, double totalVenta) {
+		super();
+		this.codigoCliente = codigoCliente;
+		this.nameClient = nameClient;
+		this.fechaCompra = fechaCompra;
+		this.idProducto = idProducto;
+		this.nameProduct = nameProduct;
 		this.cantidad = cantidad;
 		this.precioVenta = precioVenta;
 		this.totalVenta = totalVenta;
@@ -78,15 +93,35 @@ public class CECompraEfectuada {
 		this.totalVenta = totalVenta;
 	}
 
+	public String getNameClient() {
+		return nameClient;
+	}
+
+	public void setNameClient(String nameClient) {
+		this.nameClient = nameClient;
+	}
+
+	public String getNameProduct() {
+		return nameProduct;
+	}
+
+	public void setNameProduct(String nameProduct) {
+		this.nameProduct = nameProduct;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("CECompraEfectuada [codigoCliente=");
 		builder.append(codigoCliente);
-		builder.append(", idProducto=");
-		builder.append(idProducto);
+		builder.append(", nameClient=");
+		builder.append(nameClient);
 		builder.append(", fechaCompra=");
 		builder.append(fechaCompra);
+		builder.append(", idProducto=");
+		builder.append(idProducto);
+		builder.append(", nameProduct=");
+		builder.append(nameProduct);
 		builder.append(", cantidad=");
 		builder.append(cantidad);
 		builder.append(", precioVenta=");
@@ -96,4 +131,5 @@ public class CECompraEfectuada {
 		builder.append("]");
 		return builder.toString();
 	}
+	
 }

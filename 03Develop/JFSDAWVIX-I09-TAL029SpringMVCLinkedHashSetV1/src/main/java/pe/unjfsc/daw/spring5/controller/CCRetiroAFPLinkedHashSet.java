@@ -48,18 +48,19 @@ public class CCRetiroAFPLinkedHashSet {
 		return new ModelAndView(CEConstant.JSP_LIST_ALL_AFILIADO, "model", myModel);
 	}
 	
-	@RequestMapping("/adicionarAfiliado.lhs")
+	@RequestMapping(value="/adicionarAfiliado.lhs", method = RequestMethod.GET)
 	public ModelAndView lookRegistro(Model oM) {
 		LOG.info("[EVL] Load page Add Afiliados :");
 		String lFechaSistema = (new Date()).toString();
 		Map<String, Object> myModel = new HashMap<String, Object>();
 		myModel.put("vFechaSistema", lFechaSistema);
 		myModel.put("vAfiliado", new CESaldoAfiliado());
+		LOG.info("[EVL] Model And View add : {} ", myModel);
 		LOG.info("[EVL] Iniciando JSP : {} ", CEConstant.JSP_ADD_AFILIADO);
 		return new ModelAndView(CEConstant.JSP_ADD_AFILIADO, "model", myModel);
 	}
 	
-	@RequestMapping(value="/view/saveSaldo", method = RequestMethod.POST)
+	@RequestMapping(value="/saveSaldo", method = RequestMethod.POST)
 	public ModelAndView newAfiliado(@ModelAttribute("model.vAfiliado") CESaldoAfiliado poCESaldo) {
 		LOG.info("[EVL] Grabando Afiliados : {}", poCESaldo);
 		oCMRetiroAFP.saveRetiro(poCESaldo);

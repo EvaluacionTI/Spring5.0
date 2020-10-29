@@ -5,6 +5,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 	<title>[DAW] Desarrollo Aplicaciones Web</title>
 </head>
 <body>
@@ -18,6 +19,10 @@
 	<br>
 	<co:url value="/visualizarAfiliados.lhs" var="visualizarUrl"/>
 	<a href="${visualizarUrl}">Visualizar Saldo de Afiliados</a>	
+	<br>
+	<br>
+	<co:url value="/listadoAfiliados.lhs" var="listadoUrl"/>
+	<a href="${listadoUrl}">Lista general de Saldo de Afiliados</a>
 	<br>
 	<br>
 	<co:url value="/listadoAfiliados.lhs" var="listadoUrl"/>

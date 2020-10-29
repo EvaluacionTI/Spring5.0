@@ -1,6 +1,8 @@
 package pe.unjfsc.daw.spring5.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 
@@ -17,6 +19,9 @@ public class CDLoadData {
 	private HashSet<CEProducto> oListProduct;
 	private ArrayList<CECliente> oListClient;
 	private LinkedHashSet<CECompraEfectuada> oListCompraEfectuadas;
+	private LinkedHashSet<CECompraEfectuada> oListCompraEfectuadasRpta;
+    private ArrayList<CECompraEfectuada> oListBuyFinal;
+    private CECompraEfectuada oCECompraRpta;
 
 	public CDLoadData() {
 		loadProducto();
@@ -68,7 +73,6 @@ public class CDLoadData {
 		return oListClient;
 	}
 
-	
 	public LinkedHashSet<CECompraEfectuada> loadCompraEfectuadas(){
 		oListCompraEfectuadas = new LinkedHashSet<CECompraEfectuada>();
 		
@@ -100,4 +104,176 @@ public class CDLoadData {
 
 		return oListCompraEfectuadas;
 	}
+
+	public LinkedHashSet<CECompraEfectuada> loadNameCompraEfectuadas(){
+		oListCompraEfectuadasRpta = new LinkedHashSet<CECompraEfectuada>();
+		
+		oListCompraEfectuadasRpta = getNameClientProduct(oListCompraEfectuadas);
+		LOG.info("[EVL] Load List Compra Efectuadas Rpta : {}", oListCompraEfectuadasRpta.size() );
+		return oListCompraEfectuadasRpta;
+	}
+	
+	protected LinkedHashSet<CECompraEfectuada> getNameClientProduct(LinkedHashSet<CECompraEfectuada> poLista){
+		LinkedHashSet<CECompraEfectuada> oListaRpta = new LinkedHashSet<CECompraEfectuada>();
+		oCECompraRpta = new CECompraEfectuada();
+		
+		for (CECompraEfectuada oItem : poLista) {
+			LOG.info("[EVL] Read CECompraEfectuada : {}", oItem );
+			oCECompraRpta = foundClientProduc(oItem);
+			LOG.info("[EVL] Read New CECompraEfectuada : {}", oCECompraRpta );
+			oListaRpta.add(oCECompraRpta);
+			oCECompraRpta = new CECompraEfectuada();
+		}
+		return oListaRpta;
+	}
+	
+	protected CECompraEfectuada foundClientProduc(CECompraEfectuada poCECompra) {
+		oCECompraRpta = new CECompraEfectuada();
+		oCECompraRpta = poCECompra;
+		for (CECliente oCEItem : oListClient) {
+			if (poCECompra.getCodigoCliente().equals(oCEItem.getCodigoCliente())){
+				oCECompraRpta.setNameClient(oCEItem.getNombre());
+				break;
+			}
+		}
+		
+		for (CEProducto oCEItem : oListProduct) {
+			if (poCECompra.getIdProducto()==oCEItem.getId()) {
+				oCECompraRpta.setNameProduct(oCEItem.getCategoria()+"/"+oCEItem.getClase()+"/"+oCEItem.getTipoProducto()+"/"+oCEItem.getMarca()+"/"+oCEItem.getModeloPresentacion());
+				break;
+			}
+		}
+		
+		return oCECompraRpta;
+	}
+	
+	public ArrayList<CECompraEfectuada> detailBuyNotOrder(String psCodigo){
+		LinkedHashSet<CECompraEfectuada> oListaRpta = new LinkedHashSet<CECompraEfectuada>();
+		ArrayList<CECompraEfectuada> oListNotOrder = new ArrayList<CECompraEfectuada>();
+		
+		oListaRpta = getNameClientProduct(oListCompraEfectuadas);
+		for (CECompraEfectuada oCEItem : oListaRpta) {
+			if(oCEItem.getCodigoCliente().equals(psCodigo)) {
+				oListNotOrder.add(oCEItem);
+			}
+		}
+		LOG.info("[EVL] Lista sin ordenar : {}", oListNotOrder );
+		return oListNotOrder;
+	}
+	
+	public ArrayList<CECompraEfectuada> detailBuyOrder(String psCodigo){
+		LinkedHashSet<CECompraEfectuada> oListaRpta = new LinkedHashSet<CECompraEfectuada>();
+		ArrayList<CECompraEfectuada> oListOrder = new ArrayList<CECompraEfectuada>();
+		
+		oListaRpta = getNameClientProduct(oListCompraEfectuadas);
+		for (CECompraEfectuada oCEItem : oListaRpta) {
+			if(oCEItem.getCodigoCliente().equals(psCodigo)) {
+				oListOrder.add(oCEItem);
+			}
+		}
+
+		Collections.sort(oListOrder, new Comparator<CECompraEfectuada>() {
+
+			@Override
+			public int compare(CECompraEfectuada o1, CECompraEfectuada o2) {
+				if (o1.getCantidad() < o2.getCantidad()) {
+					return 1;
+				}
+				if (o1.getCantidad() > o2.getCantidad()) {
+					return -1;
+				}
+				return 0;
+			}
+			
+		});
+		LOG.info("[EVL] Lista ordenada : {}", oListOrder );
+		return oListOrder;
+	}	
+
+    public ArrayList<CECompraEfectuada> detailAccumulatedBuyOrder(String psCodigo) {
+        LinkedHashSet<CECompraEfectuada> oListaRpta = new LinkedHashSet<>();
+        ArrayList<CECompraEfectuada> oListOrder = new ArrayList<>();
+
+        oListaRpta = getNameClientProduct(oListCompraEfectuadas);
+        for (CECompraEfectuada oCEItem : oListaRpta) {
+            if (oCEItem.getCodigoCliente().equals(psCodigo)) {
+                oListOrder.add(oCEItem);
+            }
+        }
+        LOG.info("[EVL] Lista seleccionada : {}", oListOrder.size());
+
+        short iFlagPrimero = 0;
+        for (CECompraEfectuada oCEItem : oListOrder) {
+            if (iFlagPrimero == 0) {
+                oListBuyFinal.add(oCEItem);
+                LOG.info("[EVL] Lista 1er vez Buy final : {}", oListBuyFinal);
+                iFlagPrimero = 1;
+            } else {
+                acumulaBuy(oCEItem);
+            }
+        }
+
+        Collections.sort(oListBuyFinal, (CECompraEfectuada o1, CECompraEfectuada o2) -> {
+            if (o1.getCantidad() < o2.getCantidad()) {
+                return 1;
+            }
+            if (o1.getCantidad() > o2.getCantidad()) {
+                return -1;
+            }
+            return 0;
+        });
+        LOG.info("[EVL] Lista ordenada : {}", oListOrder);
+        return oListBuyFinal;
+    }
+
+    protected void acumulaBuy(CECompraEfectuada poCECompra) {
+        CECompraEfectuada oCEAcumula = new CECompraEfectuada();
+        int iAcumulaCantidad, iTotalAcumulaCantidad;
+        LOG.info("[EVL] Buy que viene : {}", poCECompra);
+        for (CECompraEfectuada oCEItem : oListBuyFinal) {
+            if (oCEItem.getIdProducto() == poCECompra.getIdProducto()) {
+                iAcumulaCantidad = oCEItem.getCantidad();
+                iTotalAcumulaCantidad = iAcumulaCantidad + poCECompra.getCantidad();
+                oCEAcumula = oCEItem;
+                oCEAcumula.setCantidad(iTotalAcumulaCantidad);
+                oListBuyFinal.remove(oCEItem);
+                oListBuyFinal.add(oCEAcumula);
+                LOG.info("[EVL] Lista buy acumula final : {}", oListBuyFinal);
+                break; // Como es dinamico la lista debe salir
+            } else {
+                oListBuyFinal.add(poCECompra);
+                LOG.info("[EVL] Lista new buy final : {}", oListBuyFinal);
+                break; // Como es dinamico la lista debe salir
+            }
+        }
+    }
+
+    public ArrayList<CECompraEfectuada> detailNotBuy(String psCodigo) {
+        LinkedHashSet<CECompraEfectuada> oListaRpta = new LinkedHashSet<CECompraEfectuada>();
+        ArrayList<CECompraEfectuada> oListNotOrder = new ArrayList<CECompraEfectuada>();
+
+        oListaRpta = getNameClientProduct(oListCompraEfectuadas);
+        short iNoExiste = 0;
+        for (CECompraEfectuada oCEItem : oListaRpta) {
+            if (oCEItem.getCodigoCliente().equals(psCodigo)) {
+                iNoExiste = 1;
+                break;
+            }
+        }
+
+        if (iNoExiste == 0) {
+            oCECompraRpta = new CECompraEfectuada();
+            for (CEProducto oCEItem : oListProduct) {
+                oCECompraRpta.setCodigoCliente(psCodigo);
+                oCECompraRpta.setIdProducto(oCEItem.getId());
+                oCECompraRpta.setNameProduct(oCEItem.getCategoria() + "/" + oCEItem.getClase() + "/" + oCEItem.getTipoProducto() + "/" + oCEItem.getMarca() + "/" + oCEItem.getModeloPresentacion());
+                oCECompraRpta.setPrecioVenta(oCEItem.getPrecioVenta());
+                oListNotOrder.add(oCECompraRpta);
+                oCECompraRpta = new CECompraEfectuada();
+            }
+        }
+
+        LOG.info("[EVL] Lista sin ordenar : {}", oListNotOrder);
+        return oListNotOrder;
+    }	
 }

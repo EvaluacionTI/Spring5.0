@@ -5,6 +5,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 		<title>[DAW] Desarrollo Aplicaciones Web</title>
 	</head>
 	<body>
@@ -20,6 +21,18 @@
 		<br>
 		<co:url value="/listadoCompraEfectuada.eur" var="compraUrl" />
 		<a href="${compraUrl}">Listado Compras Efectuadas</a>
+		<br>
+		<br>
+		<co:url value="/listadoNameCompraEfectuada.eur" var="compraUrl" />
+		<a href="${compraUrl}">Listado nombre Cliente Producto Compras Efectuadas</a>
+		<br>
+		<br>
+		<co:url value="/listadoBuyNotOrder.eur" var="compraUrl" />
+		<a href="${compraUrl}">Listado detalle de Compras Efectuadas no ordenadas</a>
+		<br>
+		<br>
+		<co:url value="/listadoBuyOrder.eur" var="compraUrl" />
+		<a href="${compraUrl}">Listado detalle de Compras Efectuadas ordenas</a>
 		<br>
 		<br>
 		<co:url value="/listadoUltimaCompra.eur" var="ultimaCompraUrl" />

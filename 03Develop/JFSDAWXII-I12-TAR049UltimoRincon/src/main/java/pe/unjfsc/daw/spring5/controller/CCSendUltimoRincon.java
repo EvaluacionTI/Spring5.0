@@ -66,7 +66,7 @@ public class CCSendUltimoRincon {
 	}
 
 	@RequestMapping(value="/listadoCompraEfectuada.eur")
-	public ModelAndView linkedListListRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public ModelAndView linkedHashSetRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		LOG.info("[EVL] Request and response : {} {}", request, response);
 		
 		String lsFechaSistema = (new Date()).toString();
@@ -82,5 +82,62 @@ public class CCSendUltimoRincon {
 
 		LOG.info("[EVL] Mapa for DOM : {}", myModel);
 		return new ModelAndView(CEConstant.JSP_LIST_COMPRA_ECECTUADA, "model", myModel);
-	}		
+	}
+
+	@RequestMapping(value="/listadoNameCompraEfectuada.eur")
+	public ModelAndView linkedHashSetNameRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		LOG.info("[EVL] Request and response : {} {}", request, response);
+		
+		String lsFechaSistema = (new Date()).toString();
+		LOG.info("[EVL] Instance CMListadoUltimoRincon	: {}", oListaFinal);
+		
+		LOG.info("[EVL] Archivo			  	: {}", CEConstant.JSP_LIST_NAME_COMPRA_ECECTUADA);
+		LOG.info("[EVL] Fecha del sistema 	: {}", lsFechaSistema);
+		LOG.info("[EVL] ArrayList			: {}", oListaFinal.listaClientProductCompraEfectuada().size());
+		
+		Map<String, Object> myModel = new HashMap<String, Object>();
+        myModel.put("vFechaSistema", lsFechaSistema);
+        myModel.put("listSaldoAfiliados", oListaFinal.listaClientProductCompraEfectuada());
+
+		LOG.info("[EVL] Mapa for DOM : {}", myModel);
+		return new ModelAndView(CEConstant.JSP_LIST_NAME_COMPRA_ECECTUADA, "model", myModel);
+	}
+	
+	@RequestMapping(value="/listadoBuyNotOrder.eur")
+	public ModelAndView arrayListNotOrderRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		LOG.info("[EVL] Request and response : {} {}", request, response);
+		
+		String lsFechaSistema = (new Date()).toString();
+		LOG.info("[EVL] Instance CMListadoUltimoRincon	: {}", oListaFinal);
+		
+		LOG.info("[EVL] Archivo			  	: {}", CEConstant.JSP_LIST_DETAIL_BUY_NOT_ORDER);
+		LOG.info("[EVL] Fecha del sistema 	: {}", lsFechaSistema);
+		LOG.info("[EVL] ArrayList			: {}", oListaFinal.detailBuyNotOrder("0333151023").size());
+		
+		Map<String, Object> myModel = new HashMap<String, Object>();
+        myModel.put("vFechaSistema", lsFechaSistema);
+        myModel.put("listSaldoAfiliados", oListaFinal.detailBuyNotOrder("0333151023"));
+
+		LOG.info("[EVL] Mapa for DOM : {}", myModel);
+		return new ModelAndView(CEConstant.JSP_LIST_DETAIL_BUY_NOT_ORDER, "model", myModel);
+	}
+
+	@RequestMapping(value="/listadoBuyOrder.eur")
+	public ModelAndView arrayListOrderRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		LOG.info("[EVL] Request and response : {} {}", request, response);
+		
+		String lsFechaSistema = (new Date()).toString();
+		LOG.info("[EVL] Instance CMListadoUltimoRincon	: {}", oListaFinal);
+		
+		LOG.info("[EVL] Archivo			  	: {}", CEConstant.JSP_LIST_DETAIL_BUY_ORDER);
+		LOG.info("[EVL] Fecha del sistema 	: {}", lsFechaSistema);
+		LOG.info("[EVL] ArrayList			: {}", oListaFinal.detailBuyOrder("0333151023").size());
+		
+		Map<String, Object> myModel = new HashMap<String, Object>();
+        myModel.put("vFechaSistema", lsFechaSistema);
+        myModel.put("listSaldoAfiliados", oListaFinal.detailBuyOrder("0333151023"));
+
+		LOG.info("[EVL] Mapa for DOM : {}", myModel);
+		return new ModelAndView(CEConstant.JSP_LIST_DETAIL_BUY_ORDER, "model", myModel);
+	}	
 }
