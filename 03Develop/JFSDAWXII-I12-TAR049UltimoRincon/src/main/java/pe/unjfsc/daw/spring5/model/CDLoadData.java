@@ -8,18 +8,14 @@ import java.util.LinkedHashSet;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 
 import pe.unjfsc.daw.spring5.entity.CECliente;
 import pe.unjfsc.daw.spring5.entity.CECompraEfectuada;
 import pe.unjfsc.daw.spring5.entity.CEProducto;
 
-@Repository
 public class CDLoadData {
 	private static final Logger LOG = LoggerFactory.getLogger("CDLoadData");
 	
-	@Autowired
 	private HashSet<CEProducto> oListProduct;
 	private ArrayList<CECliente> oListClient;
 	private LinkedHashSet<CECompraEfectuada> oListCompraEfectuadas;
@@ -34,7 +30,7 @@ public class CDLoadData {
 	}
 	
 	public HashSet<CEProducto> loadProducto(){
-		//oListProduct = new HashSet<>();
+		oListProduct = new HashSet<>();
 		oListProduct.add(new CEProducto(10, "Bebidas", "Gasesosa", "Retornable", "Coca cola", "1.5 lt", 6.00));
 		oListProduct.add(new CEProducto(15, "Bebidas", "Gasesosa", "Retornable", "Coca cola", "1.0 lt", 3.50));
 		oListProduct.add(new CEProducto(20, "Bebidas", "Gasesosa", "No retornable", "Coca cola", "500 ml", 2.50));
