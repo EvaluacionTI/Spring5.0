@@ -6,6 +6,7 @@
   <packaging>war</packaging>
   <version>0.1.0</version>
   <name>BVASPGEVL1911v01SpringBatchTal049 Maven Webapp</name>
+
 	<!-- [ 1. PROPIEDADES GENERALES ] -->
 	<properties>
 		<spring.version>5.2.7.RELEASE</spring.version>

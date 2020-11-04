@@ -8,7 +8,7 @@ public class CEConstant {
 	public static final int RANGO_51600 = 51600;
 	public static final double PORCENTAJE_25 = 0.25;
 	
-	// Nombre de pï¿½gina lï¿½gico
+	// Nombre de página lógico
 	public static final String JSP_LIST_ALL_AFILIADO = "jsp0101v01ListarAfiliado";
 	
 	// Variables de base de datos y tabla
