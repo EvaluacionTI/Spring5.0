@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transaction xmlns="http://www.w3schools.com" transactionName="PGLUT004" application="PGLU" version="01" country="PE" language="ES">
+	<paramsIn>
+		<dto order="1" name="EntityCustomer" mandatory="0" package="com.bbva.pglu.dto.customer.CustomerDTO" artifactId="PGLUC001">
+			<parameter order="1" name="customerId" mandatory="1" type="String" size="10"/>
+			<parameter order="2" name="firstName" mandatory="0" type="String" size="30"/>
+			<parameter order="3" name="lastName" mandatory="0" type="String" size="30"/>
+			<parameter order="4" name="genderType" mandatory="0" type="String" size="20"/>
+			<parameter order="5" name="documentNumberId" mandatory="0" type="String" size="40"/>
+			<parameter order="6" name="documentType" mandatory="0" type="String" size="40"/>
+			<parameter order="7" name="birthDate" mandatory="0" type="Date (YYYY-MM-DD)" size="0"/>
+			<parameter order="8" name="addressDesc" mandatory="0" type="String" size="50"/>
+			<parameter order="9" name="nationalityName" mandatory="0" type="String" size="40"/>
+			<parameter order="10" name="emailDesc" mandatory="0" type="String" size="100"/>
+		</dto>
+	</paramsIn>
+	<paramsOut/>
+	<description>Upate Customer</description>
+</transaction>
