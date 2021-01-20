@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transaction xmlns="http://www.w3schools.com" transactionName="QWPUT204" application="QWPU" version="01" country="PE"
+             language="ES">
+    <paramsIn>
+        <parameter order="1" name="id-customer" type="String" size="10" mandatory="1"/>
+    </paramsIn>
+    <paramsOut/>
+    <description>Delete Customer by id</description>
+</transaction>

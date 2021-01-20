@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transaction xmlns="http://www.w3schools.com" transactionName="PAPXT006" application="PAPX" version="01" country="PE" language="ES">
+	<paramsIn/>
+	<paramsOut>
+		<list order="1" name="EntityListAccount" mandatory="0">
+			<dto order="1" name="Type" mandatory="0" package="com.bbva.papx.dto.account.AccountDTO" artifactId="PAPXC001">
+				<parameter order="1" name="accountId" mandatory="0" type="String" size="30"/>
+				<parameter order="2" name="familyName" mandatory="0" type="String" size="30"/>
+				<parameter order="3" name="accountType" mandatory="0" type="String" size="30"/>
+				<parameter order="4" name="aliasDesc" mandatory="0" type="String" size="50"/>
+				<parameter order="5" name="accountNumberId" mandatory="0" type="String" size="40"/>
+				<parameter order="6" name="oppeningDate" mandatory="0" type="Date (YYYY-MM-DD)" size="0"/>
+				<parameter order="7" name="statusType" mandatory="0" type="String" size="20"/>
+				<parameter order="8" name="titleDesc" mandatory="0" type="String" size="50"/>
+				<parameter order="9" name="currencyName" mandatory="0" type="String" size="10"/>
+				<parameter order="10" name="currentBalanceAmount" mandatory="0" type="Double" size="30"/>
+				<parameter order="11" name="pendingBalanceAmount" mandatory="0" type="Double" size="30"/>
+				<parameter order="12" name="postedBalanceAmount" mandatory="0" type="Double" size="30"/>
+				<parameter order="13" name="relatedContractId" mandatory="0" type="String" size="30"/>
+				<parameter order="14" name="aggreementId" mandatory="0" type="String" size="30"/>
+			</dto>
+		</list>
+	</paramsOut>
+	<description>List All Account</description>
+</transaction>

@@ -1,0 +1,24 @@
+package com.bbva.qwpu;
+
+import com.bbva.qwpu.dto.customers.DTOTransferencia;
+
+import com.bbva.elara.transaction.AbstractTransaction;
+
+public abstract class AbstractQWPUT21201PETransaction extends AbstractTransaction {
+
+	public AbstractQWPUT21201PETransaction(){
+	}
+	
+	
+
+	/**
+	 * Return value for input parameter EntityTransfer
+	 */
+	protected DTOTransferencia getEntitytransfer(){
+		return (DTOTransferencia)getParameter("EntityTransfer");
+	}
+	
+	
+	
+
+}

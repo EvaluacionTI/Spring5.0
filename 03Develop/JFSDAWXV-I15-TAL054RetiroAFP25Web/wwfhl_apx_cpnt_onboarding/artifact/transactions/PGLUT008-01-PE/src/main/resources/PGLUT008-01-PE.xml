@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transaction xmlns="http://www.w3schools.com" transactionName="PGLUT008" application="PGLU" version="01" country="PE" language="ES">
+	<paramsIn>
+		<parameter order="1" name="id-customer" mandatory="0" type="String" size="30"/>
+	</paramsIn>
+	<paramsOut>
+		<dto order="1" name="EntityOut" mandatory="0" package="com.bbva.pglu.dto.customer.CustomerDTO" artifactId="PGLUC001">
+			<parameter order="1" name="id" mandatory="0" type="String" size="10"/>
+			<parameter order="2" name="firstName" mandatory="0" type="String" size="30"/>
+			<parameter order="3" name="lastName" mandatory="0" type="String" size="30"/>
+		</dto>
+	</paramsOut>
+	<description>ASO Customer</description>
+</transaction>

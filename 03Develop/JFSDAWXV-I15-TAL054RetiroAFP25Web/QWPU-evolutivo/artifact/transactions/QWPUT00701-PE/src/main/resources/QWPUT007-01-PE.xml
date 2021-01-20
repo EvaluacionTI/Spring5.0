@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transaction xmlns="http://www.w3schools.com" transactionName="QWPUT007" application="QWPU" version="01" country="PE"
+             language="ES">
+    <paramsIn/>
+    <paramsOut>
+        <parameter order="1" name="dataEco" type="String" size="200" mandatory="1"/>
+    </paramsOut>
+    <description>Eco que llego a la library</description>
+</transaction>

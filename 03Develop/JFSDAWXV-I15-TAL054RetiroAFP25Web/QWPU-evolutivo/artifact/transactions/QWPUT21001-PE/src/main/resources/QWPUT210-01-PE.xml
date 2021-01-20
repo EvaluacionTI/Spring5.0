@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transaction xmlns="http://www.w3schools.com"
+	transactionName="QWPUT210" application="QWPU" version="01" country="PE"
+	language="ES">
+	<paramsIn />
+	<paramsOut>
+		<list name="ListTransfer" order="1" mandatory="0">
+			<dto name="Type" package="com.bbva.qwpu.dto.customers.DTOTransferencia"
+				artifactId="QWPUC200" mandatory="0" order="1">
+				<parameter order="1" name="idTransfer" type="Long" size="10"
+					mandatory="0" />
+				<parameter order="2" name="fechaMovimiento" type="Date (YYYY-MM-DD)"
+					size="0" mandatory="0" />
+				<parameter order="3" name="ordenante" type="String" size="100"
+					mandatory="0" />
+				<parameter order="4" name="monedaOrigen" type="String"
+					size="5" mandatory="0" />
+				<parameter order="5" name="numeroCuentaOrigen" type="String"
+					size="30" mandatory="0" />
+				<parameter order="6" name="importeOrigen" type="Double"
+					size="18" mandatory="0" />
+				<parameter order="7" name="monedaDestino" type="String"
+					size="5" mandatory="0" />
+				<parameter order="8" name="numeroCuentaDestino" type="String"
+					size="30" mandatory="0" />
+				<parameter order="9" name="importeDestino" type="Double"
+					size="18" mandatory="0" />
+				<parameter order="10" name="beneficiario" type="String"
+					size="100" mandatory="0" />
+			</dto>
+		</list>
+	</paramsOut>
+	<description>Lista All Transferencia</description>
+</transaction>

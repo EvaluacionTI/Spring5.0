@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transaction xmlns="http://www.w3schools.com"
+	transactionName="QWPUT100" application="QWPU" version="01" country="PE"
+	language="ES">
+	<paramsIn>
+		<dto name="EntityIn" package="com.bbva.qwpu.dto.employed.CEEmployedDTO"
+			artifactId="QWPUC100" mandatory="1" order="1">
+			<parameter order="1" name="id" type="Long" size="10"
+				mandatory="0" />
+			<parameter order="2" name="firstName" type="String" size="30"
+				mandatory="0" />
+			<parameter order="3" name="lastName" type="String" size="30"
+				mandatory="0" />
+			<parameter order="4" name="email" type="String" size="50"
+				mandatory="0" />
+			<parameter order="5" name="age" type="Long" size="5"
+				mandatory="0" />
+			<parameter order="6" name="limitCredit" type="Double" size="12"
+				mandatory="0" />
+			<parameter order="7" name="siNoActivo" type="Boolean" size="0"
+				mandatory="0" />
+			<parameter order="8" name="fechaRegistro" type="Date (YYYY-MM-DD)"
+				size="0" mandatory="0" />
+		</dto>
+	</paramsIn>
+	<paramsOut />
+	<description>List all employed with jdbc</description>
+	<services>
+		<service>QWPUS10000</service>
+	</services>
+</transaction>

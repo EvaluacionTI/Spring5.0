@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transaction xmlns="http://www.w3schools.com" transactionName="QWPUT104" application="QWPU" version="01" country="PE" language="ES">
+	<paramsIn>
+		<parameter order="1" name="id-employed" mandatory="0" type="String" size="5"/>
+	</paramsIn>
+	<paramsOut/>
+	<description>Eliminar un empleado</description>
+</transaction>
