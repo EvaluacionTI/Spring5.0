@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<transaction xmlns="http://www.w3schools.com" transactionName="PGLUT005" application="PGLU" version="01" country="PE" language="ES">
-	<paramsIn>
-		<parameter order="1" name="id-customer" mandatory="1" type="String" size="10"/>
-	</paramsIn>
-	<paramsOut/>
-	<description>Delete Customer</description>
-</transaction>

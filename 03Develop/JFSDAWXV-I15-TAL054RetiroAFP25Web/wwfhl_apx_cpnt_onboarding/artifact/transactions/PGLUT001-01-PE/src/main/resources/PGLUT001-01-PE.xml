@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<transaction xmlns="http://www.w3schools.com" transactionName="PGLUT001" application="PGLU" version="01" country="PE" language="ES">
-	<paramsIn/>
-	<paramsOut/>
-	<description>Create Contract</description>
-</transaction>

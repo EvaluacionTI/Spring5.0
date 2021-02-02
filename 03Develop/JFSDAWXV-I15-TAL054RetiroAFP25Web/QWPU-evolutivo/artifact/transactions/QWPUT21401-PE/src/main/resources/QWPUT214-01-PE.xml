@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<transaction xmlns="http://www.w3schools.com" transactionName="QWPUT214" application="QWPU" version="01" country="PE"
-             language="ES">
-    <paramsIn>
-        <parameter order="1" name="id-Transfer" type="Long" size="10" mandatory="0"/>
-    </paramsIn>
-    <paramsOut/>
-    <description>Delete Transfer by Id</description>
-</transaction>
