@@ -29,5 +29,4 @@ public class CV0101v01IniciarSpringBootApplication {
 		MOLOG.info("4. Digitar url : http://localhost:8015/");
 		MOLOG.info("4. Digitar url : http://localhost:8015/Evalua");
 	}
-
 }
