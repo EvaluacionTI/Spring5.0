@@ -9,6 +9,7 @@ import pe.bbva.evalua.spring5.model.CIRetiroAFP25;
 
 public class CVMostrarAllMatriz {
 	private static final Logger LOG = LoggerFactory.getLogger("CVMostrarAllMatriz");
+	
 	public static void main(String[] args) {
 		
 		ApplicationContext oCntx = new ClassPathXmlApplicationContext("/pe/bbva/evalua/spring5/context-Matrices.xml");

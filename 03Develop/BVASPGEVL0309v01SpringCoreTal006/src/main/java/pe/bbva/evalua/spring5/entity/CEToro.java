@@ -6,7 +6,7 @@ public class CEToro {
 	private String codigo;
 	private String nombre;
 	private String alias;
-	private LocalDate fechaNacimiento;
+	private String fechaNacimiento;
 
 	public String getCodigo() {
 		return codigo;
@@ -26,10 +26,10 @@ public class CEToro {
 	public void setAlias(String alias) {
 		this.alias = alias;
 	}
-	public LocalDate getFechaNacimiento() {
+	public String getFechaNacimiento() {
 		return fechaNacimiento;
 	}
-	public void setFechaNacimiento(LocalDate fechaNacimiento) {
+	public void setFechaNacimiento(String fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 	@Override

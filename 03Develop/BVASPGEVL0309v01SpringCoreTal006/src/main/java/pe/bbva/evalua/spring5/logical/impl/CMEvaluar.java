@@ -28,5 +28,4 @@ public class CMEvaluar implements CIUtilidad {
 		
 		return valorGenerado;
 	}
-
 }

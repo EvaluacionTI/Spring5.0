@@ -29,7 +29,7 @@ public class CVMostrarHashSet {
 		LOG.info("[EVL] Lista by id : {}", oLista.consultaByIdRetiroHashSet(5));
 		
 		LOG.info("[EVL] Delete by Id : ");
-		oLista.deleteRetiroHashSet(18);
+		oLista.deleteRetiroHashSet(12);
 		LOG.info("[EVL] Lista all load : {}", oLista.consultaAllRetiroHashSet());
 
 		LOG.info("[EVL] Update by Id : ");

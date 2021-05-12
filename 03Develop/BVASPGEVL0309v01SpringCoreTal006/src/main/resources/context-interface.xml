@@ -5,6 +5,11 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="idCEToro" class="pe.bbva.evalua.spring5.entity.CEToro">
+		<property name="codigo" value="83783"></property>
+		<property name="nombre" value="MARCO"/>
+		<property name="alias" value="BRAVO"/>
+		<property name="fechaNacimiento" value="17/10/1999"/>
+	
 	</bean>
 	
 		<bean id="idCMEvaluar" class="pe.bbva.evalua.spring5.logical.impl.CMEvaluar">

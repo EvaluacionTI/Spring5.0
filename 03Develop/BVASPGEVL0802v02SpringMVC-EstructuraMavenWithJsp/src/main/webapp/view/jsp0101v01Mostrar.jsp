@@ -12,6 +12,7 @@
 		<hr>
 		<p>
 				
-		<h6>Se inicio la carga de JSP</h6>
+		<h6>Se inicio la carga de JSP</h6><br>
+		<h5>vía comando de ejecución de comando en linea con maven</h5>
 	</body>
 </html>
