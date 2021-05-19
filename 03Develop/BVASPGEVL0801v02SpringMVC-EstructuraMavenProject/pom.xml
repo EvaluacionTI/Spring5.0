@@ -57,12 +57,23 @@
 		</dependency>
 
 		<dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>BVASPGEVL0801v02SpringMVC-EstructuraMavenProject</finalName>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<uriEncoding>utf-8</uriEncoding>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>

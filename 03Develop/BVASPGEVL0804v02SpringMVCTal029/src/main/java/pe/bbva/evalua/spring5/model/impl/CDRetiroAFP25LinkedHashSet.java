@@ -42,13 +42,11 @@ public class CDRetiroAFP25LinkedHashSet implements CIRetiroAFP25LinkedHashSet {
 		moListAfiliado.add(new CESaldoAfiliadoCustom(21, "2020", 18500.94));
 	}
 
-	@Override
 	public void saveRetiroLinkedHashSet(CESaldoAfiliadoCustom poCESaldoAfiliado) {
 		moListAfiliado.add(new CESaldoAfiliadoCustom(poCESaldoAfiliado.getId(), poCESaldoAfiliado.getCodigoAfiliado(), poCESaldoAfiliado.getSaldoCIC()));
 		
 	}
 
-	@Override
 	public void updateRetiroLinkedHashSet(CESaldoAfiliadoCustom poCESaldoAfiliado) {
 		Iterator<CESaldoAfiliadoCustom> it = moListAfiliado.iterator();
 		while(it.hasNext()) {
@@ -62,7 +60,6 @@ public class CDRetiroAFP25LinkedHashSet implements CIRetiroAFP25LinkedHashSet {
 		}
 	}
 
-	@Override
 	public void deleteRetiroLinkedHashSet(int pId) {
 		Iterator<CESaldoAfiliadoCustom> it = moListAfiliado.iterator();
 		while(it.hasNext()) {
@@ -75,13 +72,11 @@ public class CDRetiroAFP25LinkedHashSet implements CIRetiroAFP25LinkedHashSet {
 		}
 	}
 
-	@Override
 	public LinkedHashSet<CESaldoAfiliadoCustom> consultaAllRetiroLinkedHashSe() {
 		LOG.info("[EVL LinkedHashSet {}", moListAfiliado);
 		return moListAfiliado;
 	}
 
-	@Override
 	public CESaldoAfiliadoCustom consultaByIdRetiroLinkedHashSe(int pId) {
 		CESaldoAfiliadoCustom oCESaldoAfilidado = null;
 		CESaldoAfiliadoCustom oCESaldoResult = null;

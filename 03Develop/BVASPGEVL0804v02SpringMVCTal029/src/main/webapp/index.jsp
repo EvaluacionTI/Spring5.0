@@ -30,6 +30,7 @@
 	<!-- <co:url value="/view/jsp0101v01ListarAfiliado.jsp" var="messageUrl"></co:url> -->
 	<co:url value="/listarAfiliados.ea" var="messageUrl" />
 	<a href="${messageUrl}">Clic enter</a>
+	<br>
 	<co:url value="/adicionarAfiliado.lhs" var="adicionarUrl"/>
 	<a href="${adicionarUrl}">Nuevo de Saldo de Afiliados</a>
 	<br>
