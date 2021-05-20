@@ -18,7 +18,7 @@
 		<taglibs.version>1.1.2</taglibs.version>
 		<jsp.version>2.0</jsp.version>
 		<servletapi.version>2.5</servletapi.version>
-		<junit.version>4.12</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<slf4j.version>1.7.5</slf4j.version>
 		<failOnMissingWebXml>false</failOnMissingWebXml>
 
